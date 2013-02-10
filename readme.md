@@ -101,7 +101,7 @@ find_text('Incorrect email').text == 'Incorrect email'
 ```ruby
 # Commands that don't work or crash
 > a.type
-NoMethodError: undefined method `type' for #<Selenium::WebDriver::Element:>
+NoMethodError: undefined method 'type' for #<Selenium::WebDriver::Element:>
 > a.attribute :text
 Selenium::WebDriver::Error::IndexOutOfBoundsError: Instruments died while responding to command, please check appium logs
 ```
