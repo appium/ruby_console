@@ -16,3 +16,38 @@ class Selenium::WebDriver::Element
     type
   end
 end
+
+# Print JSON posted to Appium
+# Requires from lib/selenium/webdriver/remote.rb
+require 'selenium/webdriver/remote/capabilities'
+require 'selenium/webdriver/remote/bridge'
+require 'selenium/webdriver/remote/server_error'
+require 'selenium/webdriver/remote/response'
+require 'selenium/webdriver/remote/commands'
+require 'selenium/webdriver/remote/http/common'
+require 'selenium/webdriver/remote/http/default'
+
+module Selenium::WebDriver::Remote
+  class Bridge
+    # Code from lib/selenium/webdriver/remote/bridge.rb
+    def raw_execute(command, opts = {}, command_hash = nil)
+      verb, path = COMMANDS[command] || raise(ArgumentError, "unknown command: #{command.inspect}")
+      path       = path.dup
+      
+      path[':session_id'] = @session_id if path.include?(":session_id")
+      
+      begin
+        opts.each { |key, value| path[key.inspect] = escaper.escape(value.to_s) }
+        rescue IndexError
+        raise ArgumentError, "#{opts.inspect} invalid for #{command.inspect}"
+      end
+      
+      puts verb
+      puts path
+      puts command_hash.to_json
+      
+      puts "-> #{verb.to_s.upcase} #{path}" if $DEBUG
+      http.call verb, path, command_hash
+    end # def
+  end # class
+end # module
