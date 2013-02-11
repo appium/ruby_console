@@ -107,3 +107,5 @@ find_text('Incorrect email').text == 'Incorrect email'
 0. `a.name` `self.attribute :name`
 0. `a.type` `self.attribute :type`
 0. `a.tag_name` `type`
+
+[routing.js](https://github.com/appium/appium/blob/master/app/routing.js#L69) contains a list of not yet implemented end points.
