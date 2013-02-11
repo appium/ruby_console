@@ -1,5 +1,7 @@
 # Ruby Console for Appium
 
+Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source with `node server.js -V 1`
+
 Export the path to your .app bundle `MyApp.app` or zipped app bundle `MyApp.app.zip`
 
 `export APP_PATH="MyApp.app"`
