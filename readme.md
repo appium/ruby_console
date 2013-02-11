@@ -96,16 +96,14 @@ find_text('Incorrect email').text == 'Incorrect email'
 
 ```ruby
 # Commands that work
+> a.name
+> a.type
+> a.tag_name
 > a.text
-=> "Incorrect email"
-> a.attribute :type
-=> "UIAStaticText"
 ```
 
-```ruby
-# Commands that don't work or crash
-> a.type
-NoMethodError: undefined method 'type' for #<Selenium::WebDriver::Element:>
-> a.attribute :text
-Selenium::WebDriver::Error::IndexOutOfBoundsError: Instruments died while responding to command, please check appium logs
-```
+`patch.rb` provides:
+
+0. `a.name` `self.attribute :name`
+0. `a.type` `self.attribute :type`
+0. `a.tag_name` `type`
