@@ -19,9 +19,14 @@ def find_tags_attr tag_name, attribute
   results
 end
 
-# Find element by name. Works with buttons.
+# Find element by name. Works with button and text.
+# nil is returned if the element is not found.
+# nil is also returned when @driver times out.
 def find_name name
-  @driver.find_element :name, name
+  begin
+    result = @driver.find_element :name, name
+  # rescue Selenium::WebDriver::Error::NoSuchElementError
+  rescue; end
 end
 
 # Searches all tags and returns the first that
@@ -39,6 +44,33 @@ def find_tag_by_value tag, value
   end
   
   result
+end
+
+# tag   - the tag name to search for
+# attr  - the attribute to compare against
+# value - the value being searched for
+def find_tag_by_attr_include tag, attr, value
+  result = nil
+  
+  find_tags(tag).each do |found|
+    # value may return a Fixnum
+    if found.attribute(attr).to_s.include? value
+      result = found
+      break
+    end
+  end
+  
+  result
+end
+
+# element.attribute(:value).include? value
+def find_tag_by_value_include tag, value
+  find_tag_by_attr_include tag, :value, value
+end
+
+# element.attribute(:name).include? value
+def find_tag_by_name_include tag, value
+  find_tag_by_attr_include tag, :name, value
 end
 
 # Returns first tag that matches tag_name

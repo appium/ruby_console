@@ -17,6 +17,7 @@ require 'button'
 require 'textfield'
 require 'secure_textfield'
 require 'text'
+require 'patch'
 
 APP_PATH = ENV['APP_PATH']
 
@@ -30,6 +31,7 @@ def capabilities
 end
 
 def absolute_app_path
+    raise 'APP_PATH environment variable not set!' if APP_PATH.nil?
     file = File.join(File.dirname(__FILE__), APP_PATH)
     raise "App doesn't exist #{file}" unless File.exist? file
     raise "App must be a directory #{file}" unless File.directory? file
@@ -64,3 +66,7 @@ def x
   driver_quit
   exit # exit pry
 end
+
+# Paging in Pry is annoying :q required to exit.
+# With pager disabled, the output is similar to IRB
+Pry.config.pager = false

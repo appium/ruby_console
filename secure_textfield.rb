@@ -20,3 +20,8 @@ end
 def find_secure_textfield value
   find_tag_by_value :UIASecureTextField, value
 end
+
+# Returns the first UIASecureTextField that includes value.
+def find_secure_textfield_include value
+  find_tag_by_value_include :UIASecureTextField, value
+end

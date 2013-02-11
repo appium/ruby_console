@@ -20,3 +20,8 @@ end
 def find_textfield value
   find_tag_by_value :textfield, value
 end
+
+# Returns the first textfield that includes value.
+def find_textfield_include value
+  find_tag_by_value_include :textfield, value
+end

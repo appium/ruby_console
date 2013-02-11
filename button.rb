@@ -20,3 +20,8 @@ end
 def find_button name
   find_name name
 end
+
+# Returns the first button that includes name.
+def find_button_include name
+  find_tag_by_name_include :button, name
+end
