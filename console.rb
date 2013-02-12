@@ -24,10 +24,10 @@ APP_PATH = ENV['APP_PATH']
 
 def capabilities
   {
-      'browserName' => 'iOS',
-      'platform' => 'Mac',
-      'version' => '6.0',
-      'app' => absolute_app_path
+    browserName: 'iOS',
+    platform: 'Mac',
+    version: '6.0',
+    app: absolute_app_path
   }
 end
 
@@ -55,11 +55,15 @@ def driver
   # If the driver already exists, quit before creating a new driver.
   driver_quit
   
-  @driver = Selenium::WebDriver.for(:remote, :http_client => @client, :desired_capabilities => capabilities, :url => server_url)
+  @driver = Selenium::WebDriver.for(:remote, http_client: @client, desired_capabilities: capabilities, url: server_url)
 end
 
 # Setup driver
 driver
+
+# Set timeout to a large number so that Appium doesn't quit
+# when no commands are entered after 60 seconds.
+@driver.execute_script 'mobile: setCommandTimeout', timeout: 9999
 
 # Define x to close driver and Pry.
 # quit and exit are reserved by Pry.
