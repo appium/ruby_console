@@ -35,5 +35,5 @@ def alert_dismiss_text
   a = @driver.find_element(:tag_name, :alert)
   return if a.nil?
   b = a.find_elements(:tag_name, :button)
-  b.first.text if b.size >= 2
+  b.first.text if b.size >= 1
 end
