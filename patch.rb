@@ -15,6 +15,16 @@ class Selenium::WebDriver::Element
   def tag_name
     type
   end
+
+  # For use with mobile tap.
+  # @driver.execute_script 'mobile: tap', :x => 0.0, :y => 0.98
+  # https://github.com/appium/appium/wiki/Automating-mobile-gestures
+  def location_rel
+    xy = self.location
+    w = window_size
+    OpenStruct.new( :x => xy.x.to_f / w.width.to_f,
+                    :y => xy.y.to_f / w.height.to_f )
+  end
 end
 
 # Print JSON posted to Appium

@@ -17,11 +17,11 @@ def first_button
 end
 
 # Returns the first element that matches name.
-def find_button name
+def button name
   find_name name
 end
 
 # Returns the first button that includes name.
-def find_button_include name
+def button_include name
   find_tag_by_name_include :button, name
 end

@@ -17,11 +17,11 @@ def first_text
 end
 
 # Returns the first element that matches name.
-def find_text name
+def text name
   find_name name
 end
 
 # Returns the first textfield that includes name.
-def find_text_include name
+def text_include name
   find_tag_by_name_include :text, name
 end

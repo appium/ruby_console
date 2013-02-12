@@ -17,11 +17,11 @@ def first_secure_textfield
 end
 
 # Returns the first secure textfield that matches value.
-def find_secure_textfield value
+def secure_textfield value
   find_tag_by_value :UIASecureTextField, value
 end
 
 # Returns the first UIASecureTextField that includes value.
-def find_secure_textfield_include value
+def secure_textfield_include value
   find_tag_by_value_include :UIASecureTextField, value
 end
