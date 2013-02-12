@@ -19,6 +19,7 @@ require 'secure_textfield'
 require 'text'
 require 'window'
 require 'patch'
+require 'alert'
 
 APP_PATH = ENV['APP_PATH']
 
