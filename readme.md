@@ -149,7 +149,7 @@ alert.accept
 alert.dismiss
 ```
 
-Appium can list the alerts buttons.
+Appium can list the alert's buttons.
 
 ```ruby
 alert_buttons = @driver.find_element(:tag_name, :alert).find_elements(:tag_name, :buttons)
