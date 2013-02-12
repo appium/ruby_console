@@ -11,6 +11,36 @@ def e_buttons
   find_tags :button
 end
 
+# Returns the button element matching name and
+# occurrence. number=2 means the 2nd occurrence.
+#
+# find the 2nd Sign In button
+# b = e_button 'Sign In', 2
+#
+# name = exact name of the button to match
+# number 1 = first button
+def e_button name, number
+  raise "Number must be >= 1" if number <= 0
+  number = number - 1 # zero indexed
+
+  all = find_tags :button
+
+  result = nil
+  count = 0
+
+  all.each do |btn|
+    if btn.name == name
+      if count == number
+        result = btn
+        break
+      end
+      count = count + 1
+    end # if name
+  end # each
+
+  result
+end
+
 # Returns the first button element.
 def first_button
   first_tag :button
