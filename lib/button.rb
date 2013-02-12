@@ -11,6 +11,9 @@ def e_buttons
   find_tags :button
 end
 
+# TODO: Rewrite once this bug is fixed.
+# https://github.com/appium/appium/issues/163
+#
 # Returns the button element matching name and
 # occurrence. number=2 means the 2nd occurrence.
 #
@@ -24,7 +27,6 @@ def e_button name, number
   number = number - 1 # zero indexed
 
   all = find_tags :button
-
   result = nil
   count = 0
 
