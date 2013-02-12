@@ -2,6 +2,16 @@
 
 Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source with `node server.js -V 1`
 
+Reset Appium after pulling the latest changes.
+
+```
+# in the appium/ dir after cloning from GitHub
+rm -rf node_modules/
+npm install .
+grunt buildApp:TestApp
+grunt buildApp:UICatalog
+```
+
 Export the path to your .app bundle `MyApp.app` or zipped app bundle `MyApp.app.zip`
 
 `export APP_PATH="MyApp.app"`
