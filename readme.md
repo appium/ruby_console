@@ -161,7 +161,13 @@ alert_buttons[0].click
 
 Alert buttons can be accessed by element index, button index, or button name. Button name is the most readable.
 
-`alert_click( value )` is the same as `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[value].tap();'`
+0. `alert_click( value )` is the same as `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[value].tap();'`
+0. `alert_text` Returns the text of the alert message.
+0. `alert_accept` Accepts the alert.
+0. `alert_accept_text` Returns the text of the alert accept button.
+0. `alert_dismiss` Dismisses the alert.
+0. `alert_dismiss_text` Returns the text of the alert dismiss button.
+
 
 Three ways to access alert buttons using UI Automation directly.
 
