@@ -42,8 +42,8 @@ There are two ways to find buttons. The first is to list all buttons and then ac
 0. `buttons` returns an array of button names.
 0. `e_buttons` returns an array of button elements. `@driver.find_elements :tag_name, :button`
 0. `first_button` returns the first button element. `@driver.find_elements(:tag_name, :button).first`
-0. `find_button( name )` Returns the first element that matches name. `@driver.find_element(:name, 'element name')`
-0. `find_button_include( name )` Returns the first button that includes name.
+0. `button( name )` Returns the first element that matches name. `@driver.find_element(:name, 'element name')`
+0. `button_include( name )` Returns the first button that includes name.
 
 `first_button.click` clicks the first button.
 `@driver.find_elements(:tag_name, :button).first.click`
@@ -59,8 +59,8 @@ There are two ways to find buttons. The first is to list all buttons and then ac
 0. `textfields` Returns an array of textfield values.
 0. `e_textfields` Returns an array of textfield elements. `@driver.find_elements :tag_name, :textfield`
 0. `first_textfield` Returns the first textfield element. `@driver.find_elements(:tag_name, :textfield).first`
-0. `find_textfield( value )` Returns the first textfield that matches value.
-0. `find_textfield_include( value )` Returns the first textfield that includes value.
+0. `textfield( value )` Returns the first textfield that matches value.
+0. `textfield_include( value )` Returns the first textfield that includes value.
 
 `first_textfield.send_keys 'hello'` types the word "hello" into the first textfield. 
 `@driver.find_elements(:tag_name, :textfield).send_keys 'hello'`
@@ -82,8 +82,8 @@ textfields.first == 'hello'
 0. `secure_textfields` Returns an array of secure textfield values.
 0. `e_secure_textfields` Returns an array of secure textfield elements. `@driver.find_elements :tag_name, :UIASecureTextField`
 0. `first_secure_textfield` Returns the first secure textfield element. `@driver.find_elements(:tag_name, :UIASecureTextField).first`
-0. `find_secure_textfield( value )` Returns the first secure textfield that matches value.
-0. `find_secure_textfield_include( value )` Returns the first secure textfield that includes value.
+0. `secure_textfield( value )` Returns the first secure textfield that matches value.
+0. `secure_textfield_include( value )` Returns the first secure textfield that includes value.
 
 `password( length )` will return a password of the specified length. It's helpful to check that a secure textfield has been set.
 
@@ -100,8 +100,8 @@ secure_textfields.first == password(5)
 0. `texts` Returns an array of text names.
 0. `e_texts` Returns an array of text elements. `@driver.find_elements :tag_name, :text`
 0. `first_text` Returns the first text element. `@driver.find_elements(:tag_name, :text).first`
-0. `find_text( name )` Returns the first element that matches name. `@driver.find_element(:name, 'element name')`
-0. `find_text_include( name )` Returns the first text that includes name.
+0. `text( name )` Returns the first element that matches name. `@driver.find_element(:name, 'element name')`
+0. `text_include( name )` Returns the first text that includes name.
 
 ```ruby
 # Find text and check we've found the correct one.
