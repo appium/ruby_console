@@ -171,3 +171,7 @@ Alert buttons can be accessed by element index, button index, or button name. Bu
 #### Error: EMFILE, too many open files
 
 Run `ulimit -n 9999`. It's a [known issue](https://github.com/appium/appium/issues/148).
+
+#### Slow Tests
+
+`_include` is slow because it checks the attribute on each tag after enumerating all tags of a certain type.
