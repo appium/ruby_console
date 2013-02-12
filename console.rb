@@ -17,6 +17,7 @@ require 'button'
 require 'textfield'
 require 'secure_textfield'
 require 'text'
+require 'window'
 require 'patch'
 
 APP_PATH = ENV['APP_PATH']
