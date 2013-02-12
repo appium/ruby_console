@@ -149,6 +149,14 @@ alert.accept
 alert.dismiss
 ```
 
+Appium can list the alerts buttons.
+
+```ruby
+alert_buttons = @driver.find_element(:tag_name, :alert).find_elements(:tag_name, :buttons)
+alert_buttons[0].text
+alert_buttons[0].click
+```
+
 Alert buttons can be accessed by element index, button index, or button name. Button name is the most readable.
 
 `alert_click( value )` is the same as `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[value].tap();'`
