@@ -5,6 +5,15 @@
 # json and ap are required for the source method.
 require 'json'
 require 'ap' # awesome print
+require 'timeout' # for wait
+
+def wait &w
+  # Give up after 5 seconds.
+  # Check every 0.5 seconds to see if w.call is true
+  # Timeout::Error: execution expired
+  timeout(5) { while(!w.call) do; sleep(0.5) end }
+end
+
 
 # Returns elements matching the tag name
 def find_tags tag_name
