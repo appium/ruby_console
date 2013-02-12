@@ -149,3 +149,7 @@ Three ways to access alert buttons.
 0. Element index `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().elements()[3].tap();'`
 0. Button index `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[0].tap();'`
 0. Button name `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()["Yes"].tap();'`
+
+#### Error: EMFILE, too many open files
+
+Run `ulimit -n 9999`. It's a [known issue](https://github.com/appium/appium/issues/148).
