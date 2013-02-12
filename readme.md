@@ -142,10 +142,10 @@ find_text('Incorrect email').text == 'Incorrect email'
 
 Alert buttons can be accessed by element index, button index, or button name. Button name is the most readable.
 
-`alert_click( value )` is the same as ``@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[value].tap();'`
+`alert_click( value )` is the same as `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[value].tap();'`
 
-`@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().elements()[3].tap();'`
+Three ways to access alert buttons.
 
-`@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[0].tap();'`
-
-`@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()["No"].tap();'`
+0. Element index `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().elements()[3].tap();'`
+0. Button index `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[0].tap();'`
+0. Button name `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()["Yes"].tap();'`
