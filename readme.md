@@ -168,13 +168,6 @@ Alert buttons can be accessed by element index, button index, or button name. Bu
 0. `alert_dismiss` Dismisses the alert.
 0. `alert_dismiss_text` Returns the text of the alert dismiss button.
 
-
-Three ways to access alert buttons using UI Automation directly.
-
-0. Element index `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().elements()[3].tap();'`
-0. Button index `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[0].tap();'`
-0. Button name `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()["Yes"].tap();'`
-
 #### Error: EMFILE, too many open files
 
 Run `ulimit -n 9999`. It's a [known issue](https://github.com/appium/appium/issues/148).
