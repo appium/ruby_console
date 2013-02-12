@@ -135,3 +135,13 @@ find_text('Incorrect email').text == 'Incorrect email'
 0. `a.tag_name` `type`
 
 [routing.js](https://github.com/appium/appium/blob/master/app/routing.js#L69) contains a list of not yet implemented end points.
+
+#### Alerts
+
+Alert buttons can be accessed by element index, button index, or button name. Button name is the most readable.
+
+`@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().elements()[3].tap();'`
+
+`@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[0].tap();'`
+
+`@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()["No"].tap();'`
