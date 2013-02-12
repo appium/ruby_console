@@ -16,6 +16,11 @@ Run with
 `
 - [Ruby selenium-webdriver](http://selenium.googlecode.com/svn/trunk/docs/api/rb/index.html)
 - [Appium](https://github.com/appium/appium/blob/master/README.md)
+- [Appium extension](https://github.com/appium/appium/wiki/Automating-mobile-gestures)
+
+Example use of Appium's mobile gesture.
+
+> @driver.execute_script 'mobile: tap', :x => 0, :y => 500
 
 `console.rb` uses some code from [simple_test.rb](
 https://github.com/appium/appium/blob/82995f47408530c80c3376f4e07a1f649d96ba22/sample-code/examples/ruby/simple_test.rb) and is released under the [same license](https://github.com/appium/appium/blob/c58eeb66f2d6fa3b9a89d188a2e657cca7cb300f/LICENSE) as Appium. The [Accessibility Inspector](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/iPhoneAccessibility/Testing_Accessibility/Testing_Accessibility.html) is helpful for discovering button names and textfield values.
