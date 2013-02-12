@@ -8,12 +8,13 @@ require 'ap' # awesome print
 require 'timeout' # for wait
 
 def wait &w
-  # Give up after 5 seconds.
+  # Give up after 30 seconds.
   # Check every 0.5 seconds to see if w.call is true
   # Timeout::Error: execution expired
-  timeout(5) { while(!w.call) do; sleep(0.5) end }
+  r = nil
+  timeout(30) { while(!(r=w.call)) do; sleep(0.5) end }
+  r#esult
 end
-
 
 # Returns elements matching the tag name
 def find_tags tag_name
