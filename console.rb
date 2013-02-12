@@ -61,9 +61,14 @@ end
 # Setup driver
 driver
 
+# execute_script helper method.
+def execute_script script, *args
+  @driver.execute_script script, *args
+end
+
 # Set timeout to a large number so that Appium doesn't quit
 # when no commands are entered after 60 seconds.
-@driver.execute_script 'mobile: setCommandTimeout', timeout: 9999
+execute_script 'mobile: setCommandTimeout', timeout: 9999
 
 # Define x to close driver and Pry.
 # quit and exit are reserved by Pry.
