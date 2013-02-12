@@ -49,8 +49,9 @@ def first_button
 end
 
 # Returns the first element that matches name.
-def button name
-  find_name name
+def button name, number=-1
+  number >= 1 ? e_button( name, number ) :
+               find_name( name )
 end
 
 # Returns the first button that includes name.

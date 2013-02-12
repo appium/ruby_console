@@ -2,3 +2,4 @@
 .*
 *.trace
 features/
+tmp.rb
