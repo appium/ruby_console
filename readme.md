@@ -102,6 +102,8 @@ find_text('Incorrect email').text == 'Incorrect email'
 > a.type
 > a.tag_name
 > a.text
+> a.size
+> a.location
 ```
 
 `patch.rb` provides:
