@@ -35,11 +35,13 @@ Example use of Appium's mobile gesture.
 `console.rb` uses some code from [simple_test.rb](
 https://github.com/appium/appium/blob/82995f47408530c80c3376f4e07a1f649d96ba22/sample-code/examples/ruby/simple_test.rb) and is released under the [same license](https://github.com/appium/appium/blob/c58eeb66f2d6fa3b9a89d188a2e657cca7cb300f/LICENSE) as Appium. The [Accessibility Inspector](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/iPhoneAccessibility/Testing_Accessibility/Testing_Accessibility.html) is helpful for discovering button names and textfield values.
 
-#### Starting & Ending
+#### Driver
 
-`driver` will restart the driver. It's useful when Appium times out after no commands have been issued for 60 seconds.
+`driver` will restart the driver.
 
 `x` will quit the driver and exit Pry.
+
+`execute_script` calls `@driver.execute_script`
 
 #### Buttons
 
@@ -139,6 +141,8 @@ find_text('Incorrect email').text == 'Incorrect email'
 #### Alerts
 
 Alert buttons can be accessed by element index, button index, or button name. Button name is the most readable.
+
+`alert_click( value )` is the same as ``@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[value].tap();'`
 
 `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().elements()[3].tap();'`
 
