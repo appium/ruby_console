@@ -10,8 +10,5 @@ def window_size
   # it's called in patch.rb from webdriver scope.
   driver = TOPLEVEL_BINDING.eval '@driver'
   return nil if driver.nil?
-  size = driver.execute_script "UIATarget.localTarget().frontMostApp().mainWindow().rect()"
-  return nil if size.nil?
-  size = size['size']
-  OpenStruct.new :width => size['width'], :height => size['height']
+  driver.manage.window.size
 end
