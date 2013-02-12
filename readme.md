@@ -57,7 +57,7 @@ There are two ways to find buttons. The first is to list all buttons and then ac
 0. `button( name )` Returns the first element that matches name. `@driver.find_element(:name, 'element name')`
 0. `button_include( name )` Returns the first button that includes name.
 0. `e_button( name, number )` Returns the button element matching name at the `number` occurrence.
-`name='Sign In` `number=2` will match the 2nd Sign In button.
+`name='Sign In'` `number=2` will match the 2nd Sign In button.
 
 `first_button.click` clicks the first button.
 `@driver.find_elements(:tag_name, :button).first.click`
