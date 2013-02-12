@@ -140,11 +140,20 @@ find_text('Incorrect email').text == 'Incorrect email'
 
 #### Alerts
 
+Selenium has [built in support](https://github.com/appium/appium/issues/161#issuecomment-13443274) for alerts.
+
+```ruby
+alert = @driver.switch_to.alert
+alert.text
+alert.accept
+alert.dismiss
+```
+
 Alert buttons can be accessed by element index, button index, or button name. Button name is the most readable.
 
 `alert_click( value )` is the same as `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[value].tap();'`
 
-Three ways to access alert buttons.
+Three ways to access alert buttons using UI Automation directly.
 
 0. Element index `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().elements()[3].tap();'`
 0. Button index `@driver.execute_script 'UIATarget.localTarget().frontMostApp().alert().buttons()[0].tap();'`
