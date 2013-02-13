@@ -2,6 +2,8 @@
 
 Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source with `node server.js -V 1`
 
+# Reset Appium
+
 Reset Appium after pulling the latest changes.
 
 ```
