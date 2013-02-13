@@ -5,9 +5,10 @@ Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source with `nod
 Reset Appium after pulling the latest changes.
 
 ```
-# in the appium/ dir after cloning from GitHub
+# In the appium/ dir after cloning from GitHub
 rm -rf node_modules/
 npm install .
+# Rebuilt test apps if you're testing against them
 grunt buildApp:TestApp
 grunt buildApp:UICatalog
 ```
