@@ -56,6 +56,10 @@ def driver
   driver_quit
   
   @driver = Selenium::WebDriver.for(:remote, http_client: @client, desired_capabilities: capabilities, url: server_url)
+
+  # Set timeout to a large number so that Appium doesn't quit
+  # when no commands are entered after 60 seconds.
+  @driver.execute_script 'mobile: setCommandTimeout', timeout: 9999
 end
 
 # Setup driver
@@ -65,10 +69,6 @@ driver
 def execute_script script, *args
   @driver.execute_script script, *args
 end
-
-# Set timeout to a large number so that Appium doesn't quit
-# when no commands are entered after 60 seconds.
-execute_script 'mobile: setCommandTimeout', timeout: 9999
 
 # Define x to close driver and Pry.
 # quit and exit are reserved by Pry.
