@@ -12,6 +12,8 @@ rm -rf node_modules/
 npm install .
 # Rebuilt test apps if you're testing against them
 grunt buildApp:TestApp
+# Run downloadApp if UICatalog fails to build.
+grunt downloadApp
 grunt buildApp:UICatalog
 ```
 
