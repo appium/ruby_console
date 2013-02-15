@@ -32,6 +32,7 @@ Run with
 - [Ruby selenium-webdriver](http://selenium.googlecode.com/svn/trunk/docs/api/rb/index.html)
 - [Appium](https://github.com/appium/appium/blob/master/README.md)
 - [Appium extension](https://github.com/appium/appium/wiki/Automating-mobile-gestures)
+- [mechanic names of elements](https://github.com/jaykz52/mechanic/blob/8c490e1d225f384847e47ffdafb47cc2248bb96c/src/mechanic-core.js#L28)
 
 Example use of Appium's mobile gesture.
 
