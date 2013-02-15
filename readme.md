@@ -184,6 +184,12 @@ Run `ulimit -n 9999`. It's a [known issue](https://github.com/appium/appium/issu
 
 #### Raw UIAutomation
 
+[mechanic](https://github.com/jaykz52/mechanic/) can be used directly.
+`$driver.manage.timeouts.implicit_wait = 0` must be set or it will hang forever.
+
+`$driver.execute_script "$('button')"` is the same as
+`$driver.execute_script "mechanic('button')"`
+
 `execute_script "au.lookup('button')[0].tap()"` is the same as
 `execute_script 'UIATarget.localTarget().frontMostApp().buttons()[0].tap()'`
 
