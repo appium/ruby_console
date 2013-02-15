@@ -181,3 +181,13 @@ Run `ulimit -n 9999`. It's a [known issue](https://github.com/appium/appium/issu
 #### Slow Tests
 
 `_include` is slow because it checks the attribute on each tag after enumerating all tags of a certain type.
+
+#### Raw UIAutomation
+
+`execute_script "au.lookup('button')[0].tap()"` is the same as
+`execute_script 'UIATarget.localTarget().frontMostApp().buttons()[0].tap()'`
+
+See [app.js](https://github.com/appium/appium/blob/master/app/uiauto/appium/app.js#L3) for more au methods.
+Note that raw UIAutomation commands are not offically supported.
+
+
