@@ -11,6 +11,9 @@ https://github.com/appium/appium/blob/c58eeb66f2d6fa3b9a89d188a2e657cca7cb300f/L
 require 'rspec'
 require 'selenium-webdriver'
 
+# __FILE__ = path to this file
+$:.unshift File.expand_path('../lib', __FILE__)
+
 # ruby_console files
 require 'helper'
 require 'button'
@@ -21,7 +24,7 @@ require 'window'
 require 'patch'
 require 'alert'
 
-APP_PATH = ENV['APP_PATH']
+APP_PATH = ENV['APP_PATH'] unless defined?(APP_PATH)
 
 def capabilities
   {
@@ -33,6 +36,7 @@ def capabilities
 end
 
 def absolute_app_path
+    # TODO: Support absolute APP_PATH
     raise 'APP_PATH environment variable not set!' if APP_PATH.nil?
     file = File.join(File.dirname(__FILE__), APP_PATH)
     raise "App doesn't exist #{file}" unless File.exist? file
@@ -45,7 +49,7 @@ end
 
 def driver_quit
   # rescue NoSuchDriverError
-  begin; @driver.quit unless @driver.nil?; rescue; end
+  begin; $driver.quit unless $driver.nil?; rescue; end
 end
 
 def driver
@@ -55,19 +59,19 @@ def driver
   # If the driver already exists, quit before creating a new driver.
   driver_quit
   
-  @driver = Selenium::WebDriver.for(:remote, http_client: @client, desired_capabilities: capabilities, url: server_url)
+  $driver = Selenium::WebDriver.for(:remote, http_client: @client, desired_capabilities: capabilities, url: server_url)
 
   # Set timeout to a large number so that Appium doesn't quit
   # when no commands are entered after 60 seconds.
-  @driver.execute_script 'mobile: setCommandTimeout', timeout: 9999
+  $driver.execute_script 'mobile: setCommandTimeout', timeout: 9999
 end
 
 # Setup driver
-driver
+driver if $driver.nil?
 
 # execute_script helper method.
 def execute_script script, *args
-  @driver.execute_script script, *args
+  $driver.execute_script script, *args
 end
 
 # Define x to close driver and Pry.
@@ -79,4 +83,5 @@ end
 
 # Paging in Pry is annoying :q required to exit.
 # With pager disabled, the output is similar to IRB
-Pry.config.pager = false
+# Only set if Pry is defined.
+Pry.config.pager = false if defined?(Pry)

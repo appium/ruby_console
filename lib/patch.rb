@@ -17,7 +17,7 @@ class Selenium::WebDriver::Element
   end
 
   # For use with mobile tap.
-  # @driver.execute_script 'mobile: tap', :x => 0.0, :y => 0.98
+  # $driver.execute_script 'mobile: tap', :x => 0.0, :y => 0.98
   # https://github.com/appium/appium/wiki/Automating-mobile-gestures
   def location_rel
     xy = self.location
@@ -60,4 +60,4 @@ module Selenium::WebDriver::Remote
       http.call verb, path, command_hash
     end # def
   end # class
-end # module
+end if defined?(Pry)# module

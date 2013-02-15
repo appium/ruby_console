@@ -18,23 +18,23 @@ end
 
 # Returns elements matching the tag name
 def find_tags tag_name
-  @driver.find_elements :tag_name, tag_name
+  $driver.find_elements :tag_name, tag_name
 end
 
 # Returns an array of attribute values from elements matching the tag name.
 def find_tags_attr tag_name, attribute
   results = []
-  elements = @driver.find_elements :tag_name, tag_name
+  elements = $driver.find_elements :tag_name, tag_name
   elements.each { |e| results.push e.attribute(attribute) }
   results
 end
 
 # Find first element by name. Works with button and text.
 # nil is returned if the element is not found.
-# nil is also returned when @driver times out.
+# nil is also returned when $driver times out.
 def find_name name
   begin
-    result = @driver.find_element :name, name
+    result = $driver.find_element :name, name
   # rescue Selenium::WebDriver::Error::NoSuchElementError
   rescue; end
 end
@@ -42,7 +42,7 @@ end
 # Find all elements by name.
 def find_names name
   begin
-    result = @driver.find_elements :name, name
+    result = $driver.find_elements :name, name
     # rescue Selenium::WebDriver::Error::NoSuchElementError
     rescue; end
 end
@@ -99,7 +99,7 @@ end
 
 # Prints a JSON view of the current page
 def source
-  ap JSON.parse(@driver.page_source)
+  ap JSON.parse($driver.page_source)
 end
 
 # Password character returned from value of UIASecureTextField
