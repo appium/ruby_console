@@ -66,6 +66,7 @@ def driver
   $driver.execute_script 'mobile: setCommandTimeout', timeout: 9999
 
   # Must set implicit_wait to zero or $ commands will fail.
+  # execute_script "$('button')"
   $driver.manage.timeouts.implicit_wait = 0
 end
 
