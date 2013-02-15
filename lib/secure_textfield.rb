@@ -3,25 +3,25 @@
 
 # Returns an array of secure textfield values.
 def secure_textfields
-  find_tags_attr :UIASecureTextField, :value
+  find_tags_attr :secure, :value
 end
 
 # Returns an array of secure textfield elements.
 def e_secure_textfields
-  find_tags :UIASecureTextField
+  find_tags :secure
 end
 
 # Returns the first secure textfield element.
 def first_secure_textfield
-  first_tag :UIASecureTextField
+  first_tag :secure
 end
 
 # Returns the first secure textfield that matches value.
 def secure_textfield value
-  find_tag_by_value :UIASecureTextField, value
+  find_tag_by_value :secure, value
 end
 
-# Returns the first UIASecureTextField that includes value.
+# Returns the first secure textfield that includes value.
 def secure_textfield_include value
-  find_tag_by_value_include :UIASecureTextField, value
+  find_tag_by_value_include :secure, value
 end
