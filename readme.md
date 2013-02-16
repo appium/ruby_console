@@ -23,7 +23,7 @@ Export the path to your .app bundle `MyApp.app` or zipped app bundle `MyApp.app.
 
 Run with
 
-`pry -I . -r console.rb`
+`pry -r ./console.rb`
 
 #### Documentation
 
