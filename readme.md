@@ -100,8 +100,8 @@ textfields.first == 'hello'
 > "value" => "Password",
 
 0. `secure_textfields` Returns an array of secure textfield values.
-0. `e_secure_textfields` Returns an array of secure textfield elements. `@driver.find_elements :tag_name, :UIASecureTextField`
-0. `first_secure_textfield` Returns the first secure textfield element. `@driver.find_elements(:tag_name, :UIASecureTextField).first`
+0. `e_secure_textfields` Returns an array of secure textfield elements. `@driver.find_elements :tag_name, :secure`
+0. `first_secure_textfield` Returns the first secure textfield element. `@driver.find_elements(:tag_name, :secure).first`
 0. `secure_textfield( value )` Returns the first secure textfield that matches value.
 0. `secure_textfield_include( value )` Returns the first secure textfield that includes value.
 
@@ -195,5 +195,27 @@ Run `ulimit -n 9999`. It's a [known issue](https://github.com/appium/appium/issu
 
 See [app.js](https://github.com/appium/appium/blob/master/app/uiauto/appium/app.js#L3) for more au methods.
 Note that raw UIAutomation commands are not offically supported.
+
+#### XPath
+
+See [#194](https://github.com/appium/appium/pull/194/files) for details.
+
+```ruby
+$driver.find_element :xpath,  'button'
+$driver.find_elements :xpath,  'button'
+
+$driver.find_element :xpath,  'button[@name="Sign In"]'
+$driver.find_elements :xpath,  'button[@name="Sign In"]'
+
+$driver.find_element :xpath,  'button[contains(@name, "Sign In")]'
+$driver.find_elements :xpath,  'button[contains(@name, "Sign")]'
+
+$driver.find_element :xpath,  'textfield[@value="Email"]'
+$driver.find_element :xpath,  'textfield[contains(@value, "Email")]'
+
+$driver.find_element :xpath,  'text[contains(@name, "Reset")]'
+
+$driver.find_elements(:xpath, 'text[contains(@name, "agree")]')
+```
 
 
