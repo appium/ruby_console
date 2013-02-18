@@ -22,8 +22,6 @@ def find_tags tag_name
 end
 
 # Returns an array of attribute values from elements matching the tag name.
-# This is slow because one call is made per attribute.
-# See https://github.com/appium/appium/issues/169
 def find_tags_attr tag_name, attribute
   js = %Q(
     var b = $('#{tag_name}');

@@ -16,7 +16,7 @@
    button 'name'    # 1st button exactly matching name
    button 'name', 2 # 2nd button exactly matching name
 
-   buttons          # text of all buttons. SLOW.
+   buttons          # text of all buttons.
    buttons 'name'   # all buttons exactly matching name
 
    button_include  'name' # the first button that includes name
