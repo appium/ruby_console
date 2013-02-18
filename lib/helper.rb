@@ -53,38 +53,22 @@ def find_names name
     rescue; end
 end
 
-# Searches all tags and returns the first that
-# matches value.
-# Alternative to value search is finding all tags of type
-# and then selecting one by index.
+# Returns the first tag that exactly matches value.
+# tag name mapping:
+# text field  = 'textfield'
+# secure text field = 'secure'
 def find_tag_by_value tag, value
-  result = nil
+  raise "Invalid tag #{tag}. Must be textfield or secure." \
+  unless ['textfield', 'secure'].include? tag
   
-  find_tags(tag).each do |found|
-    if found.attribute(:value) == value
-      result = found
-      break
-    end
-  end
-  
-  result
+  $driver.find_element :xpath, %Q(#{tag}[@value='#{value}'])
 end
 
 # tag   - the tag name to search for
 # attr  - the attribute to compare against
 # value - the value being searched for
 def find_tag_by_attr_include tag, attr, value
-  result = nil
-  
-  find_tags(tag).each do |found|
-    # value may return a Fixnum
-    if found.attribute(attr).to_s.include? value
-      result = found
-      break
-    end
-  end
-  
-  result
+  $driver.find_element :xpath, %Q(#{tag}[contains(@#{attr}, '#{value}')])
 end
 
 # element.attribute(:value).include? value
