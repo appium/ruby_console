@@ -16,6 +16,11 @@ def first_text
   first_tag :text
 end
 
+# Returns the last text element
+def last_text
+  last_tag :text
+end
+
 # Returns the first element that matches name.
 def text name
   find_name name

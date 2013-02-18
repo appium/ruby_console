@@ -16,6 +16,11 @@ def first_secure_textfield
   first_tag :secure
 end
 
+# Returns the last secure textfield element.
+def last_secure_textfield
+  last_tag :secure
+end
+
 # Returns the first secure textfield that matches value.
 def secure_textfield value
   find_tag_by_value :secure, value

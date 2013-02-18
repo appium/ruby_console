@@ -3,3 +3,4 @@
 *.trace
 features/
 tmp.rb
+*.zip

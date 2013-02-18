@@ -16,6 +16,11 @@ def first_textfield
   first_tag :textfield
 end
 
+# Returns the last textfield element.
+def last_textfield
+  last_tag :textfield
+end
+
 # Returns the first textfield that matches value.
 def textfield value
   find_tag_by_value :textfield, value
