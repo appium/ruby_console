@@ -22,6 +22,8 @@ def find_tags tag_name
 end
 
 # Returns an array of attribute values from elements matching the tag name.
+# This is slow because one call is made per attribute.
+# See https://github.com/appium/appium/issues/169
 def find_tags_attr tag_name, attribute
   results = []
   elements = $driver.find_elements :tag_name, tag_name
@@ -95,6 +97,12 @@ end
 def first_tag tag_name
   tag = find_tags tag_name
   tag = tag.first unless tag.nil?
+end
+
+# Returns last tag that matches tag_name
+def last_tag tag_name
+  tag = find_tags tag_name
+  tag = tag.last unless tag.nil?
 end
 
 # Prints a JSON view of the current page
