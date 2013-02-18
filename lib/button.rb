@@ -35,6 +35,8 @@ def button name, number=-1
 end
 
 # Returns an array of button names.
+# If name is provided, return an array of button elements
+# exactly matching name.
 def buttons name=nil
   name == nil ? find_tags_attr(:button, :name) :
   $driver.find_elements(:xpath, "button[@name='#{name}']")

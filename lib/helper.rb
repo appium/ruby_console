@@ -25,10 +25,16 @@ end
 # This is slow because one call is made per attribute.
 # See https://github.com/appium/appium/issues/169
 def find_tags_attr tag_name, attribute
-  results = []
-  elements = $driver.find_elements :tag_name, tag_name
-  elements.each { |e| results.push e.attribute(attribute) }
-  results
+  js = %Q(
+    var b = $('#{tag_name}');
+    var r = [];
+    for (var a = 0; a < b.length; a++) {
+      r.push(b[a].#{attribute}());
+    }
+    r
+  )
+
+  $driver.execute_script js
 end
 
 # Find first element by name. Works with button and text.
