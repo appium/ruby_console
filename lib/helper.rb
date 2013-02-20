@@ -59,7 +59,7 @@ end
 # secure text field = 'secure'
 def find_tag_by_value tag, value
   raise "Invalid tag #{tag}. Must be textfield or secure." \
-  unless ['textfield', 'secure'].include? tag
+  unless ['textfield', 'secure'].include? tag.to_s
   
   $driver.find_element :xpath, %Q(#{tag}[@value='#{value}'])
 end
