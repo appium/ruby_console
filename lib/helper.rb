@@ -12,7 +12,7 @@ def wait &w
   # Check every 0.5 seconds to see if w.call is true
   # Timeout::Error: execution expired
   r = nil
-  timeout(30) { while(!(r=w.call)) do; sleep(0.5) end }
+  timeout(30) { while(!(r=begin;w.call;rescue;end)) do; sleep(0.5) end }
   r#esult
 end
 
