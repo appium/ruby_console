@@ -25,7 +25,8 @@ require 'patch'
 require 'alert'
 
 APP_PATH = ENV['APP_PATH'] unless defined?(APP_PATH)
-
+SAUCE_USERNAME = ENV['SAUCE_USERNAME']
+SAUCE_ACCESS_KEY = ENV['SAUCE_ACCESS_KEY']
 def capabilities
   {
     browserName: 'iOS 6.0',
@@ -48,7 +49,7 @@ def absolute_app_path
 end
 
 def server_url
-  if !ENV['SAUCE_USERNAME'].nil? && !ENV['SAUCE_ACCESS_KEY'].nil?
+  if !SAUCE_USERNAME.nil? && !SAUCE_ACCESS_KEY.nil?
     "http://#{SAUCE_USERNAME}:#{SAUCE_ACCESS_KEY}@ondemand.saucelabs.com:80/wd/hub"
   else
     'http://127.0.0.1:4723/wd/hub'
