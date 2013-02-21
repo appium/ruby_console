@@ -28,9 +28,11 @@ APP_PATH = ENV['APP_PATH'] unless defined?(APP_PATH)
 
 def capabilities
   {
-    browserName: 'iOS',
-    platform: 'Mac',
+    browserName: 'iOS 6.0',
+    platform: 'Mac 10.8',
     version: '6.0',
+    device: 'iPhone Simulator',
+    name: 'Ruby Console iOS Appium',
     app: absolute_app_path
   }
 end
