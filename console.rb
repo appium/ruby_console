@@ -32,7 +32,7 @@ def capabilities
     platform: 'Mac 10.8',
     version: '6.0',
     device: 'iPhone Simulator',
-    name: 'Ruby Console iOS Appium',
+    name: ENV['APP_NAME'] || 'Ruby Console iOS Appium',
     app: absolute_app_path
   }
 end
@@ -40,13 +40,19 @@ end
 def absolute_app_path
     # TODO: Support absolute APP_PATH
     raise 'APP_PATH environment variable not set!' if APP_PATH.nil?
+    return APP_PATH if APP_PATH.match(/^http/) # public URL for Sauce
+    return APP_PATH if APP_PATH.match(/^\//) # absolute file path
     file = File.join(File.dirname(__FILE__), APP_PATH)
     raise "App doesn't exist #{file}" unless File.exist? file
     file
 end
 
 def server_url
-  'http://127.0.0.1:4723/wd/hub'
+  if !ENV['SAUCE_USERNAME'].nil? && !ENV['SAUCE_ACCESS_KEY'].nil?
+    "http://#{SAUCE_USERNAME}:#{SAUCE_ACCESS_KEY}@ondemand.saucelabs.com:80/wd/hub"
+  else
+    'http://127.0.0.1:4723/wd/hub'
+  end
 end
 
 def driver_quit
