@@ -27,6 +27,10 @@ Run with
 
 #### Documentation
 
+# yard
+
+[Documentation for ruby_console on rubydoc.](http://rubydoc.info/github/appium/ruby_console/master/toplevel)
+
 - [iOS UI Automation](http://developer.apple.com/library/ios/#documentation/DeveloperTools/Reference/UIAutomationRef/_index.html) Example use `@driver.execute_script "UIATarget.localTarget().frontMostApp().mainWindow().rect()"
 `
 - [Ruby selenium-webdriver](http://selenium.googlecode.com/svn/trunk/docs/api/rb/index.html)
