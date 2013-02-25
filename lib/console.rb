@@ -99,7 +99,7 @@ def execute_script script, *args
   $driver.execute_script script, *args
 end
 
-# Define x to close driver and Pry.
+# Quit the driver and Pry.
 # quit and exit are reserved by Pry.
 def x
   driver_quit
