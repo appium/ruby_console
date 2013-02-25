@@ -1,5 +1,10 @@
 # Implement useful features for element.
 class Selenium::WebDriver::Element
+
+  # Fixes NoMethodError: undefined method `value' for #<Selenium::WebDriver::Element:0x..fa4a9148235390a44 id="1">
+  def value
+    self.attribute :value
+  end
   
   # Fixes NoMethodError: undefined method `name' for #<Selenium::WebDriver::Element
   def name
