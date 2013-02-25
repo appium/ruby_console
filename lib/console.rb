@@ -51,7 +51,7 @@ def absolute_app_path
     file
 end
 
-# Gets the server url for sauce or local based on env vars.
+# Get the server url for sauce or local based on env vars.
 # @return [String] the server url
 def server_url
   if !SAUCE_USERNAME.nil? && !SAUCE_ACCESS_KEY.nil?

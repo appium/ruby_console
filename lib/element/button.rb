@@ -78,7 +78,7 @@ def button_name name
   find_ele_by_name :button, name
 end
 
-# Returns the button element exactly matching name and
+# Get the button element exactly matching name and
 # occurrence. number=2 means the 2nd occurrence.
 #
 # find the second Sign In button
@@ -100,7 +100,7 @@ def button_name_num name, number=1
   result
 end
 
-# Returns an array of button elements.
+# Get an array of button elements.
 # @return [Array<Button>]
 def e_buttons
   find_eles :button

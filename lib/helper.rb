@@ -66,7 +66,7 @@ def find_names name
     rescue; end
 end
 
-# Returns the first tag that exactly matches value.
+# Get the first tag that exactly matches value.
 # tag name mapping:
 # text field  = 'textfield'
 # secure text field = 'secure'

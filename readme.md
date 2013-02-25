@@ -66,10 +66,10 @@ https://github.com/appium/appium/blob/82995f47408530c80c3376f4e07a1f649d96ba22/s
 0. `(Button) button(name, number = 0)` Find a button by name and optionally number.
 0. `(Button) button_include(name)` Get the first button that includes name.
 0. `(Button) button_name(name)` Get the first button element that exactly matches name.
-0. `(Button) button_name_num(name, number = 1)` Returns the button element exactly matching name and occurrence.
+0. `(Button) button_name_num(name, number = 1)` Get the button element exactly matching name and occurrence.
 0. `(Array<String>, Array<Buttons>) buttons(name = nil)` Get an array of button names or button elements if name is provided.
 0. `(Array<Button>) buttons_include(name)` Get all buttons that include name.
-0. `(Array<Button>) e_buttons` Returns an array of button elements.
+0. `(Array<Button>) e_buttons` Get an array of button elements.
 0. `(Button) first_button` Get the first button element.
 0. `(Button) last_button` Get the last button element.
 
