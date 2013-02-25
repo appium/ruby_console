@@ -1,6 +1,6 @@
 # Ruby Console for Appium
 
-Install the following gems.
+Install the following gems:
 
 `gem install bundler pry selenium-webdriver ap crack`
 
