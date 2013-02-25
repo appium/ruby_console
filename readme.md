@@ -113,6 +113,36 @@ text      | UIAStaticText
 
 --
 
+```ruby
+e.name # button, text
+e.value # secure, textfield
+e.type
+e.tag_name # calls .type (patch.rb)
+e.text
+e.size
+e.location
+e.rel_location
+
+# alert example without helper methods
+alert = $driver.switch_to.alert
+alert.text
+alert.accept
+alert.dismiss
+
+# Secure textfield example.
+#
+# Find using default value
+s = secure 'Password'
+# Enter password
+s.send_keys 'hello'
+# Check value
+s.value == password('hello'.length)
+```
+
+[routing.js](https://github.com/appium/appium/blob/master/app/routing.js#L69) lists not yet implemented end points.
+
+--
+
 #### Driver
 
 `driver` will restart the driver.
