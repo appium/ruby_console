@@ -1,24 +1,29 @@
+# Implement useful features for element.
 class Selenium::WebDriver::Element
   
-  # NoMethodError: undefined method `name' for #<Selenium::WebDriver::Element
+  # Fixes NoMethodError: undefined method `name' for #<Selenium::WebDriver::Element
   def name
     self.attribute :name
   end
   
-  # NoMethodError: undefined method `type' for #<Selenium::WebDriver::Element
+  # Fixes NoMethodError: undefined method `type' for #<Selenium::WebDriver::Element
   def type
     self.attribute :type
   end
   
   # Tag name appears to be the same as type.
-  # Selenium::WebDriver::Error::UnknownError: Not yet implemented
+  #
+  # Fixes Selenium::WebDriver::Error::UnknownError: Not yet implemented
   def tag_name
     type
   end
 
   # For use with mobile tap.
+  #
   # $driver.execute_script 'mobile: tap', :x => 0.0, :y => 0.98
+  #
   # https://github.com/appium/appium/wiki/Automating-mobile-gestures
+  # @return [OpenStruct] the relative x, y in a struct. ex: { x: 0.50, y: 0.20 }
   def location_rel
     xy = self.location
     w = window_size
@@ -28,6 +33,7 @@ class Selenium::WebDriver::Element
 end
 
 # Print JSON posted to Appium
+#
 # Requires from lib/selenium/webdriver/remote.rb
 require 'selenium/webdriver/remote/capabilities'
 require 'selenium/webdriver/remote/bridge'
@@ -37,6 +43,9 @@ require 'selenium/webdriver/remote/commands'
 require 'selenium/webdriver/remote/http/common'
 require 'selenium/webdriver/remote/http/default'
 
+# Show http calls to the Selenium server.
+#
+# Invaluable for debugging.
 module Selenium::WebDriver::Remote
   class Bridge
     # Code from lib/selenium/webdriver/remote/bridge.rb

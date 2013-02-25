@@ -1,39 +1,46 @@
 # encoding: utf-8
 
-# value is either an integer index of the button or the button name.
+# Tap the alert button identified by value.
+# @param value [Integer, String] either an integer index of the button or the button's name
+# @return [void]
 def alert_click value
   $driver.execute_script "UIATarget.localTarget().frontMostApp().alert().buttons()[#{value}].tap();"
 end
 
-# Returns the alert message text.
+# Get the alert message text.
+# @return [String]
 def alert_text
   $driver.switch_to.alert.text
 end
 
-# Accepts the alert.
+# Accept the alert.
+# @return [void]
 def alert_accept
   $driver.switch_to.alert.accept
 end
 
-# Returns the text of the alert accept button.
-# last button = accept
+# Get the text of the alert's accept button.
+# The last button is considered "accept."
+# @return [String]
 def alert_accept_text
   a = $driver.find_element(:tag_name, :alert)
   return if a.nil?
   b = a.find_elements(:tag_name, :button)
-  b.last.text if b.size >= 1
+  b.last.text if b && b.size >= 1
 end
 
-# Dismisses the alert.
+# Dismiss the alert.
+# @return [void]
 def alert_dismiss
   $driver.switch_to.alert.dismiss
 end
 
-# Returns the text of the alert dismiss button.
-# first button = dismiss
+# Get the text of the alert's dismiss button.
+# The first button is considered "dismiss."
+# @return [String]
 def alert_dismiss_text
   a = $driver.find_element(:tag_name, :alert)
   return if a.nil?
   b = a.find_elements(:tag_name, :button)
-  b.first.text if b.size >= 1
+  b.first.text if b && b.size >= 1
 end
