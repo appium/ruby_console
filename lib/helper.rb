@@ -9,7 +9,7 @@ require 'timeout' # for wait
 
 # Check every 0.5 seconds to see if block.call is true.
 # Give up after 30 seconds.
-# @param [Block] the block to call
+# @param block [Block] the block to call
 # @return [Object] the result of block.call
 def wait &block
   # Rescue Timeout::Error: execution expired
