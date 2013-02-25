@@ -5,3 +5,4 @@ features/
 tmp.rb
 *.zip
 doc/
+*.autosave
