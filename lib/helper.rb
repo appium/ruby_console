@@ -91,7 +91,7 @@ end
 # Get all tags that exactly match tag and name.
 # @param tag [String] the tag name to match
 # @param name [String] the name to exactly match
-# @return [Array<Element>] the element of type tag exactly matching name
+# @return [Array<Element>] the elements of type tag exactly matching name
 def find_eles_by_name tag, name
   $driver.find_elements :xpath, %Q(#{tag}[@name='#{name}'])
 end
