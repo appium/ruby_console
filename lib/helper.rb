@@ -80,12 +80,20 @@ def find_ele_by_value tag, value
   $driver.find_element :xpath, %Q(#{tag}[@value='#{value}'])
 end
 
-# Get the first tag that exactly matches name.
+# Get the first tag that exactly matches tag and name.
 # @param tag [String] the tag name to match
 # @param name [String] the name to exactly match
 # @return [Element] the element of type tag exactly matching name
 def find_ele_by_name tag, name
   $driver.find_element :xpath, %Q(#{tag}[@name='#{name}'])
+end
+
+# Get all tags that exactly match tag and name.
+# @param tag [String] the tag name to match
+# @param name [String] the name to exactly match
+# @return [Array<Element>] the element of type tag exactly matching name
+def find_eles_by_name tag, name
+  $driver.find_elements :xpath, %Q(#{tag}[@name='#{name}'])
 end
 
 # Get the first tag by attribute that exactly matches value.
