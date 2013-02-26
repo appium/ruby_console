@@ -189,4 +189,40 @@ $driver.find_element  :xpath, 'text[contains(@name, "Reset")]'
 $driver.find_elements :xpath, 'text[contains(@name, "agree")]'
 ```
 
+#### Cucumber Sauce Integration
+
+Reset after each test and when done report the result to Sauce after quiting the driver.
+
+```ruby
+require 'rest_client' # https://github.com/archiloque/rest-client
+require 'json' # for .to_json
+
+$passed = true
+
+After do |scenario|
+  $driver.execute_script 'mobile: reset'
+
+  if $passed
+    $passed = false if scenario.failed?
+  end
+end
+
+at_exit do
+  ID = $driver.send(:bridge).session_id
+  $driver.quit
+  
+  if !SAUCE_USERNAME.nil? && !SAUCE_ACCESS_KEY.nil?
+    URL = "https://#{SAUCE_USERNAME}:#{SAUCE_ACCESS_KEY}@saucelabs.com/rest/v1/#{SAUCE_USERNAME}/jobs/#{ID}"
+
+    # Keep trying until passed is set correctly. Give up after 30 seconds.
+    wait do
+      response = RestClient.put URL, { 'passed' => $passed }.to_json, :content_type => :json, :accept => :json
+      response = JSON.parse(response)
+
+      # Check that the server responded with the right value.
+      response['passed'] == $passed
+    end
+  end
+end
+```
 
