@@ -70,7 +70,7 @@ end
 
 # Creates a new global driver and quits the old one if it exists.
 # @return [Selenium::WebDriver] the new global driver
-def driver
+def start_driver
   @client = @client || Selenium::WebDriver::Remote::Http::Default.new
   @client.timeout = 999999
 
@@ -91,7 +91,7 @@ def driver
 end
 
 # Setup driver
-driver if $driver.nil?
+start_driver if $driver.nil?
 
 # The same as $driver.execute_script
 # @return the object returned by execute_script
