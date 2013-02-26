@@ -9,7 +9,7 @@ end
 
 # Get an array of secure textfield elements.
 # @return [Array<Secure>]
-def e_secure
+def e_secures
   find_eles :secure
 end
 
