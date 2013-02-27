@@ -30,13 +30,15 @@ end
 # @param attribute [String] the attribute to collect
 # @result [Array<String>] an array of strings containing the attribute from found elements of type tag_name.
 def find_eles_attr tag_name, attribute
+  # Use au.lookup(tag_name) instead of $(tag_name)
+  # See https://github.com/appium/appium/issues/214
   js = %Q(
-    var b = $('#{tag_name}');
-    var r = [];
-    for (var a = 0; a < b.length; a++) {
-      r.push(b[a].#{attribute}());
+    var eles = au.lookup('#{tag_name}');
+    var result = [];
+    for (var a = 0, length = eles.length; a < length; a++) {
+      result.push(eles[a].#{attribute}());
     }
-    r
+    result
   )
 
   $driver.execute_script js
