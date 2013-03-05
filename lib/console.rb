@@ -23,21 +23,57 @@ require 'alert'
 # Path to the .app or .app.zip.
 # The path can be local or remote for Sauce.
 APP_PATH = ENV['APP_PATH'] unless defined?(APP_PATH)
+
+# The name to use for the test run on Sauce.
+APP_NAME = ENV['APP_NAME'] unless defined?(APP_NAME)
+
+# Android app package
+APP_PACKAGE = ENV['APP_PACKAGE'] unless defined?(APP_PACKAGE)
+
+# Android app starting activity.
+APP_ACTIVITY = ENV['APP_ACTIVITY'] unless defined?(APP_ACTIVITY)
+
 # Sauce Username
 SAUCE_USERNAME = ENV['SAUCE_USERNAME']
 # Sauce Key
 SAUCE_ACCESS_KEY = ENV['SAUCE_ACCESS_KEY']
 
+$os = nil
+
+if $os.nil?
+  $os = :ios
+  $os = :android if APP_PATH.end_with?('.apk') || APP_PATH.end_with?('.apk.zip')
+end
+
 # WebDriver capabilities. Must be valid for Sauce to work.
-def capabilities
+# https://github.com/jlipps/appium/blob/master/app/android.js
+def android_capabilities
+  {
+    browserName: 'Android',
+    platform: 'LINUX',
+    version: '4.1',
+    device: 'Android',
+    name: APP_NAME || 'Ruby Console Android Appium',
+    app: absolute_app_path,
+    :'app-package' => APP_PACKAGE,
+    :'app-activity' => APP_ACTIVITY
+  }
+end
+
+# WebDriver capabilities. Must be valid for Sauce to work.
+def ios_capabilities
   {
     browserName: 'iOS 6.0',
     platform: 'Mac 10.8',
     version: '6.0',
     device: 'iPhone Simulator',
-    name: ENV['APP_NAME'] || 'Ruby Console iOS Appium',
+    name: APP_NAME || 'Ruby Console iOS Appium',
     app: absolute_app_path
   }
+end
+
+def capabilities
+  $os == :ios ? ios_capabilities : android_capabilities
 end
 
 # Converts environment variable APP_PATH to an absolute path.
@@ -77,7 +113,12 @@ def start_driver
   # If the driver already exists, quit before creating a new driver.
   driver_quit
 
-  $driver = Selenium::WebDriver.for(:remote, http_client: @client, desired_capabilities: capabilities, url: server_url)
+  begin
+    $driver = Selenium::WebDriver.for(:remote, http_client: @client, desired_capabilities: capabilities, url: server_url)
+  rescue Errno::ECONNREFUSED
+    puts 'ERROR: Unable to connect to Appium. Is the server running?'
+    exit
+  end
 
   # Set timeout to a large number so that Appium doesn't quit
   # when no commands are entered after 60 seconds.
@@ -85,7 +126,9 @@ def start_driver
 
   # Must set implicit_wait to zero or $ commands will fail.
   # execute_script "$('button')"
-  $driver.manage.timeouts.implicit_wait = 0
+  # $ commands fail anyway now so set implicit wait.
+  # https://github.com/appium/appium/issues/214
+  $driver.manage.timeouts.implicit_wait = 30
 
   $driver
 end

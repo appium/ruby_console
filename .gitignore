@@ -6,3 +6,4 @@ tmp.rb
 *.zip
 doc/
 *.autosave
+*.apk
