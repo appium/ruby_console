@@ -1,4 +1,4 @@
-# Ruby Console for Appium
+#### Ruby Console for Appium
 
 Install the following gems:
 
@@ -16,7 +16,7 @@ Run with
 
 `pry -r ./console.rb`
 
-# Reset Appium
+#### Reset Appium
 
 Reset Appium after pulling the latest changes.
 
