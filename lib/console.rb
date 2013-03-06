@@ -136,6 +136,11 @@ end
 # Setup driver
 start_driver if $driver.nil?
 
+# Set implicit wait to zero.
+def no_wait
+  $driver.manage.timeouts.implicit_wait = 0
+end
+
 # The same as $driver.execute_script
 # @return the object returned by execute_script
 def execute_script script, *args
