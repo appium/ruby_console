@@ -86,6 +86,10 @@ end
 #
 # b = e_button 'Sign In', 2
 #
+# Button order will change in iOS vs Android
+# so if there's no button found at number then
+# return the first button.
+#
 # @param text [String] the text to match exactly
 # @param number [Integer] the button occurance to return. 1 = first button
 # @return [Button] the button that exactly matches text and number
@@ -96,7 +100,8 @@ def button_text_num text, number=1
   result = nil
 
   elements = find_eles_by_text :button, text
-  result = elements[number] if elements.size > number
+  elements.size > number ? result = elements[number]
+                         : result = elements.first
 
   result
 end

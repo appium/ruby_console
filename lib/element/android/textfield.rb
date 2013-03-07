@@ -1,6 +1,8 @@
 # encoding: utf-8
 # UIATextField methods
 
+if $os == :android
+
 # Get an array of textfield texts.
 # @return [Array<String>]
 def textfields
@@ -38,3 +40,5 @@ end
 def textfield_include text
   find_ele_by_text_include :textfield, text
 end
+
+end # if $os

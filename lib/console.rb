@@ -43,14 +43,13 @@ if $os.nil?
   $os = :android if APP_PATH.end_with?('.apk') || APP_PATH.end_with?('.apk.zip')
 end
 
+puts "OS is: #{$os}" if defined?(Pry)
+
 # Android combines secure and textfield.
 # iOS differentiates between secure and textfield.
 # combine secure & textfield on iOS to match Android behavior.
-if $os == :ios
-  require 'ios/textfield'
-else
-  require 'android/textfield'
-end
+$os == :ios ? require('ios/textfield') :
+              require('android/textfield')
 
 # WebDriver capabilities. Must be valid for Sauce to work.
 # https://github.com/jlipps/appium/blob/master/app/android.js

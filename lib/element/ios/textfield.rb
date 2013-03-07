@@ -4,6 +4,8 @@
 # Find textfield and then secure elements in one server call
 # to match Android.
 
+if $os == :ios
+
 # Get an array of textfield texts.
 # @return [Array<String>]
 def textfields
@@ -74,3 +76,5 @@ def textfield_js filter=''
   au._returnElems(r);
 )
 end
+
+end # if $os
