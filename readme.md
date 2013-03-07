@@ -156,6 +156,21 @@ s.value == password('hello'.length)
 See [app.js](https://github.com/appium/appium/blob/master/app/uiauto/appium/app.js#L3) for more au methods.
 Note that raw UIAutomation commands are not offically supported.
 
+Advanced au.
+
+In this example we lookup two tags, combine the results, wrap with $, and then return the elements.
+
+```ruby
+s = %(
+var t = au.lookup('textfield');
+var s = au.lookup('secure');
+var r = $(t.concat(s));
+au._returnElems(r);
+)
+
+execute_script s
+```
+
 #### XPath
 
 See [#194](https://github.com/appium/appium/pull/194/files) for details.
