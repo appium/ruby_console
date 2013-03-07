@@ -23,7 +23,7 @@ for (var a = 0; a < methods.length; a++) {
   var index = '';
 
   for (var b = 0; b < elements.length; b++) {
-    if (name.indexOf(elements[b]) !== -1) {
+    if (name.indexOf(elements[b]) !== -1 && name.indexOf('find_ele') === -1) {
       index = elements[b];
       break;
     }
