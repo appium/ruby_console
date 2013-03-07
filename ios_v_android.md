@@ -18,6 +18,10 @@ Android
 
 `text` is [not a selenium search strategy](https://github.com/appium/appium/issues/241#issuecomment-14582659) so use XPath.
 
+`secure` on iOS will return value.
+
+`EditText` used as password field on Andorid will always return an empty string.
+
 --
 
 iOS .name returns the [accessibility attribute](http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Reference/UIAElementClassReference/UIAElement/UIAElement.html#//apple_ref/javascript/instm/UIAElement/name) if it's set. if not set, the string value is used.
