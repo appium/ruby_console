@@ -80,10 +80,6 @@ text      | UIAStaticText
 
 #### text
 0. `(Array<Text>) e_texts` Get an array of text elements.
-0. `(Element) find_ele_by_text(tag, text)` Get the first tag that exactly matches tag and text.
-0. `(Element) find_ele_by_text_include(tag, text)` Get the first tag that includes text.
-0. `(Array<Element>) find_eles_by_text(tag, text)` Get all tags that exactly match tag and text.
-0. `(Array<Element>) find_eles_by_text_include(tag, text)` Get the tags that include text.
 0. `(Text) first_text` Get the first text element.
 0. `(Text) last_text` Get the last text element.
 0. `(Text) text(text)` Get the first element that matches text.
