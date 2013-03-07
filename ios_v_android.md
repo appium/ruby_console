@@ -16,5 +16,5 @@ Android
 - `text` text content of the UI widget
 - `tag_name` the android class
 
-`.name` will fallback to `.text` except if used in Xpath.
-name should be converted to text for consistent behavior with iOS.
+iOS .name returns the [accessibility attribute](http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Reference/UIAElementClassReference/UIAElement/UIAElement.html#//apple_ref/javascript/instm/UIAElement/name) if it's set. if not set, the string value is used.
+Android .name returns the accessibility attribute and nothing if it's not set.
