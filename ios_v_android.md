@@ -15,7 +15,9 @@ Android
 - `name` content description (defined in activity XML or dynamically)
 - `text` text content of the UI widget
 - `tag_name` the android class
- 
+
+`text` is [not a selenium search strategy](https://github.com/appium/appium/issues/241#issuecomment-14582659) so use XPath.
+
 --
 
 iOS .name returns the [accessibility attribute](http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Reference/UIAElementClassReference/UIAElement/UIAElement.html#//apple_ref/javascript/instm/UIAElement/name) if it's set. if not set, the string value is used.
