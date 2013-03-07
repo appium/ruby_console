@@ -56,6 +56,28 @@ def find_eles_attr tag_name, attribute
   $driver.execute_script js
 end
 
+# iOS only. Android uses uiautomator instead of uiautomation.
+# Get an array of attribute values from elements exactly matching tag name.
+# @param tag_name_1 [String] the 1st tag name to find
+# @param tag_name_2 [String] the 2nd tag name to find
+# @param attribute [String] the attribute to collect
+# @result [Array<String>] an array of strings containing the attribute from found elements of type tag_name.
+def find_2_eles_attr tag_name_1, tag_name_2, attribute
+  # Use au.lookup(tag_name) instead of $(tag_name)
+  # See https://github.com/appium/appium/issues/214
+  js = %Q(
+    var eles = au.lookup('#{tag_name_1}');
+    eles = $(eles.concat(au.lookup('#{tag_name_2}')));
+    var result = [];
+    for (var a = 0, length = eles.length; a < length; a++) {
+      result.push(eles[a].#{attribute}());
+    }
+    result
+  )
+
+  $driver.execute_script js
+end
+
 # Get the first tag that exactly matches tag and text.
 # @param tag [String] the tag name to match
 # @param text [String] the text to exactly match

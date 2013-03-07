@@ -13,8 +13,6 @@ require 'selenium-webdriver'
 # ruby_console files
 require 'helper'
 require 'button'
-require 'textfield'
-require 'secure' # secure textfield, iOS only.
 require 'text'
 require 'window'
 require 'patch'
@@ -43,6 +41,15 @@ $os = nil
 if $os.nil?
   $os = :ios
   $os = :android if APP_PATH.end_with?('.apk') || APP_PATH.end_with?('.apk.zip')
+end
+
+# Android combines secure and textfield.
+# iOS differentiates between secure and textfield.
+# combine secure & textfield on iOS to match Android behavior.
+if $os == :ios
+  require 'ios/textfield'
+else
+  require 'android/textfield'
 end
 
 # WebDriver capabilities. Must be valid for Sauce to work.
