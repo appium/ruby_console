@@ -15,3 +15,6 @@ Android
 - `name` content description (defined in activity XML or dynamically)
 - `text` text content of the UI widget
 - `tag_name` the android class
+
+`.name` will fallback to `.text` except if used in Xpath.
+name should be converted to text for consistent behavior with iOS.
