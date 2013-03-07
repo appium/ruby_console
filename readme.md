@@ -53,7 +53,45 @@ text      | UIAStaticText
 
 --
 
-<docs/>
+
+#### alert
+0. `(void) alert_accept` Accept the alert.
+0. `(String) alert_accept_text` Get the text of the alert's accept button.
+0. `(void) alert_click(value)` iOS only Tap the alert button identified by value.
+0. `(void) alert_dismiss` Dismiss the alert.
+0. `(String) alert_dismiss_text` Get the text of the alert's dismiss button.
+0. `(String) alert_text` Get the alert message text.
+
+#### button
+0. `(Button) button(text, number = 0)` Find a button by text and optionally number.
+0. `(Button) button_include(text)` Get the first button that includes text.
+0. `(Array<String>, Array<Buttons>) buttons(text = nil)` Get an array of button texts or button elements if text is provided.
+0. `(Array<Button>) buttons_include(text)` Get all buttons that include text.
+0. `(Button) first_button` Get the first button element.
+0. `(Button) last_button` Get the last button element.
+
+#### textfield
+0. `(Array<Textfield>) e_textfields` Get an array of textfield elements.
+0. `(Textfield) first_textfield` Get the first textfield element.
+0. `(Textfield) last_textfield` Get the last textfield element.
+0. `(Textfield) textfield(text)` Get the first textfield that matches text.
+0. `(Textfield) textfield_include(text)` Get the first textfield that includes text.
+0. `(Array<String>) textfields` Get an array of textfield texts.
+
+#### text
+0. `(Array<Text>) e_texts` Get an array of text elements.
+0. `(Element) find_ele_by_text(tag, text)` Get the first tag that exactly matches tag and text.
+0. `(Element) find_ele_by_text_include(tag, text)` Get the first tag that includes text.
+0. `(Array<Element>) find_eles_by_text(tag, text)` Get all tags that exactly match tag and text.
+0. `(Array<Element>) find_eles_by_text_include(tag, text)` Get the tags that include text.
+0. `(Text) first_text` Get the first text element.
+0. `(Text) last_text` Get the last text element.
+0. `(Text) text(text)` Get the first element that matches text.
+0. `(Text) text_include(text)` Get the first textfield that includes text.
+0. `(Array<String>) texts` Get an array of text texts.
+
+#### window
+0. `(Object) window_size` Get the window's size.
 
 --
 
