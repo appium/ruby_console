@@ -10,7 +10,7 @@ var desc = function(method) { return method.children[1].children[0].textContent.
 
 // All element methods must include the element name.
 // Check textfield before text because text is included in textfield.
-var elements = [ 'alert', 'button', 'secure', 'textfield', 'text', 'window' ];
+var elements = [ 'alert', 'button', 'textfield', 'text', 'window' ];
 var output = {};
 
 for (var b = 0; b < elements.length; b++) {
