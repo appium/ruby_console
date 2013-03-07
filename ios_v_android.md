@@ -9,4 +9,9 @@ on iOS `textfield` will not match secure text fields.
 
 ##### Search strategy
 
-`android:id` is not accessible via uiautomator.
+Android
+
+- `android:id` is not accessible via uiautomator
+- `name` content description (defined in activity XML or dynamically)
+- `text` text content of the UI widget
+- `tag_name` the android class
