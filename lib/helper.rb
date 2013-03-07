@@ -7,6 +7,17 @@ require 'json'
 require 'ap' # awesome print
 require 'timeout' # for wait
 
+# iOS .name returns the accessibility attribute if it's set. if not set, the string value is used.
+# Android .name returns the accessibility attribute and nothing if it's not set.
+#
+# .text should be cross platform so prefer that over name, unless both
+# Android and iOS have proper accessibility attributes.
+# .text and .value should be the same so use .text over .value.
+#
+# secure tag_name is iOS only because it can't be implemented using uiautomator for Android.
+#
+# find_element :text doesn't work so use XPath to find by text.
+
 # Check every 0.5 seconds to see if block.call is true.
 # Give up after 30 seconds.
 # @param block [Block] the block to call
@@ -25,6 +36,7 @@ def find_eles tag_name
   $driver.find_elements :tag_name, tag_name
 end
 
+# iOS only. Android uses uiautomator instead of uiautomation.
 # Get an array of attribute values from elements exactly matching tag name.
 # @param tag_name [String] the tag name to find
 # @param attribute [String] the attribute to collect
@@ -44,58 +56,20 @@ def find_eles_attr tag_name, attribute
   $driver.execute_script js
 end
 
-# Find first element by name. Works with button and text.
-# nil is returned if the element is not found.
-# nil is also returned when $driver times out.
-# Result can be ANY tag.
-# @param name [String] the name to exactly match
-# @return [Element] the first element exactly matching name
-def find_name name
-  begin
-    result = $driver.find_element :name, name
-  # rescue Selenium::WebDriver::Error::NoSuchElementError
-  rescue; end
-end
-
-# Find all elements by name.
-# Results can include ANY tag.
-# @param name [String] the name to exactly match
-# @return [Array<Element>] the elements exactly matching name
-def find_names name
-  begin
-    result = $driver.find_elements :name, name
-    # rescue Selenium::WebDriver::Error::NoSuchElementError
-    rescue; end
-end
-
-# Get the first tag that exactly matches value.
-# tag name mapping:
-# text field  = 'textfield'
-# secure text field = 'secure'
+# Get the first tag that exactly matches tag and text.
 # @param tag [String] the tag name to match
-# @param value [String] the value to exactly match
-# @return [Element] the element of type tag exactly matching value
-def find_ele_by_value tag, value
-  raise "Invalid tag #{tag}. Must be textfield or secure." \
-  unless ['textfield', 'secure'].include? tag.to_s
-  
-  $driver.find_element :xpath, %Q(#{tag}[@value='#{value}'])
+# @param text [String] the text to exactly match
+# @return [Element] the element of type tag exactly matching text
+def find_ele_by_text tag, text
+  $driver.find_element :xpath, %Q(#{tag}[@text='#{text}'])
 end
 
-# Get the first tag that exactly matches tag and name.
+# Get all tags that exactly match tag and text.
 # @param tag [String] the tag name to match
-# @param name [String] the name to exactly match
-# @return [Element] the element of type tag exactly matching name
-def find_ele_by_name tag, name
-  $driver.find_element :xpath, %Q(#{tag}[@name='#{name}'])
-end
-
-# Get all tags that exactly match tag and name.
-# @param tag [String] the tag name to match
-# @param name [String] the name to exactly match
-# @return [Array<Element>] the elements of type tag exactly matching name
-def find_eles_by_name tag, name
-  $driver.find_elements :xpath, %Q(#{tag}[@name='#{name}'])
+# @param text [String] the text to exactly match
+# @return [Array<Element>] the elements of type tag exactly matching text
+def find_eles_by_text tag, text
+  $driver.find_elements :xpath, %Q(#{tag}[@text='#{text}'])
 end
 
 # Get the first tag by attribute that exactly matches value.
@@ -116,31 +90,22 @@ def find_eles_by_attr_include tag, attr, value
   $driver.find_elements :xpath, %Q(#{tag}[contains(@#{attr}, '#{value}')])
 end
 
-# Get the first tag that includes value.
+# Get the first tag that includes text.
 # @param tag [String] the tag name to match
-# @param value [String] the value the element must include
-# @return [Element] the element of type tag that includes value
-# element.attribute(:value).include? value
-def find_ele_by_value_include tag, value
-  find_ele_by_attr_include tag, :value, value
+# @param text [String] the text the element must include
+# @return [Element] the element of type tag that includes text
+# element.attribute(:text).include? text
+def find_ele_by_text_include tag, text
+  find_ele_by_attr_include tag, :text, text
 end
 
-# Get the first tag that includes name.
+# Get the tags that include text.
 # @param tag [String] the tag name to match
-# @param name [String] the name the element must include
-# @return [Element] the element of type tag that includes name
-# element.attribute(:name).include? name
-def find_ele_by_name_include tag, name
-  find_ele_by_attr_include tag, :name, name
-end
-
-# Get the tags that include name.
-# @param tag [String] the tag name to match
-# @param name [String] the name the element must include
-# @return [Array<Element>] the elements of type tag that includes name
-# element.attribute(:name).include? name
-def find_eles_by_name_include tag, name
-  find_eles_by_attr_include tag, :name, name
+# @param text [String] the text the element must include
+# @return [Array<Element>] the elements of type tag that includes text
+# element.attribute(:text).include? text
+def find_eles_by_text_include tag, text
+  find_eles_by_attr_include tag, :text, text
 end
 
 # Get the first tag that matches tag_name

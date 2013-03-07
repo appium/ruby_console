@@ -1,5 +1,6 @@
 # Implement useful features for element.
 class Selenium::WebDriver::Element
+  # Note: For testing .text should be used over value, and name.
 
   # Fixes NoMethodError: undefined method `value' for #<Selenium::WebDriver::Element:0x..fa4a9148235390a44 id="1">
   def value

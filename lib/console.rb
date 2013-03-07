@@ -14,7 +14,7 @@ require 'selenium-webdriver'
 require 'helper'
 require 'button'
 require 'textfield'
-require 'secure' # secure textfield
+require 'secure' # secure textfield, iOS only.
 require 'text'
 require 'window'
 require 'patch'

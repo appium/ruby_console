@@ -1,10 +1,10 @@
 # encoding: utf-8
 # UIATextField methods
 
-# Get an array of textfield values.
+# Get an array of textfield texts.
 # @return [Array<String>]
 def textfields
-  find_eles_attr :textfield, :value
+  find_eles_attr :textfield, :text
 end
 
 # Get an array of textfield elements.
@@ -25,16 +25,16 @@ def last_textfield
   last_ele :textfield
 end
 
-# Get the first textfield that matches value.
-# @param value [String] the value to match exactly
+# Get the first textfield that matches text.
+# @param text [String] the text to match exactly
 # @return [Textfield]
-def textfield value
-  find_ele_by_value :textfield, value
+def textfield text
+  find_ele_by_text :textfield, text
 end
 
-# Get the first textfield that includes value.
-# @param value [String] the value the textfield must include
+# Get the first textfield that includes text.
+# @param text [String] the text the textfield must include
 # @return [Textfield]
-def textfield_include value
-  find_ele_by_value_include :textfield, value
+def textfield_include text
+  find_ele_by_text_include :textfield, text
 end

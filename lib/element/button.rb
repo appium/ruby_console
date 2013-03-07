@@ -4,57 +4,57 @@
 =begin
  Method Signatures:
 
-   button( name, number = -1 )
-   buttons( name = nil )
-   button_include( name )
-   buttons_include( name )
+   button( text, number = -1 )
+   buttons( text = nil )
+   button_include( text )
+   buttons_include( text )
    first_button
    last_button
 
  Examples:
 
-   button 'name'    # 1st button exactly matching name
-   button 'name', 2 # 2nd button exactly matching name
+   button 'text'    # 1st button exactly matching text
+   button 'text', 2 # 2nd button exactly matching text
 
    buttons          # text of all buttons.
-   buttons 'name'   # all buttons exactly matching name
+   buttons 'text'   # all buttons exactly matching text
 
-   button_include  'name' # the first button that includes name
-   buttons_include 'name' # all buttons that include name
+   button_include  'text' # the first button that includes text
+   buttons_include 'text' # all buttons that include text
 
    first_button     # the first button
    last_button      # the last button
 =end
 
-# Find a button by name and optionally number.
-# @param name [String] the name to exactly match
-# @param number [Integer] the occurance of the button matching name. Defaults to the first button.
-# @return [Button] the button found with name and matching number
-def button name, number=0
-  number >= 1 ? button_name_num( name, number ) :
-  button_name( name )
+# Find a button by text and optionally number.
+# @param text [String] the text to exactly match
+# @param number [Integer] the occurance of the button matching text. Defaults to the first button.
+# @return [Button] the button found with text and matching number
+def button text, number=0
+  number >= 1 ? button_text_num( text, number ) :
+  button_text( text )
 end
 
-# Get an array of button names or button elements if name is provided.
-# @param name [String] the name to exactly match
-# @return [Array<String>, Array<Buttons>] either an array of button names or an array of button elements if name is provided.
-def buttons name=nil
-  name == nil ? find_eles_attr(:button, :name) :
-                find_ele_by_name(:button, name)
+# Get an array of button texts or button elements if text is provided.
+# @param text [String] the text to exactly match
+# @return [Array<String>, Array<Buttons>] either an array of button texts or an array of button elements if text is provided.
+def buttons text=nil
+  text == nil ? find_eles_attr(:button, :text) :
+                find_ele_by_text(:button, text)
 end
 
-# Get the first button that includes name.
-# @param name [String] the name that the element must include
+# Get the first button that includes text.
+# @param text [String] the text that the element must include
 # @return [Button]
-def button_include name
-  find_ele_by_name_include :button, name
+def button_include text
+  find_ele_by_text_include :button, text
 end
 
-# Get all buttons that include name.
-# @param name [String] the name that the element must include
+# Get all buttons that include text.
+# @param text [String] the text that the element must include
 # @return [Array<Button>]
-def buttons_include name
-  find_eles_by_name_include :button, name
+def buttons_include text
+  find_eles_by_text_include :button, text
 end
 
 # Get the first button element.
@@ -70,31 +70,32 @@ def last_button
 end
 
 # -- prefer above methods before using these.
+private
 
-# Get the first button element that exactly matches name.
-# @param name [String] the name to match exactly
+# Get the first button element that exactly matches text.
+# @param text [String] the text to match exactly
 # @return [Button]
-def button_name name
-  find_ele_by_name :button, name
+def button_text text
+  find_ele_by_text :button, text
 end
 
-# Get the button element exactly matching name and
+# Get the button element exactly matching text and
 # occurrence. number=2 means the 2nd occurrence.
 #
 # find the second Sign In button
 #
 # b = e_button 'Sign In', 2
 #
-# @param name [String] the name to match exactly
+# @param text [String] the text to match exactly
 # @param number [Integer] the button occurance to return. 1 = first button
-# @return [Button] the button that exactly matches name and number
-def button_name_num name, number=1
+# @return [Button] the button that exactly matches text and number
+def button_text_num text, number=1
   raise "Number must be >= 1" if number <= 0
   number = number - 1 # zero indexed
 
   result = nil
 
-  elements = find_eles_by_name :button, name
+  elements = find_eles_by_text :button, text
   result = elements[number] if elements.size > number
 
   result

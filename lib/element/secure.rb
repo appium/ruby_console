@@ -1,10 +1,10 @@
 # encoding: utf-8
 # UIASecureTextField methods
 
-# Get an array of secure textfield values.
+# Get an array of secure textfield texts.
 # @return [Array<String>]
 def secures
-  find_eles_attr :secure, :value
+  find_eles_attr :secure, :text
 end
 
 # Get an array of secure textfield elements.
@@ -25,16 +25,16 @@ def last_secure
   last_ele :secure
 end
 
-# Get the first secure textfield that matches value.
-# @param value [String] the value to find exactly
+# Get the first secure textfield that matches text.
+# @param text [String] the text to find exactly
 # @return [Secure]
-def secure value
-  find_ele_by_value :secure, value
+def secure text
+  find_ele_by_text :secure, text
 end
 
-# Get the first secure textfield that includes value.
-# @param value [String] the value that the tag must include
+# Get the first secure textfield that includes text.
+# @param text [String] the text that the tag must include
 # @return [Secure]
-def secure_include value
-  find_ele_by_value_include :secure, value
+def secure_include text
+  find_ele_by_text_include :secure, text
 end
