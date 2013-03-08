@@ -152,6 +152,8 @@ def source
   ap JSON.parse($driver.page_source)
 end
 
+# iOS only. On Android uiautomator always returns an empty string for EditText password.
+#
 # Password character returned from value of UIASecureTextField
 # @param length [Integer] the length of the password to generate
 # @return [String] the returned string is of size length
