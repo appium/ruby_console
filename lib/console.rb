@@ -10,14 +10,6 @@ https://github.com/appium/appium/blob/c58eeb66f2d6fa3b9a89d188a2e657cca7cb300f/L
 
 require 'selenium-webdriver'
 
-# ruby_console files
-require 'helper'
-require 'button'
-require 'text'
-require 'window'
-require 'patch'
-require 'alert'
-
 # Path to the .app or .app.zip.
 # The path can be local or remote for Sauce.
 APP_PATH = ENV['APP_PATH'] unless defined?(APP_PATH)
@@ -45,6 +37,14 @@ if $os.nil?
 end
 
 puts "OS is: #{$os}" if defined?(Pry)
+
+# ruby_console files load depending on OS
+require 'helper'
+require 'button'
+require 'text'
+require 'window'
+require 'patch'
+require 'alert'
 
 # Android combines secure and textfield.
 # iOS differentiates between secure and textfield.

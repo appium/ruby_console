@@ -24,6 +24,21 @@ class Selenium::WebDriver::Element
     type
   end
 
+  # Cross platform way of entering text into a textfield
+  def set_value text
+  # enter text then tap window to hide the keyboard.
+  js = %Q(
+    au.getElement('#{self.ref}').setValue('#{text}');
+    au.lookup('window')[0].tap()
+  )
+  $driver.execute_script js
+  end if $os == :ios
+
+  # Cross platform way of entering text into a textfield
+  def set_value text
+    self.send_keys text
+  end if $os == :android
+
   # For use with mobile tap.
   #
   # $driver.execute_script 'mobile: tap', :x => 0.0, :y => 0.98
