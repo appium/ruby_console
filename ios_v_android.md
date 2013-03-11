@@ -1,5 +1,15 @@
 #### Notes on iOS and Android Appium compatibility
 
+
+#### iPhone vs iPad
+
+iPad will contain elements from visible background screens. iPhone will have only one screen, however the keyboard can only be dismissed by clicking somewhere.
+The iPad has a hide keyboard button. The iPhone will use `Next` and `Go` on a typical login screen via the on screen keyboard.
+
+- setValue will immediately set the value
+- hideKeyboard will attempt to hide the iPad keyboard and fail on iPhone
+- find_element(:tag_name, :window).click should work everywhere
+
 ##### Tag Names
 
 `secure` is not possible to implement on Android using uiautomator. `textfield` and `secure` are both considered `edittext`.
