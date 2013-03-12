@@ -29,6 +29,8 @@ SAUCE_USERNAME = ENV['SAUCE_USERNAME'] unless defined?(SAUCE_USERNAME)
 # Sauce Key
 SAUCE_ACCESS_KEY = ENV['SAUCE_ACCESS_KEY'] unless defined?(SAUCE_ACCESS_KEY)
 
+PORT = ENV['PORT'] || 4723 unless defined?(PORT)
+
 $os = nil
 
 if $os.nil?
@@ -100,7 +102,7 @@ def server_url
   if !SAUCE_USERNAME.nil? && !SAUCE_ACCESS_KEY.nil?
     "http://#{SAUCE_USERNAME}:#{SAUCE_ACCESS_KEY}@ondemand.saucelabs.com:80/wd/hub"
   else
-    'http://127.0.0.1:4723/wd/hub'
+    "http://127.0.0.1:#{PORT}/wd/hub"
   end
 end
 
