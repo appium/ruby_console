@@ -65,6 +65,7 @@ grunt v0.4.1
 
 ![](img/packages.png)
 
+- Create a new Android virtual device that uses the Intel image.
 
 `android avd`
 
