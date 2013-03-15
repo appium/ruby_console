@@ -14,9 +14,17 @@ Only OS X is supported.
 
 `gem install rest-client bundler pry selenium-webdriver ap crack`
 
-- Export APP_PATH
+- Export APP_PATH, APP_PACKAGE, APP_ACTIVITY
 
-`export APP_PATH="`pwd`/my.apk"`
+```
+export APP_PATH="`pwd`/my.apk" ;\
+export APP_PACKAGE="com.my.Pkg" ;\
+export APP_ACTIVITY="MyActivity"
+```
+
+- Echo the values to make sure they're set correctly
+
+`$ echo $APP_PATH $APP_PACKAGE $APP_ACTIVITY`
 
 - Install [nodejs](http://nodejs.org/)
 
