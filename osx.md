@@ -10,7 +10,7 @@ Only OS X is supported.
 
 - Install grunt.
 
-` sudo npm install -G grunt grunt-cli`
+` sudo npm install -g grunt grunt-cli`
 
 ```bash
 $ grunt --version
