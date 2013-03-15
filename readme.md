@@ -51,6 +51,11 @@ textfield | UIATextField
 secure    | UIASecureTextField
 text      | UIAStaticText
 
+
+--
+
+- `source` Prints a JSON view of the current page.
+
 --
 
 
