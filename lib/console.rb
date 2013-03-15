@@ -13,6 +13,7 @@ require 'selenium-webdriver'
 # Path to the .app or .app.zip.
 # The path can be local or remote for Sauce.
 APP_PATH = ENV['APP_PATH'] unless defined?(APP_PATH)
+raise "APP_PATH must be set." if APP_PATH.nil?
 
 # The name to use for the test run on Sauce.
 APP_NAME = ENV['APP_NAME'] unless defined?(APP_NAME)
@@ -39,6 +40,11 @@ if $os.nil?
 end
 
 puts "OS is: #{$os}" if defined?(Pry)
+
+if $os == :android
+  raise "APP_PACKAGE must be set." if APP_PACKAGE.nil?
+  raise "APP_ACTIVITY must be set." if APP_ACTIVITY.nil?
+end
 
 # ruby_console files load depending on OS
 require 'helper'
