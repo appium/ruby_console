@@ -2,6 +2,14 @@
 
 Only OS X is supported.
 
+- Clone ruby_console
+
+`$ git clone git://github.com/appium/ruby_console.git`
+
+- Ensure you have Ruby 1.9.3+ (1.8 is not supported). If you don't have 1.9.3+, install it with rvm.
+
+`$ ruby --version`
+
 - Install [nodejs](http://nodejs.org/)
 
 `$ node --version`
