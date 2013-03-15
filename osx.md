@@ -14,6 +14,10 @@ Only OS X is supported.
 
 `gem install rest-client bundler pry selenium-webdriver ap crack`
 
+- Export APP_PATH
+
+`export APP_PATH="`pwd`/my.apk"`
+
 - Install [nodejs](http://nodejs.org/)
 
 `$ node --version`
