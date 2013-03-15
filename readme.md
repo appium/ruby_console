@@ -34,7 +34,9 @@ Reset Appium after pulling the latest changes.
 - [Appium](https://github.com/appium/appium/blob/master/README.md)
 - [Appium extension](https://github.com/appium/appium/wiki/Automating-mobile-gestures)
 - [mechanic names of elements](https://github.com/jaykz52/mechanic/blob/8c490e1d225f384847e47ffdafb47cc2248bb96c/src/mechanic-core.js#L28)
-
+- [All methods supported by Appium](https://github.com/appium/appium/wiki/JSON-Wire-Protocol:-Supported-Methods)
+- [Appium's mobile gesture docs](https://github.com/appium/appium/wiki/Automating-mobile-gestures)
+- 
 Example use of Appium's mobile gesture.
 
 > @driver.execute_script 'mobile: tap', :x => 0, :y => 500
@@ -105,6 +107,9 @@ e.text
 e.size
 e.location
 e.rel_location
+e.click
+e.send_keys 'keys to send'
+e.set_value 'value to set' # ruby_console specific
 
 # alert example without helper methods
 alert = $driver.switch_to.alert
