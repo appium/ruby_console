@@ -59,6 +59,13 @@ grunt v0.4.1
 
 - Use intel [system image](http://software.intel.com/en-us/articles/android-4-2-jelly-bean-x86-emulator-system-image) at least API 17 (Jelly Bean)
 
+- Install using Android package tool. For API 17, install `SDK Platform`, `Intel x86 Atom System Image`, `Google APIs` as in the picture. 
+
+`android`
+
+![](img/packages.png)
+
+
 `android avd`
 
 ![](img/avd_settings.png)
