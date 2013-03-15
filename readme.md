@@ -2,7 +2,7 @@
 
 Install the following gems:
 
-`gem install rest-client bundler pry selenium-webdriver ap crack`
+`gem install rest-client bundler pry selenium-webdriver awesome_print crack`
 
 Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source.
 
