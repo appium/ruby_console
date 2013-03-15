@@ -55,6 +55,8 @@ grunt v0.4.1
 `node server.js -V --fast-reset`
 
 - Install dmg [hax module](http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager). See the [install guide](http://software.intel.com/en-us/articles/installation-instructions-for-intel-hardware-accelerated-execution-manager-macosx).
+  - [Direct link to hax module dmg](http://software.intel.com/sites/default/files/article/184952/intelhaxm-1.0.4-hotfix-androidonmac.zip)
+
 - Use intel [system image](http://software.intel.com/en-us/articles/android-4-2-jelly-bean-x86-emulator-system-image) at least API 17 (Jelly Bean)
 
 `android avd`
