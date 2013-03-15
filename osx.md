@@ -10,6 +10,10 @@ Only OS X is supported.
 
 `$ ruby --version`
 
+- Install ruby_console gems.
+
+`gem install rest-client bundler pry selenium-webdriver ap crack`
+
 - Install [nodejs](http://nodejs.org/)
 
 `$ node --version`
