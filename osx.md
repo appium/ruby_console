@@ -77,5 +77,5 @@ If there are any problems viewing or downloading the packages, go to `Packages -
 ![](img/hax.png)
 
 - After launching the emulator, check that it's listed in adb devices. Run the following commands a few times until it's listed.
-
+If you see `error: protocol fault (no status)` just keep running the command until the emulator is detected.
 `adb kill-server; adb devices`
