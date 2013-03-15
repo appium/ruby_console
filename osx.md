@@ -71,3 +71,7 @@ If there are any problems viewing or downloading the packages, go to `Packages -
 `android avd`
 
 ![](img/avd_settings.png)
+
+- Check that `hax is working`
+
+![](img/hax.png)
