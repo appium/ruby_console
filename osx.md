@@ -6,6 +6,18 @@ Only OS X is supported.
 
 `$ node --version`
 
+`$ npm --version`
+
+- Install grunt.
+
+` sudo npm install -G grunt grunt-cli`
+
+```bash
+$ grunt --version
+grunt-cli v0.1.6
+grunt v0.4.1
+```
+
 - Clone appium
 
 `$ git clone git@github.com:appium/appium.git`
