@@ -162,6 +162,16 @@ def execute_script script, *args
   $driver.execute_script script, *args
 end
 
+# Calls $driver.find_elements
+def find_elements *args
+  $driver.find_elements *args
+end
+
+# Calls $driver.find_elements
+def find_element *args
+  $driver.find_element *args
+end
+
 # Quit the driver and Pry.
 # quit and exit are reserved by Pry.
 def x
