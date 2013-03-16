@@ -1,6 +1,7 @@
 #### Getting Started
 
-Only OS X is supported.
+This document is written for OS X. Appium does not yet work on Windows.
+Appium Android should run on Linux however iOS testing requires OS X.
 
 - Clone ruby_console
 
