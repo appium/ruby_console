@@ -170,20 +170,20 @@ execute_script s
 See [#194](https://github.com/appium/appium/pull/194/files) for details.
 
 ```ruby
-$driver.find_element  :xpath, 'button'
-$driver.find_elements :xpath, 'button'
+find_element  :xpath, 'button'
+find_elements :xpath, 'button'
 
-$driver.find_element  :xpath, 'button[@name="Sign In"]'
-$driver.find_elements :xpath, 'button[@name="Sign In"]'
+find_element  :xpath, 'button[@name="Sign In"]'
+find_elements :xpath, 'button[@name="Sign In"]'
 
-$driver.find_element  :xpath, 'button[contains(@name, "Sign In")]'
-$driver.find_elements :xpath, 'button[contains(@name, "Sign")]'
+find_element  :xpath, 'button[contains(@name, "Sign In")]'
+find_elements :xpath, 'button[contains(@name, "Sign")]'
 
-$driver.find_element :xpath, 'textfield[@value="Email"]'
-$driver.find_element :xpath, 'textfield[contains(@value, "Email")]'
+find_element :xpath, 'textfield[@value="Email"]'
+find_element :xpath, 'textfield[contains(@value, "Email")]'
 
-$driver.find_element  :xpath, 'text[contains(@name, "Reset")]'
-$driver.find_elements :xpath, 'text[contains(@name, "agree")]'
+find_element  :xpath, 'text[contains(@name, "Reset")]'
+find_elements :xpath, 'text[contains(@name, "agree")]'
 ```
 
 #### Cucumber Sauce Integration
