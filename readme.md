@@ -30,6 +30,7 @@ Reset Appium after pulling the latest changes.
 
 - [iOS UI Automation](http://developer.apple.com/library/ios/#documentation/DeveloperTools/Reference/UIAutomationRef/_index.html) Example use `@driver.execute_script "UIATarget.localTarget().frontMostApp().mainWindow().rect()"
 `
+- [Android UIAutomator](http://developer.android.com/tools/help/uiautomator/index.html)
 - [Ruby selenium-webdriver](http://selenium.googlecode.com/svn/trunk/docs/api/rb/index.html)
 - [Appium](https://github.com/appium/appium/blob/master/README.md)
 - [Appium extension](https://github.com/appium/appium/wiki/Automating-mobile-gestures)
