@@ -2,6 +2,8 @@
 #
 # run with
 # ruby my_test.rb
+#
+# Example use of running a test standalone.
 
 $:.unshift File.expand_path('..', __FILE__)
 
@@ -10,3 +12,5 @@ require 'console'
 def sign_in
   button('Sign In').click
 end
+
+sign_in
