@@ -7,3 +7,6 @@ tmp.rb
 doc/
 *.autosave
 *.apk
+*.gemspec
+*.lock
+*.gem
