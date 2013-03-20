@@ -38,7 +38,7 @@ Reset Appium after pulling the latest changes.
 
 - find_elements returns an empty array [] when no elements are found.
 
-##### [ruby_console on rubydoc.info](http://rubydoc.info/github/appium/ruby_console/master/toplevel)
+##### [app_lib on rubydoc.info](http://www.rubydoc.info/github/bootstraponline/app_lib/master/toplevel)
 
 - [iOS UI Automation](http://developer.apple.com/library/ios/#documentation/DeveloperTools/Reference/UIAutomationRef/_index.html) Example use `@driver.execute_script "UIATarget.localTarget().frontMostApp().mainWindow().rect()"
 `
