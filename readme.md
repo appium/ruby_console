@@ -2,13 +2,18 @@
 
 [![Dependency Status](https://gemnasium.com/appium/ruby_console.png)](https://gemnasium.com/appium/ruby_console)
 
-#### Install
+#### Update system
 
 Paste the following into Terminal. If you're not using [RVM](https://rvm.io/), you may have to prefix gem commands with sudo.
 
 ```bash
 gem update --system ;\
-gem update bundler ;\
+gem update bundler
+```
+
+#### Install / Upgrade
+
+```bash
 gem uninstall -aIx app_lib ;\
 gem uninstall -aIx ruby_console ;\
 gem install --no-rdoc --no-ri ruby_console
@@ -17,10 +22,6 @@ gem install --no-rdoc --no-ri ruby_console
 You should uninstall the `ap` gem because it breaks awesome_print.
 
 `gem uninstall -aIx ap`
-
-#### Upgrade
-
-`gem update app_lib ; gem update ruby_console`
 
 #### Run
 
