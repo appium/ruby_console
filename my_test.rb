@@ -5,12 +5,13 @@
 #
 # Example use of running a test standalone. Useful for debugging a single test.
 
-$:.unshift File.expand_path('..', __FILE__)
-
-require 'console'
+require 'rubygems'
+require 'app_lib'
 
 def sign_in
   button('Sign In').click
 end
+
+start_driver
 
 sign_in
