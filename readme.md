@@ -114,6 +114,7 @@ text      | UIAStaticText
 0. `(String) alert_text` Get the alert message text.
 
 #### button
+0. `(Button) button(index)` Find a button by index.
 0. `(Button) button(text, number = 0)` Find a button by text and optionally number.
 0. `(Button) button_include(text)` Get the first button that includes text.
 0. `(Array<String>, Array<Buttons>) buttons(text = nil)` Get an array of button texts or button elements if text is provided.
@@ -122,6 +123,7 @@ text      | UIAStaticText
 0. `(Button) last_button` Get the last button element.
 
 #### textfield
+0. `(Textfield) textfield(index)` Find a textfield by index.
 0. `(Array<Textfield>) e_textfields` Get an array of textfield elements.
 0. `(Textfield) first_textfield` Get the first textfield element.
 0. `(Textfield) last_textfield` Get the last textfield element.
@@ -130,6 +132,7 @@ text      | UIAStaticText
 0. `(Array<String>) textfields` Get an array of textfield texts.
 
 #### text
+0. `(Text) text(index)` Find a text by index.
 0. `(Array<Text>) e_texts` Get an array of text elements.
 0. `(Text) first_text` Get the first text element.
 0. `(Text) last_text` Get the last text element.
