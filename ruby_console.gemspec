@@ -24,7 +24,8 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/appium/ruby_console'
   s.require_paths = [ 'lib' ]
 
-  s.add_runtime_dependency 'app_lib', '>= 0.0.12'
+  # app_lib version must match ruby console version.
+  s.add_runtime_dependency 'app_lib', ">= #{RubyConsole::VERSION}"
   s.add_runtime_dependency 'pry', '~> 0.9.12'
   
   # Why are these required?
