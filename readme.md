@@ -180,7 +180,7 @@ s.value == password('hello'.length)
 
 #### Driver
 
-`driver` will restart the driver.
+`start_driver` will restart the driver.
 
 `x` will quit the driver and exit Pry.
 
