@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/appium/ruby_console'
   s.require_paths = [ 'lib' ]
 
-  s.add_runtime_dependency 'app_lib', '>= 0.0.10'
+  s.add_runtime_dependency 'app_lib', '>= 0.0.11'
   s.add_runtime_dependency 'pry', '~> 0.9.12'
 
   s.add_development_dependency 'rake', '~> 10.0.3'
