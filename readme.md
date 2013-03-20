@@ -18,7 +18,7 @@ Run `ruby_console` with the `arc` command. Appium Ruby Console = ARC.
 
 Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source.
 
-`node server.js -V 1`
+`node server.js -V --fast-reset`
 
 For OS X, export the path to your .app bundle `MyApp.app` or zipped app bundle `MyApp.app.zip`
 
@@ -244,4 +244,3 @@ at_exit do
   end
 end
 ```
-
