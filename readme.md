@@ -4,7 +4,7 @@
 
 #### Install
 
-Paste the following into Terminal.
+Paste the following into Terminal. If you're not using [RVM](https://rvm.io/), you may have to prefix gem commands with sudo.
 
 ```bash
 gem update --system ;\
