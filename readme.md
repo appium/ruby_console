@@ -1,5 +1,7 @@
 #### Ruby Console for Appium
 
+[![Dependency Status](https://gemnasium.com/appium/ruby_console.png)](https://gemnasium.com/appium/ruby_console)
+
 Install the following gems:
 
 `gem install rest-client bundler pry selenium-webdriver awesome_print crack`
