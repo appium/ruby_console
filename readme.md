@@ -11,13 +11,15 @@ gem update --system ;\
 gem update bundler
 ```
 
-#### Install / Upgrade
+#### Install / Upgrade Ruby Console
 
 ```bash
 gem uninstall -aIx app_lib ;\
 gem uninstall -aIx ruby_console ;\
 gem install --no-rdoc --no-ri ruby_console
 ```
+
+#### Update Appium
 
 To update `appium` from source (assuming node.js requires sudo) run:
 
