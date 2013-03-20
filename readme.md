@@ -165,6 +165,8 @@ s.value == password('hello'.length)
 
 `find_elements` calls `$driver.find_elements`
 
+`mobile :swipe, endX: 100, endY: 100, duration: 0.01` calls `$driver.execute_script 'mobile: swipe', endX: 100, endY: 100, duration: 0.01`
+
 .click to tap an element.
 .send_keys to type on an element.
 
