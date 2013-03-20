@@ -27,7 +27,7 @@ For OS X, export the path to your .app bundle `MyApp.app` or zipped app bundle `
 For Android:
 
 ```
-export APP_PATH="`pwd`/my.apk" ;\
+export APP_PATH="/path/to/my.apk" ;\
 export APP_PACKAGE="com.my.Pkg" ;\
 export APP_ACTIVITY="MyActivity"
 ```
