@@ -20,13 +20,19 @@ Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source.
 
 `node server.js -V 1`
 
-Export the path to your .app bundle `MyApp.app` or zipped app bundle `MyApp.app.zip`
+For OS X, export the path to your .app bundle `MyApp.app` or zipped app bundle `MyApp.app.zip`
 
 `export APP_PATH="../MyApp.app"`
 
-Run with
+For Android:
 
-`pry -r ./console.rb`
+```
+export APP_PATH="`pwd`/my.apk" ;\
+export APP_PACKAGE="com.my.Pkg" ;\
+export APP_ACTIVITY="MyActivity"
+```
+
+You may want to define the environment variables in `~/.bash_profile` so you don't have to export them again.
 
 #### Reset Appium
 
@@ -72,7 +78,6 @@ text      | UIAStaticText
 - `source` Prints a JSON view of the current page.
 
 --
-
 
 #### alert
 0. `(void) alert_accept` Accept the alert.
@@ -150,7 +155,11 @@ s.value == password('hello'.length)
 
 `x` will quit the driver and exit Pry.
 
-`execute_script` calls `@driver.execute_script`
+`execute_script` calls `$driver.execute_script`
+
+`find_element` calls `$driver.find_element`
+
+`find_elements` calls `$driver.find_elements`
 
 .click to tap an element.
 .send_keys to type on an element.
