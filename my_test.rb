@@ -15,3 +15,6 @@ end
 start_driver
 
 sign_in
+
+# Quit
+x
