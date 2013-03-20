@@ -2,9 +2,19 @@
 
 [![Dependency Status](https://gemnasium.com/appium/ruby_console.png)](https://gemnasium.com/appium/ruby_console)
 
-Install the following gems:
+#### Install
 
-`gem install rest-client bundler pry selenium-webdriver awesome_print crack`
+Paste the following into Terminal.
+
+```ruby
+gem update --system ;\
+gem update bundler ;\
+gem uninstall -aIx app_lib ;\
+gem uninstall -aIx ruby_console ;\
+gem install --no-rdoc --no-ri ruby_console
+```
+
+Run `ruby_console` with the `arc` command. Appium Ruby Console = ARC.
 
 Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source.
 
