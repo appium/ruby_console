@@ -19,6 +19,19 @@ gem uninstall -aIx ruby_console ;\
 gem install --no-rdoc --no-ri ruby_console
 ```
 
+To update `appium` from source (assuming node.js requires sudo) run:
+
+Clone appium if you haven't already.
+
+`git clone git@github.com:appium/appium.git`
+
+then in the `appium` folder:
+
+```bash
+git pull ;\
+sudo ./reset.sh ; ./reset.sh
+```
+
 You should uninstall the `ap` gem because it breaks awesome_print.
 
 `gem uninstall -aIx ap`
