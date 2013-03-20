@@ -6,7 +6,7 @@
 
 Paste the following into Terminal.
 
-```ruby
+```bash
 gem update --system ;\
 gem update bundler ;\
 gem uninstall -aIx app_lib ;\
