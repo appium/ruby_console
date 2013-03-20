@@ -21,7 +21,7 @@ gem install --no-rdoc --no-ri ruby_console
 
 #### Update Appium
 
-To update `appium` from source (assuming node.js requires sudo) run:
+To update `appium` from source (assuming node.js requires sudo):
 
 Clone appium if you haven't already.
 
