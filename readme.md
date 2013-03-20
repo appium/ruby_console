@@ -18,7 +18,13 @@ You should uninstall the `ap` gem because it breaks awesome_print.
 
 `gem uninstall -aIx ap`
 
-Run `ruby_console` with the `arc` command. Appium Ruby Console = ARC.
+#### Upgrade
+
+`gem update app_lib ; gem update ruby_console`
+
+#### Run
+
+The `arc` command starts Appium Ruby Console.
 
 Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source.
 
