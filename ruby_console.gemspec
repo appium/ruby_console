@@ -14,9 +14,9 @@ Gem::Specification.new do |s|
   # 1.8.x is not supported
   s.required_ruby_version = '>= 1.9.3'
 
-  s.name = 'ruby_console'
-  s.version = RubyConsole::VERSION
-  s.date = RubyConsole::DATE
+  s.name = 'appium_console'
+  s.version = AppiumConsole::VERSION
+  s.date = AppiumConsole::DATE
   s.license = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
   s.description = s.summary = 'Ruby console for use with Appium'
   s.description += '.' # avoid identical warning
