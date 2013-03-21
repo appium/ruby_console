@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   #    multi_json (~> 1.0)
   #    ffi (>= 1.0.6, ~> 1.0)
   s.add_runtime_dependency 'multi_json', '~> 1.7.1'
-  s.add_runtime_dependency 'ffi', '~> 1.4.0'
+  s.add_runtime_dependency 'ffi', '~> 1.5.0'
 
   s.add_development_dependency 'rake', '~> 10.0.3'
 
