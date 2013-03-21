@@ -192,6 +192,12 @@ s.value == password('hello'.length)
 
 `mobile :swipe, endX: 100, endY: 100, duration: 0.01` calls `$driver.execute_script 'mobile: swipe', endX: 100, endY: 100, duration: 0.01`
 
+`no_wait` will set implicit wait to 0. `$driver.manage.timeouts.implicit_wait = 0`
+
+`set_wait` will set implicit wait to default 30 seconds. `$driver.manage.timeouts.implicit_wait = 30`
+
+`set_wait(timeout_seconds)` will set implicit wait to desired timeout. `$driver.manage.timeouts.implicit_wait = timeout`
+
 .click to tap an element.
 .send_keys to type on an element.
 
