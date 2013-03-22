@@ -3,7 +3,7 @@
 This document is written for OS X. Appium does not yet work on Windows.
 Appium Android should run on Linux however iOS testing requires OS X.
 
-- Clone ruby_console
+- Clone appium_console
 
 `$ git clone git://github.com/appium/ruby_console.git`
 
@@ -11,9 +11,9 @@ Appium Android should run on Linux however iOS testing requires OS X.
 
 `$ ruby --version`
 
-- Install ruby_console gems.
+- Install appium_console gem.
 
-`gem install rest-client bundler pry selenium-webdriver ap crack`
+`gem install appium_console`
 
 - Export APP_PATH, APP_PACKAGE, APP_ACTIVITY
 

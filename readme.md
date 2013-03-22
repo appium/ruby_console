@@ -14,9 +14,9 @@ gem update bundler
 #### Install / Upgrade Ruby Console
 
 ```bash
-gem uninstall -aIx app_lib ;\
-gem uninstall -aIx ruby_console ;\
-gem install --no-rdoc --no-ri ruby_console
+gem uninstall -aIx appium_lib ;\
+gem uninstall -aIx appium_console ;\
+gem install --no-rdoc --no-ri appium_console
 ```
 
 #### Update Appium

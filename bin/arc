@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 # appium ruby console = arc
 require 'rubygems'
-require 'ruby_console'
+require 'appium_console'

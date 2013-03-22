@@ -8,7 +8,7 @@ end
 
 add_to_path 'lib'
 
-require 'ruby_console/version'
+require 'appium_console/version'
 
 Gem::Specification.new do |s|
   # 1.8.x is not supported
@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.description = s.summary = 'Ruby console for use with Appium'
   s.description += '.' # avoid identical warning
   s.authors = s.email = [ 'code@bootstraponline.com' ]
-  s.homepage = 'https://github.com/appium/ruby_console'
+  s.homepage = 'https://github.com/appium/ruby_console' # published as appium_console
   s.require_paths = [ 'lib' ]
 
   # app_lib version must match ruby console version.
