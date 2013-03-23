@@ -1,6 +1,6 @@
-#### Ruby Console for Appium
+#### Ruby Console for Appium [![Dependency Status](https://gemnasium.com/appium/ruby_console.png)](https://gemnasium.com/appium/ruby_console)
 
-[![Dependency Status](https://gemnasium.com/appium/ruby_console.png)](https://gemnasium.com/appium/ruby_console)
+- [appium_console on RubyGems](https://rubygems.org/gems/appium_console)
 
 #### Update system
 
