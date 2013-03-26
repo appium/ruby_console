@@ -50,7 +50,7 @@ export APP_ACTIVITY="MyActivity"
 
 `$ echo $APP_PATH $APP_PACKAGE $APP_ACTIVITY`
 
-- Install [nodejs](http://nodejs.org/)
+- Install [nodejs](http://nodejs.org/) using the big green install button. Node should be `v0.10.1` or better.
 
 `$ node --version`
 
