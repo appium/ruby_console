@@ -11,6 +11,13 @@ Appium Android should run on Linux however iOS testing requires OS X.
 
 `$ \curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3`
 
+- Make sure RVM is using the correct Ruby by default
+
+```
+$ rvm list
+$ rvm --default use 1.9.3
+```
+
 - Check that it's installed properly by printing the ruby version.
 
 `$ ruby --version`
