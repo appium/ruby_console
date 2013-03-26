@@ -101,6 +101,12 @@ If you see `error: protocol fault (no status)` just keep running the command unt
 
 - With both the Android emulator running and the Appium server started, it's time to launch the appium console. Make sure the ENV vars are exported.
 
+```
+export APP_PATH="/path/to/my.apk" ;\
+export APP_PACKAGE="com.my.Pkg" ;\
+export APP_ACTIVITY="MyActivity"
+```
+
 `arc`
 
 If you see `WARN: Unresolved specs during Gem::Specification.reset:`, it's safe to ignore that.
