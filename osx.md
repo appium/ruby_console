@@ -7,7 +7,9 @@ Appium Android should run on Linux however iOS testing requires OS X.
 
 `$ git clone git://github.com/appium/ruby_console.git`
 
-- Ensure you have Ruby 1.9.3+ (1.8 is not supported). If you don't have 1.9.3+, install it with rvm.
+- Ensure you have Ruby 1.9.3+ (1.8 is not supported). Install the latest stable patch release of Ruby 1.9.3 (not Ruby 2.0).
+
+`\curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3`
 
 `$ ruby --version`
 
