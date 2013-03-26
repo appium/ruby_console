@@ -19,13 +19,17 @@ Appium Android should run on Linux however iOS testing requires OS X.
 
 ```ruby
 gem update --system ;\
-gem install bundler ;\
+gem install --no-rdoc --no-ri bundler ;\
 gem update bundler
 ```
 
 - Install appium_console gem.
 
-`gem install appium_console`
+```ruby
+gem uninstall -aIx appium_lib ;\
+gem uninstall -aIx appium_console ;\
+gem install --no-rdoc --no-ri appium_console
+```
 
 - Export APP_PATH, APP_PACKAGE, APP_ACTIVITY
 
