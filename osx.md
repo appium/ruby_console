@@ -98,3 +98,9 @@ If there are any problems viewing or downloading the packages, go to `Packages -
 `adb kill-server; adb devices`
 
 If you see `error: protocol fault (no status)` just keep running the command until the emulator is detected.
+
+- With both the Android emulator running and the Appium server started, it's time to launch the appium console. Make sure the ENV vars are exported.
+
+`arc`
+
+If you see `WARN: Unresolved specs during Gem::Specification.reset:`, it's safe to ignore that.
