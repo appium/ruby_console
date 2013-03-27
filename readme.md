@@ -52,10 +52,14 @@ For OS X, export the path to your .app bundle `MyApp.app` or zipped app bundle `
 
 For Android:
 
+`APP_ACTIVITY` is the activity to start the app with.
+`APP_WAIT_ACTIVITY` is the activity to wait for before considering the app as having been started.
+
 ```
 export APP_PATH="/path/to/my.apk" ;\
 export APP_PACKAGE="com.my.Pkg" ;\
-export APP_ACTIVITY="MyActivity"
+export APP_ACTIVITY="StartActivity" ;\
+export APP_WAIT_ACTIVITY="SplashActivity"
 ```
 
 You may want to define the environment variables in `~/.bash_profile` so you don't have to export them again.
