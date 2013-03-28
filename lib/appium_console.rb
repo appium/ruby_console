@@ -1,5 +1,6 @@
 # encoding: utf-8
 require 'rubygems'
+Gem::Specification.class_eval { def self.warn( args ); end }
 require 'pry'
 require 'appium_lib'
 
