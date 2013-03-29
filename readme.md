@@ -105,7 +105,10 @@ text      | UIAStaticText
 
 --
 
+#### generic
+
 - `source` Prints a JSON view of the current page.
+- `page` Prints the content descriptions and text values on the current page.
 - `(Element) name(name)` Returns the first element matching name. Android name is the content description.
 iOS uses accessibility label with a fallback to text.
 - `(Array<Element>) names(name)` Returns all elements matching name.
