@@ -109,6 +109,7 @@ text      | UIAStaticText
 - `(Element) name(name)` Returns the first element matching name. Android name is the content description.
 iOS uses accessibility label with a fallback to text.
 - `(Array<Element>) names(name)` Returns all elements matching name.
+
 --
 
 #### alert
