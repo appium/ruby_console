@@ -266,7 +266,8 @@ require 'json' # for .to_json
 $passed = true
 
 After do |scenario|
-  $driver.execute_script 'mobile: reset'
+  # Reset scenario unless the feature was tagged @keep
+  $driver.execute_script 'mobile: reset' unless scenario.feature.source_tag_names.include? '@keep'
 
   if $passed
     $passed = false if scenario.failed?
