@@ -9,7 +9,9 @@ def print_version
   puts "    appium_lib: v#{::AppiumLib::VERSION}"
 end
 
-ARGV.each do |a|
+ARGV.each_index do |idx|
+  a = ARGV[idx]
+  b = ARGV[idx + 1]
   if a.match /-?-?v/i
     print_version
     exit
@@ -20,6 +22,26 @@ ARGV.each do |a|
      ].each { |cmd| puts cmd; `#{cmd}` }
     print_version
     puts "Upgrade complete."
+    exit
+  elsif a.match /setup/i
+    toml = File.join Dir.pwd, 'appium.txt'
+    if !b
+      puts 'setup called without android or ios. exiting.'
+      exit
+    end
+    File.open toml, 'w' do |f|
+      if b && b.match(/android/i)
+        f.puts %Q(APP_PATH="#{ENV['APP_PATH'] || '/path/to/my.apk'}")
+        f.puts %Q(APP_PACKAGE="#{ENV['APP_PACKAGE'] || 'com.my.Pkg'}")
+        f.puts %Q(APP_ACTIVITY="#{ENV['APP_ACTIVITY'] || 'StartActivity'}")
+        f.puts %Q(APP_WAIT_ACTIVITY="#{ENV['APP_WAIT_ACTIVITY'] || 'SplashActivity'}")
+      elsif b && b.match(/ios/i)
+        # iOS requires only APP_PATH
+        ios = ENV['APP_PATH']
+        ios = false if File.extname(ios).downcase == '.apk'
+        f.puts %Q(APP_PATH="#{ios || '/path/to/myiOS.app'}")
+      end
+    end
     exit
   end
 end
