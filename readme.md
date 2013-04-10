@@ -42,6 +42,8 @@ You should uninstall the `ap` gem because it breaks awesome_print.
 
 The `arc` command starts Appium Ruby Console.
 
+`arc -v` will print the current version of appium console and appium lib.
+
 Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source.
 
 `node server.js -V --fast-reset`
