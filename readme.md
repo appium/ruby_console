@@ -44,10 +44,10 @@ You should uninstall the `ap` gem because it breaks awesome_print.
 
 The `arc` command starts Appium Ruby Console.
 
-- `arc version` will print the current version of appium console and appium lib.
-- `arc upgrade` will upgrade appium_console and appium_lib.
-- `arc setup android` will create `appium.txt` for android in the current working dir.
-- `arc setup ios` will create `appium.txt` for ios in the current working dir.
+- `arc version` prints the current version of appium console and appium lib.
+- `arc upgrade` upgrades appium_console and appium_lib.
+- `arc setup android` creates `appium.txt` for android in the current working dir.
+- `arc setup ios` creates `appium.txt` for ios in the current working dir.
 
 Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source.
 
