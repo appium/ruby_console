@@ -51,6 +51,8 @@ export APP_ACTIVITY="MyActivity"
 `$ echo $APP_PATH $APP_PACKAGE $APP_ACTIVITY`
 
 - Install [nodejs](http://nodejs.org/) using the big green install button. Node should be `v0.10.1` or better.
+If you have `brew` installed then `brew install node` can be run instead of the nodejs.org pkg.
+The advantage of using brew is that npm commands will not require sudo.
 
 `$ node --version`
 
@@ -68,7 +70,7 @@ grunt v0.4.1
 
 - Clone appium
 
-`$ git clone git@github.com:appium/appium.git`
+`$ git clone git://github.com/appium/appium.git`
 
 - Run reset.sh. You may have to run this twice as described below due to permission issues.
 
