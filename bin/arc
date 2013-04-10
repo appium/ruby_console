@@ -1,4 +1,15 @@
 #!/usr/bin/env ruby
 # appium ruby console = arc
 require 'rubygems'
+
+ARGV.each do |a|
+  if a.match(/--?v/)
+    require 'appium_console/version'
+    require 'appium_lib/version'
+    puts "appium_console: v#{::AppiumConsole::VERSION}"
+    puts "    appium_lib: v#{::AppiumLib::VERSION}"
+    exit
+  end
+end
+
 require 'appium_console'
