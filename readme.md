@@ -19,6 +19,8 @@ gem uninstall -aIx appium_console ;\
 gem install --no-rdoc --no-ri appium_console
 ```
 
+If `appium_console` is already installed, run `arc upgrade` to automatically update.
+
 #### Update Appium
 
 To update `appium` from source (assuming node.js requires sudo):
