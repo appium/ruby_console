@@ -6,7 +6,7 @@
 # Example use of running a test standalone. Useful for debugging a single test.
 
 require 'rubygems'
-require 'app_lib'
+require 'appium_lib'
 
 def sign_in
   button('Sign In').click
