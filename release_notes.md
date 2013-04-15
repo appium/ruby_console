@@ -1,3 +1,14 @@
+#### v0.0.29 2013-04-15
+
+- [f3251c8](https://github.com/appium/ruby_console/commit/f3251c819e85f5d8fabd3f9a30a3de4307d38098) Release 0.0.29
+- [83ed1b9](https://github.com/appium/ruby_console/commit/83ed1b9f4a3ca1a3b1eb6770116b0e3d42f39dfa) Update osx.md
+- [d3f30ef](https://github.com/appium/ruby_console/commit/d3f30ef722a80e957624f4d49e1a63a720e70da6) Use brew install node
+- [8a8401e](https://github.com/appium/ruby_console/commit/8a8401e3a01762feec5d9ab694843d96d2851a37) Rewrite test order when using reports
+- [43bec7d](https://github.com/appium/ruby_console/commit/43bec7d23c36f641c049f413a7d2a97f366d1282) Add minitest example
+- [211fe2e](https://github.com/appium/ruby_console/commit/211fe2ecc681403fa081ff89e7caaf0a97a440c4) Fix notes
+- [f869aa8](https://github.com/appium/ruby_console/commit/f869aa8be528a9c6c71af9eecb16d5ca7bea05f2) Update release notes
+
+
 #### v0.0.28 2013-04-11
 
 - [94ae27d](https://github.com/appium/ruby_console/commit/94ae27d54c57f16b45937decfded0cdac9e10160) Release 0.0.28
