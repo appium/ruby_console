@@ -50,31 +50,14 @@ end
 
 MiniTest::Reporters.use! MiniTest::Reporters::ProgressReporter.new
 
-# Silence '# Run options:' from minitest
-# https://github.com/seattlerb/minitest/blob/master/lib/minitest/unit.rb#L1054
-module MiniTest
-  class Unit
-    def _run args = []
-      args = process_args args
-      self.options.merge! args
-
-      self.class.plugins.each do |plugin|
-        send plugin
-        break unless report.empty?
-      end
-
-      return failures + errors if self.test_count > 0
-    rescue Interrupt
-      abort 'Interrupted'
-    end
-  end
-end
-
-# Silence '# Run options:' from minitest-reports
+# Alter '# Run options:' from minitest-reports
 # https://github.com/CapnKernul/minitest-reporters/blob/master/lib/minitest/reporter_runner.rb#L28
 module MiniTest
   class ReporterRunner < Unit
     def _run_suites(suites, type)
+      test_order = @help.match /\-\-seed (\d+)/
+      # '# Run options: --seed 10181' => 'test order: 10181'
+      $stdout.puts "test order: #{test_order[1]}" if test_order
       @suites_start_time = Time.now
       count_tests!(suites, type)
       trigger_callback(:before_suites, suites, type)
