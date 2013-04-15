@@ -34,9 +34,8 @@ gem uninstall -aIx appium_console ;\
 gem install --no-rdoc --no-ri appium_console
 ```
 
-- Install [nodejs](http://nodejs.org/) using the big green install button. Node should be `v0.10.1` or better.
-If you have `brew` installed then `brew install node` can be run instead of the nodejs.org pkg.
-The advantage of using brew is that npm commands will not require sudo.
+- Install [nodejs](http://nodejs.org/) using `brew install node`. Node should be `v0.10.2` or better.
+Don't use the big green install button on nodejs.org or all npm commands will require sudo.
 
 `$ node --version`
 
@@ -56,10 +55,9 @@ grunt v0.4.1
 
 `$ git clone git://github.com/appium/appium.git`
 
-- Run reset.sh. You may have to run this twice as described below due to permission issues.
-If you installed node with brew, reset only has to be run once and doesn't require sudo.
+- Run reset.sh
 
-`cd appium; sudo ./reset.sh; ./reset.sh`
+`cd appium; ./reset.sh`
 
 - Start appium. `-V` enables verbose and `--fast-reset` enables fast rest for Android.
 
