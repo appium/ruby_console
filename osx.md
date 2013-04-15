@@ -59,6 +59,10 @@ grunt v0.4.1
 
 `cd appium; ./reset.sh`
 
+- If there are errors, you may have to run reset.sh this way
+
+`sudo ANDROID_HOME=$ANDROID_HOME ./reset.sh`
+
 - Start appium. `-V` enables verbose and `--fast-reset` enables fast rest for Android.
 
 `node server.js -V --fast-reset`
