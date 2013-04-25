@@ -1,3 +1,11 @@
+#### v0.3.0 2013-04-25
+
+- [09ee29c](https://github.com/appium/ruby_console/commit/09ee29c03e4a2222c089f4ab736ec0e0bfa53930) Release 0.3.0
+- [2f0f38e](https://github.com/appium/ruby_console/commit/2f0f38e86155b41ff49f3419800413589efb19c4) Update for new Appium lib
+- [1bbc128](https://github.com/appium/ruby_console/commit/1bbc128cd5e7d9cadfc6ff9397179ed38459238e) Remove minitest example
+- [95db897](https://github.com/appium/ruby_console/commit/95db897cdf3ffb2fec3df1aba2a7f1ca469dbed8) Update release notes
+
+
 #### v0.0.30 2013-04-16
 
 - [af1dd74](https://github.com/appium/ruby_console/commit/af1dd74f254c512c9b63a013570638eb13adbe91) Release 0.0.30
