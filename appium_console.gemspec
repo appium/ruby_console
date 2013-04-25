@@ -1,5 +1,4 @@
 # encoding: utf-8
-
 def self.add_to_path path
  path = File.expand_path "../#{path}/", __FILE__
 
@@ -15,8 +14,8 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 1.9.3'
 
   s.name = 'appium_console'
-  s.version = AppiumConsole::VERSION
-  s.date = AppiumConsole::DATE
+  s.version = Appium::Console::VERSION
+  s.date = Appium::Console::DATE
   s.license = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
   s.description = s.summary = 'Ruby console for use with Appium'
   s.description += '.' # avoid identical warning
@@ -25,7 +24,7 @@ Gem::Specification.new do |s|
   s.require_paths = [ 'lib' ]
 
   # appium_lib version must match ruby console version.
-  s.add_runtime_dependency 'appium_lib', ">= #{AppiumConsole::VERSION}"
+  s.add_runtime_dependency 'appium_lib', ">= #{Appium::Console::VERSION}"
   s.add_runtime_dependency 'pry', '~> 0.9.12'
   s.add_runtime_dependency 'toml', '~> 0.0.4'
   s.add_development_dependency 'rake', '~> 10.0.3'

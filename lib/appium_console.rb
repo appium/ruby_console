@@ -3,41 +3,46 @@ require 'rubygems'
 Gem::Specification.class_eval { def self.warn( args ); end }
 require 'pry'
 
-# Check for env vars in .txt
-toml = File.join Dir.pwd, 'appium.txt'
+module Appium; end unless defined? Appium
 
-if File.exists? toml
-  require 'toml'
-  require 'ap'
-  puts "Loading #{toml}"
+module Appium::Console
+  # Check for env vars in .txt
+  toml = File.join Dir.pwd, 'appium.txt'
 
-  # bash requires A="OK"
-  # toml requires A = "OK"
-  #
-  # A="OK" => A = "OK"
-  data = File.read(toml).gsub /([^\s])\=(")/, "\\1 = \\2"
-  data = TOML::Parser.new(data).parsed
-  ap data
+  class Env
+    def initialize data
+      @data = data
+    end
 
-  app_path = 'APP_PATH'
-  app_package = 'APP_PACKAGE'
-  app_activity = 'APP_ACTIVITY'
-  app_wait_activity = 'APP_WAIT_ACTIVITY'
+    def update *args
+      args.each do |name|
+        var = data[name]
+        ENV[name] = var if var
+      end
+    end
+  end
 
-  path = data[app_path]
-  pkg = data[app_package]
-  act = data[app_activity]
-  wait_act = data[app_wait_activity]
+  if File.exists? toml
+    require 'toml'
+    require 'ap'
+    puts "Loading #{toml}"
 
-  ENV[app_path] = path if path
-  ENV[app_package] = pkg if pkg
-  ENV[app_activity] = act if act
-  ENV[app_wait_activity] = wait_act if wait_act
-end
+    # bash requires A="OK"
+    # toml requires A = "OK"
+    #
+    # A="OK" => A = "OK"
+    data = File.read(toml).gsub /([^\s])\=(")/, "\\1 = \\2"
+    data = TOML::Parser.new(data).parsed
+    ap data
 
-require 'appium_lib'
+    env = Env.new data
+    env.update 'APP_PATH', 'APP_APK', 'APP_PACKAGE', 'APP_ACTIVITY', 'APP_WAIT_ACTIVITY'
+  end
 
-start = File.expand_path "../start.rb", __FILE__
-cmd = ['-r', start]
-$stdout.puts 'pry ' + cmd.join(' ')
-Pry::CLI.parse_options cmd
+  require 'appium_lib'
+
+  start = File.expand_path '../start.rb', __FILE__
+  cmd = ['-r', start]
+  $stdout.puts 'pry ' + cmd.join(' ')
+  Pry::CLI.parse_options cmd
+end # module Appium::Console
