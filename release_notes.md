@@ -1,3 +1,11 @@
+#### v0.3.1 2013-04-26
+
+- [5e41993](https://github.com/appium/ruby_console/commit/5e41993aa505310b3442b0ea5c8cdf72b01cd62c) Release 0.3.1
+- [d98d052](https://github.com/appium/ruby_console/commit/d98d052af5e118a099d4abac7c24db41a5ff6974) Fix uninstall
+- [6b10caa](https://github.com/appium/ruby_console/commit/6b10caa3be482a149e433e8053ccb23c64aa723f) Fix version command
+- [b53ab55](https://github.com/appium/ruby_console/commit/b53ab550db09d246b5f975a07cda580f89088fa8) Update release notes
+
+
 #### v0.3.0 2013-04-25
 
 - [09ee29c](https://github.com/appium/ruby_console/commit/09ee29c03e4a2222c089f4ab736ec0e0bfa53930) Release 0.3.0
