@@ -80,11 +80,16 @@ desc 'Build a new gem (same as gem task)'
 task :build => :gem do
 end
 
+desc 'Uninstall gem'
+task :uninstall do
+  cmd = "gem uninstall -aIx #{repo_name}"
+  puts cmd
+  # rescue on gem not installed error.
+  begin; `cmd`; rescue; end
+end
+
 desc 'Install gem'
-task :install => :gem do
-  `gem uninstall -aIx #{repo_name}`
-  # Ensure we have the latest appium_lib
-  `gem uninstall -aIx appium_lib`
+task :install => [ :gem, :uninstall ] do
   sh "gem install --no-rdoc --no-ri #{repo_name}-#{version}.gem"
 end
 

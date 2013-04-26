@@ -43,6 +43,6 @@ module Appium::Console
 
   start = File.expand_path '../start.rb', __FILE__
   cmd = ['-r', start]
-  $stdout.puts 'pry ' + cmd.join(' ')
+  $stdout.puts "pry #{cmd.join(' ')}"
   Pry::CLI.parse_options cmd
 end # module Appium::Console
