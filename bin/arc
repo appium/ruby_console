@@ -4,9 +4,9 @@ require 'rubygems'
 
 def print_version
   require 'appium_console/version'
-  require 'appium_lib/version'
-  puts "appium_console: v#{::AppiumConsole::VERSION}"
-  puts "    appium_lib: v#{::AppiumLib::VERSION}"
+  require 'appium_lib/common/version'
+  puts "appium_console: v#{::Appium::Console::VERSION}"
+  puts "    appium_lib: v#{::Appium::VERSION}"
 end
 
 ARGV.each_index do |idx|
