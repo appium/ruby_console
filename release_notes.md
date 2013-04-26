@@ -1,3 +1,9 @@
+#### v0.3.2 2013-04-26
+
+- [521b85e](https://github.com/appium/ruby_console/commit/521b85e570717dc83481e4d2baf0804787031c46) Release 0.3.2
+- [099077f](https://github.com/appium/ruby_console/commit/099077f77c83e006c7cd313ceba2fdf2b35ee0d1) Update release notes
+
+
 #### v0.3.1 2013-04-26
 
 - [5e41993](https://github.com/appium/ruby_console/commit/5e41993aa505310b3442b0ea5c8cdf72b01cd62c) Release 0.3.1
