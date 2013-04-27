@@ -16,12 +16,14 @@ ARGV.each_index do |idx|
     print_version
     exit
   elsif a.match /upgrade/i
-    [ 'gem uninstall -aIx appium_lib',
+    cmd = [ 'gem uninstall -aIx appium_lib',
       'gem uninstall -aIx appium_console',
       'gem install --no-rdoc --no-ri appium_console'
-     ].each { |cmd| puts cmd; `#{cmd}` }
-    print_version
-    puts "Upgrade complete."
+     ].join '; '
+    puts cmd
+    begin; `#{cmd}`; rescue; end
+    puts 'Upgrade complete.'
+    # exit after upgrading
     exit
   elsif a.match /setup/i
     toml = File.join Dir.pwd, 'appium.txt'
