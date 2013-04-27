@@ -1,3 +1,10 @@
+#### v0.3.3 2013-04-26
+
+- [a4cea5b](https://github.com/appium/ruby_console/commit/a4cea5b9857f5b450ade03cf3f326605b2aff040) Release 0.3.3
+- [188503c](https://github.com/appium/ruby_console/commit/188503c0f1c884884408896a8351ab34823c5c69) Fix appium.txt support
+- [cbc12db](https://github.com/appium/ruby_console/commit/cbc12dbfc5fffdcf6e3e53eb48c1d513add90726) Update release notes
+
+
 #### v0.3.2 2013-04-26
 
 - [521b85e](https://github.com/appium/ruby_console/commit/521b85e570717dc83481e4d2baf0804787031c46) Release 0.3.2
