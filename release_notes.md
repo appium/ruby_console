@@ -1,3 +1,10 @@
+#### v0.3.4 2013-04-26
+
+- [2a621bb](https://github.com/appium/ruby_console/commit/2a621bb1620685577173fdf59daabca036cd30f7) Release 0.3.4
+- [bd60857](https://github.com/appium/ruby_console/commit/bd60857f39bd17e454a10ad0658c01c20869c33a) Fix arc upgrade
+- [2362c9c](https://github.com/appium/ruby_console/commit/2362c9ceb9c33f0086d476f11373115a08e5617b) Update release notes
+
+
 #### v0.3.3 2013-04-26
 
 - [a4cea5b](https://github.com/appium/ruby_console/commit/a4cea5b9857f5b450ade03cf3f326605b2aff040) Release 0.3.3
