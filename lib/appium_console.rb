@@ -16,7 +16,7 @@ module Appium::Console
 
     def update *args
       args.each do |name|
-        var = data[name]
+        var = @data[name]
         ENV[name] = var if var
       end
     end

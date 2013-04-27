@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.require_paths = [ 'lib' ]
 
   # appium_lib version must match ruby console version.
-  s.add_runtime_dependency 'appium_lib', ">= #{Appium::Console::VERSION}"
+  s.add_runtime_dependency 'appium_lib', '>= 0.3.2'
   s.add_runtime_dependency 'pry', '~> 0.9.12'
   s.add_runtime_dependency 'toml', '~> 0.0.4'
   s.add_development_dependency 'rake', '~> 10.0.3'
