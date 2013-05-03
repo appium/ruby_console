@@ -36,7 +36,9 @@ module Appium::Console
     ap data
 
     env = Env.new data
-    env.update 'APP_PATH', 'APP_APK', 'APP_PACKAGE', 'APP_ACTIVITY', 'APP_WAIT_ACTIVITY'
+    env.update 'APP_PATH', 'APP_APK', 'APP_PACKAGE',
+               'APP_ACTIVITY', 'APP_WAIT_ACTIVITY',
+               'SELENDROID'
   end
 
   require 'appium_lib'

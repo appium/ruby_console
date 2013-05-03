@@ -2,4 +2,4 @@
 require 'rubygems'
 require 'appium_lib'
 
-Appium::Driver.new.start_driver if $last_driver.nil?
+Appium::Driver.new.start_driver if $driver.nil?
