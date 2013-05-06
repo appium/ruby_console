@@ -1,3 +1,11 @@
+#### v0.3.5 2013-05-06
+
+- [b031b60](https://github.com/appium/ruby_console/commit/b031b60276b01e86a649cd8db8b250f3d52da9cc) Release 0.3.5
+- [521639d](https://github.com/appium/ruby_console/commit/521639dc1b53371a472a40304c59e4476ab22197) Add selendroid
+- [c5456d2](https://github.com/appium/ruby_console/commit/c5456d29d5a1aeed1f1226b90c69a7d0025ad224) Use --local install
+- [fdc0fa2](https://github.com/appium/ruby_console/commit/fdc0fa2bb45c274118c9689c1a476300760296bc) Update release notes
+
+
 #### v0.3.4 2013-04-26
 
 - [2a621bb](https://github.com/appium/ruby_console/commit/2a621bb1620685577173fdf59daabca036cd30f7) Release 0.3.4
