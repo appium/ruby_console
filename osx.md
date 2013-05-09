@@ -61,14 +61,12 @@ grunt v0.4.1
 
 `cd appium; ./reset.sh`
 
-- If there are errors, you may have to run reset.sh this way
+- Start appium.
 
-`sudo ANDROID_HOME=$ANDROID_HOME ./reset.sh`
+`node server.js`
 
-- Start appium. `-V` enables verbose and `--fast-reset` enables fast rest for Android.
-
-`node server.js -V --fast-reset`
-
+- Add the Android SDK tools folder to your path so you can run `android`.
+- Define the `ANDROID_HOME` env var pointing to SDK root. On OSX place it in `~/.bash_profile`
 - Install `Intel x86 Emulator Accelerator (HAXM)` under Extras using the `android`` tool.
 - Use Intel [system image](http://software.intel.com/en-us/articles/android-4-2-jelly-bean-x86-emulator-system-image)
 at least API 17 (Jelly Bean). This is also installed via the `android` tool.
