@@ -76,6 +76,8 @@ at least API 17 (Jelly Bean). This is also installed via the `android` tool.
 - Install using Android package tool. For API 17, install `SDK Platform`, `Intel x86 Atom System Image`, `Google APIs` as in the picture. 
 If there are any problems viewing or downloading the packages, go to `Packages -> Reload` and try again.
 
+- Install `Intel x86 Emulator Accelerator (HAXM)` under Extras in the Android SDK Manager
+
 `android`
 
 ![](img/packages.png)
