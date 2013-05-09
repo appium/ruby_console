@@ -73,12 +73,14 @@ You can also reset by platform. `./reset.sh --android`
 # Bash Profile
 - Add the Android SDK tools folder to your path so you can run `android`.
 - Define the `ANDROID_HOME` env var pointing to SDK root. On OSX place it in `~/.bash_profile`
+- You may have to add grunt as well `/usr/local/share/npm/bin/grunt`
 
 ```
 # ~/.bash_profile
 export ANDROID_HOME=$HOME/Downloads/android-sdk-macosx
 export ANDROID_SDK=$ANDROID_HOME
 PATH=$PATH:/Applications/apache-ant-1.8.4/bin
+PATH=$PATH:/usr/local/share/npm/bin/
 PATH=$PATH:$HOME/Downloads/android-sdk-macosx/platform-tools
 PATH=$PATH:$HOME/Downloads/android-sdk-macosx/tools
 export JAVA_HOME="`/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/java_home`"
