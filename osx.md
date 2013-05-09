@@ -5,7 +5,7 @@ Appium Android should run on Linux however iOS testing requires OS X.
 
 Install `Xcode` from the Mac app store and the command line build tools (Xcode -> Preferences -> Downloads).
 
-- Ensure you have Ruby 1.9.3+ (1.8 is not supported). Install the latest stable patch release of Ruby 1.9.3 (not Ruby 2.0).
+- Ensure you have Ruby 1.9.3-p392 or better (1.8 is not supported). Install the latest stable patch release of Ruby 1.9.3 (not Ruby 2.0).
 
 `$ \curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3`
 
