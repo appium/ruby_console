@@ -128,6 +128,8 @@ If there are any problems viewing or downloading the packages, go to `Packages -
 
 ![](img/hax.png)
 
+- Launch the emulator with `emulator @t17`
+
 - After launching the emulator, check that it's listed in adb devices. Run the following commands a few times until it's listed.
 
 `adb kill-server; adb devices`
