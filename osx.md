@@ -65,6 +65,8 @@ grunt v0.4.1
 
 `node server.js`
 
+
+# Bash Profile
 - Add the Android SDK tools folder to your path so you can run `android`.
 - Define the `ANDROID_HOME` env var pointing to SDK root. On OSX place it in `~/.bash_profile`
 
