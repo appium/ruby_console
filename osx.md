@@ -67,6 +67,25 @@ grunt v0.4.1
 
 - Add the Android SDK tools folder to your path so you can run `android`.
 - Define the `ANDROID_HOME` env var pointing to SDK root. On OSX place it in `~/.bash_profile`
+
+```
+# ~/.bash_profile
+export ANDROID_HOME=$HOME/Downloads/android-sdk-macosx
+export ANDROID_SDK=$ANDROID_HOME
+PATH=$PATH:/Applications/apache-ant-1.8.4/bin
+PATH=$PATH:$HOME/Downloads/android-sdk-macosx/platform-tools
+PATH=$PATH:$HOME/Downloads/android-sdk-macosx/tools
+export JAVA_HOME="`/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/java_home`"
+export APP_PATH="/path/to/MyiOS.app"
+export APK_PATH="/path/to/my.apk"
+export APP_PACKAGE="com.example.Package"
+export APP_ACTIVITY="StartActivity"
+export APP_WAIT_ACTIVITY="SplashActivity"
+
+export PATH
+```
+
+
 - Install `Intel x86 Emulator Accelerator (HAXM)` under Extras using the `android`` tool.
 - Use Intel [system image](http://software.intel.com/en-us/articles/android-4-2-jelly-bean-x86-emulator-system-image)
 at least API 17 (Jelly Bean). This is also installed via the `android` tool.
