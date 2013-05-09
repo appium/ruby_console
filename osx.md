@@ -25,7 +25,8 @@ $ rvm --default use 1.9.3
 ```ruby
 gem update --system ;\
 gem install --no-rdoc --no-ri bundler ;\
-gem update bundler
+gem update ;\
+gem cleanup
 ```
 
 - Install appium_console gem.
