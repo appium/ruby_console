@@ -61,6 +61,10 @@ grunt v0.4.1
 
 `cd appium; ./reset.sh`
 
+If you see config errors, try cleaning git. `git clean -dfx; git reset --hard`
+
+You can also reset by platform. `./reset.sh --android`
+
 - Start appium.
 
 `node server.js`
