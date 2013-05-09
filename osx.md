@@ -53,6 +53,16 @@ grunt-cli v0.1.6
 grunt v0.4.1
 ```
 
+- Install [ant](http://ant.apache.org/)
+- Install [maven](http://maven.apache.org/download.cgi) if it's not already installed.
+
+```
+$ ant -version
+Apache Ant(TM) version 1.8.2 compiled on June 20 2012
+$ mvn -version
+Apache Maven 3.0.3 (r1075438; 2011-02-28 12:31:09-0500)
+```
+
 - Clone appium
 
 `$ git clone git://github.com/appium/appium.git`
