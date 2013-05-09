@@ -117,7 +117,7 @@ If there are any problems viewing or downloading the packages, go to `Packages -
 
 ![](img/packages.png)
 
-- Create a new Android virtual device that uses the Intel image.
+- Create a new Android virtual device that uses the Intel image. Ensure `Use Host GPU` is checked.
 
 `android avd`
 
