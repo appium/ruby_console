@@ -41,7 +41,7 @@ gem install --no-rdoc --no-ri appium_console
 
 ```
 brew update ;\
-brew upgrade ;\
+brew upgrade node ;\
 brew install node
 ```
 
