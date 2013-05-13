@@ -37,7 +37,15 @@ gem uninstall -aIx appium_console ;\
 gem install --no-rdoc --no-ri appium_console
 ```
 
-- Install [nodejs](http://nodejs.org/) using `brew install node`. Node should be `v0.10.2` or better.
+- Install [nodejs](http://nodejs.org/) using brew.
+
+```
+brew update ;\
+brew upgrade ;\
+brew install node
+```
+
+- `brew install node`. Node should be `v0.10.2` or better.
 Don't use the big green install button on nodejs.org or all npm commands will require sudo.
 
 `$ node --version`
