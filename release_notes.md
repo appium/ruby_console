@@ -3,27 +3,23 @@
 - [b031b60](https://github.com/appium/ruby_console/commit/b031b60276b01e86a649cd8db8b250f3d52da9cc) Release 0.3.5
 - [521639d](https://github.com/appium/ruby_console/commit/521639dc1b53371a472a40304c59e4476ab22197) Add selendroid
 - [c5456d2](https://github.com/appium/ruby_console/commit/c5456d29d5a1aeed1f1226b90c69a7d0025ad224) Use --local install
-- [fdc0fa2](https://github.com/appium/ruby_console/commit/fdc0fa2bb45c274118c9689c1a476300760296bc) Update release notes
 
 
 #### v0.3.4 2013-04-26
 
 - [2a621bb](https://github.com/appium/ruby_console/commit/2a621bb1620685577173fdf59daabca036cd30f7) Release 0.3.4
 - [bd60857](https://github.com/appium/ruby_console/commit/bd60857f39bd17e454a10ad0658c01c20869c33a) Fix arc upgrade
-- [2362c9c](https://github.com/appium/ruby_console/commit/2362c9ceb9c33f0086d476f11373115a08e5617b) Update release notes
 
 
 #### v0.3.3 2013-04-26
 
 - [a4cea5b](https://github.com/appium/ruby_console/commit/a4cea5b9857f5b450ade03cf3f326605b2aff040) Release 0.3.3
 - [188503c](https://github.com/appium/ruby_console/commit/188503c0f1c884884408896a8351ab34823c5c69) Fix appium.txt support
-- [cbc12db](https://github.com/appium/ruby_console/commit/cbc12dbfc5fffdcf6e3e53eb48c1d513add90726) Update release notes
 
 
 #### v0.3.2 2013-04-26
 
 - [521b85e](https://github.com/appium/ruby_console/commit/521b85e570717dc83481e4d2baf0804787031c46) Release 0.3.2
-- [099077f](https://github.com/appium/ruby_console/commit/099077f77c83e006c7cd313ceba2fdf2b35ee0d1) Update release notes
 
 
 #### v0.3.1 2013-04-26
@@ -31,7 +27,6 @@
 - [5e41993](https://github.com/appium/ruby_console/commit/5e41993aa505310b3442b0ea5c8cdf72b01cd62c) Release 0.3.1
 - [d98d052](https://github.com/appium/ruby_console/commit/d98d052af5e118a099d4abac7c24db41a5ff6974) Fix uninstall
 - [6b10caa](https://github.com/appium/ruby_console/commit/6b10caa3be482a149e433e8053ccb23c64aa723f) Fix version command
-- [b53ab55](https://github.com/appium/ruby_console/commit/b53ab550db09d246b5f975a07cda580f89088fa8) Update release notes
 
 
 #### v0.3.0 2013-04-25
@@ -39,13 +34,11 @@
 - [09ee29c](https://github.com/appium/ruby_console/commit/09ee29c03e4a2222c089f4ab736ec0e0bfa53930) Release 0.3.0
 - [2f0f38e](https://github.com/appium/ruby_console/commit/2f0f38e86155b41ff49f3419800413589efb19c4) Update for new Appium lib
 - [1bbc128](https://github.com/appium/ruby_console/commit/1bbc128cd5e7d9cadfc6ff9397179ed38459238e) Remove minitest example
-- [95db897](https://github.com/appium/ruby_console/commit/95db897cdf3ffb2fec3df1aba2a7f1ca469dbed8) Update release notes
 
 
 #### v0.0.30 2013-04-16
 
 - [af1dd74](https://github.com/appium/ruby_console/commit/af1dd74f254c512c9b63a013570638eb13adbe91) Release 0.0.30
-- [2b3961d](https://github.com/appium/ruby_console/commit/2b3961d6d1938693acb71e2de84a45db73f686e7) Update release notes
 
 
 #### v0.0.29 2013-04-15
@@ -56,7 +49,6 @@
 - [8a8401e](https://github.com/appium/ruby_console/commit/8a8401e3a01762feec5d9ab694843d96d2851a37) Rewrite test order when using reports
 - [43bec7d](https://github.com/appium/ruby_console/commit/43bec7d23c36f641c049f413a7d2a97f366d1282) Add minitest example
 - [211fe2e](https://github.com/appium/ruby_console/commit/211fe2ecc681403fa081ff89e7caaf0a97a440c4) Fix notes
-- [f869aa8](https://github.com/appium/ruby_console/commit/f869aa8be528a9c6c71af9eecb16d5ca7bea05f2) Update release notes
 
 
 #### v0.0.28 2013-04-11

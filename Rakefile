@@ -122,7 +122,9 @@ task :notes do
     data.split("\n").each do |line|
       hex = line.match(/[a-zA-Z0-9]+/)[0];
       # use first 7 chars to match GitHub
-      new_data += "- [#{hex[0...7]}](https://github.com/appium/#{gh_name}/commit/#{hex}) #{line.gsub(hex, '').strip}\n"
+      comment = line.gsub(hex, '').strip
+      next if comment == 'Update release notes'
+      new_data += "- [#{hex[0...7]}](https://github.com/appium/#{gh_name}/commit/#{hex}) #{comment}\n"
     end
     data = new_data + "\n"
 
