@@ -1,7 +1,6 @@
 #### Getting Started
 
-This document is written for OS X 10.8.3 or better. Appium does not yet work on Windows.
-Appium Android should run on Linux however iOS testing requires OS X.
+This document is written for OS X 10.8.3 or better. iOS testing requires OS X. Android testing will work on OS X, Windows, or Linux.
 
 Install `Xcode` from the Mac app store and the command line build tools (Xcode -> Preferences -> Downloads).
 
