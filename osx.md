@@ -54,7 +54,7 @@ Don't use the big green install button on nodejs.org or all npm commands will re
 
 - Install grunt.
 
-` sudo npm install -g grunt grunt-cli`
+`npm install -g grunt grunt-cli`
 
 ```bash
 $ grunt --version
@@ -117,7 +117,7 @@ export PATH
 - Use Intel [system image](http://software.intel.com/en-us/articles/android-4-2-jelly-bean-x86-emulator-system-image)
 at least API 17 (Jelly Bean). This is also installed via the `android` tool.
 
-- Install using Android package tool. For API 17, install `SDK Platform`, `Intel x86 Atom System Image`, `Google APIs` as in the picture. 
+- Install using Android package tool. For API 17, install `SDK Platform`, `Intel x86 Atom System Image`, `Google APIs` as in the picture.
 If there are any problems viewing or downloading the packages, go to `Packages -> Reload` and try again.
 
 - Install `Intel x86 Emulator Accelerator (HAXM)` under Extras in the Android SDK Manager
