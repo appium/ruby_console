@@ -44,7 +44,7 @@ brew upgrade node ;\
 brew install node
 ```
 
-- `brew install node`. Node should be `v0.10.2` or better.
+- Node should be `v0.10.2` or better.
 Don't use the big green install button on nodejs.org or all npm commands will require sudo.
 
 `$ node --version`
