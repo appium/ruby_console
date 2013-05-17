@@ -111,17 +111,10 @@ export APP_WAIT_ACTIVITY="SplashActivity"
 export PATH
 ```
 
-
-- Install `Intel x86 Emulator Accelerator (HAXM)` under Extras using the `android` tool.
-- Use Intel [system image](http://software.intel.com/en-us/articles/android-4-2-jelly-bean-x86-emulator-system-image)
-at least API 17 (Jelly Bean). This is also installed via the `android` tool.
-
-- Install using Android package tool. For API 17, install `SDK Platform`, `Intel x86 Atom System Image`, `Google APIs` as in the picture.
+- Run `android` to open the SDK manager. 
+- Install `Intel x86 Emulator Accelerator (HAXM)` under Extras
+- Install API 17 `SDK Platform`, `Intel x86 Atom System Image`, `Google APIs` as in the picture.
 If there are any problems viewing or downloading the packages, go to `Packages -> Reload` and try again.
-
-- Install `Intel x86 Emulator Accelerator (HAXM)` under Extras in the Android SDK Manager
-
-`android`
 
 ![](img/packages.png)
 
@@ -144,16 +137,6 @@ If there are any problems viewing or downloading the packages, go to `Packages -
 If you see `error: protocol fault (no status)` just keep running the command until the emulator is detected.
 
 - With both the Android emulator running and the Appium server started, it's time to launch the appium console. Make sure the ENV vars are exported.
-
-APP_ACTIVITY is the activity to start the app with.
-APP_WAIT_ACTIVITY is the activity to wait for before considering the app as having been started.
-
-```
-export APP_PATH="/path/to/my.apk" ;\
-export APP_PACKAGE="com.my.Pkg" ;\
-export APP_ACTIVITY="StartActivity"
-export APP_WAIT_ACTIVITY="SplashActivity"
-```
 
 - Echo the values to make sure they're set correctly
 
