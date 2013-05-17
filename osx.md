@@ -112,7 +112,7 @@ export PATH
 ```
 
 
-- Install `Intel x86 Emulator Accelerator (HAXM)` under Extras using the `android`` tool.
+- Install `Intel x86 Emulator Accelerator (HAXM)` under Extras using the `android` tool.
 - Use Intel [system image](http://software.intel.com/en-us/articles/android-4-2-jelly-bean-x86-emulator-system-image)
 at least API 17 (Jelly Bean). This is also installed via the `android` tool.
 
