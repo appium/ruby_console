@@ -39,6 +39,9 @@ module Appium::Console
     env.update 'APP_PATH', 'APP_APK', 'APP_PACKAGE',
                'APP_ACTIVITY', 'APP_WAIT_ACTIVITY',
                'SELENDROID'
+
+    # Ensure app path is absolute
+    ENV['APP_PATH'] = File.expand_path ENV['APP_PATH'] if ENV['APP_PATH']
   end
 
   require 'appium_lib'
