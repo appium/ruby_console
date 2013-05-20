@@ -1,3 +1,34 @@
+#### v0.3.6 2013-05-20
+
+- [20508c2](https://github.com/appium/ruby_console/commit/20508c2ed00edb3ae1260fe1b0f4b61206658631) Release 0.3.6
+- [4004daa](https://github.com/appium/ruby_console/commit/4004daa8b388c07599e94c063e327a8e89472980) Fix relative paths
+- [73f9713](https://github.com/appium/ruby_console/commit/73f97136ce903f72292e0e1eb9a318cbb37a1b78) Update osx.md
+- [cfbc702](https://github.com/appium/ruby_console/commit/cfbc702e4c35dc070bdcf5ccf279b713c76f0a87) Update osx.md
+- [a3a52b2](https://github.com/appium/ruby_console/commit/a3a52b24c078253d5809b7ab064f45400ec56368) Update osx.md
+- [f228d61](https://github.com/appium/ruby_console/commit/f228d61a8285bcd973fb9c58c3511c549580d639) Appium works on Windows now
+- [966ed66](https://github.com/appium/ruby_console/commit/966ed661a6e3bb820a6d111fc85b0127cc0bbe1e) Avoid sudo
+- [311790d](https://github.com/appium/ruby_console/commit/311790ddb530d80b5c1bb550bf6467c0b4b7e6b6) Fix release notes
+- [37f8a15](https://github.com/appium/ruby_console/commit/37f8a15b3025c3c1676a271574a3587cce749f00) Update documentation links
+- [f92bdbb](https://github.com/appium/ruby_console/commit/f92bdbb09554c21617fa3cb6a8778fdd81a87b07) Move docs.md to ruby_lib
+- [41a6201](https://github.com/appium/ruby_console/commit/41a6201fb1c59d4bb97755a794465073e33b5102) Update osx.md
+- [7289300](https://github.com/appium/ruby_console/commit/728930003b287d135662994dfbb10ee12d8971ee) Update osx.md
+- [082ecd5](https://github.com/appium/ruby_console/commit/082ecd573cf4606ee648b4211664ff459050c9d5) Update gemspec
+- [141c8c5](https://github.com/appium/ruby_console/commit/141c8c51f8d1373180dd53ddb56ea719b59b63fc) Recommend 10.8
+- [435f2ca](https://github.com/appium/ruby_console/commit/435f2ca8226c3e6ed4380e1a2c640cd151120aa6) Update osx.md
+- [18e60d6](https://github.com/appium/ruby_console/commit/18e60d629ac6f3423201fbe313075db32a690fea) Update osx.md
+- [a352466](https://github.com/appium/ruby_console/commit/a3524662e702af984f1c8dff42ddbc20914cd39f) Update osx.md
+- [231c4c9](https://github.com/appium/ruby_console/commit/231c4c9cd98353593137db01781bb22113b8ae35) Update osx.md
+- [f3c2034](https://github.com/appium/ruby_console/commit/f3c2034a6103305ae6e1ccdd9a1ca8df16ac00f5) Update osx.md
+- [82bc3d1](https://github.com/appium/ruby_console/commit/82bc3d17f7451edcba3bde414a82044dbf5bcd38) Update osx.md
+- [0dc828e](https://github.com/appium/ruby_console/commit/0dc828e3770b49f522e9f8f6d42ba7fe1639888f) Update osx.md
+- [76a0423](https://github.com/appium/ruby_console/commit/76a042322e76e5f57632ee6d610933981bcc18fc) Update osx.md
+- [8e53c8d](https://github.com/appium/ruby_console/commit/8e53c8d374e0e80828a7c32fc3d2a43833736863) Add bash profile
+- [b26abdd](https://github.com/appium/ruby_console/commit/b26abdda75b7b9a3728d3cf975eff9fe9384ff2b) Update osx.md
+- [00a066f](https://github.com/appium/ruby_console/commit/00a066f0577492de3ab0d413f1242c547c93da7f) Update osx.md
+- [14cae88](https://github.com/appium/ruby_console/commit/14cae889ce471d47e400ef4025635d6949c6799e) Update osx.md
+- [bdb9aaa](https://github.com/appium/ruby_console/commit/bdb9aaabe8cd07fc516dc19909fd43323179ea03) Update osx.md
+
+
 #### v0.3.5 2013-05-06
 
 - [b031b60](https://github.com/appium/ruby_console/commit/b031b60276b01e86a649cd8db8b250f3d52da9cc) Release 0.3.5
