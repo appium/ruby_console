@@ -36,6 +36,10 @@ gem uninstall -aIx appium_console ;\
 gem install --no-rdoc --no-ri appium_console
 ```
 
+- Install [brew](http://mxcl.github.io/homebrew/)
+
+`ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
+
 - Install [nodejs](http://nodejs.org/) using brew.
 
 ```
