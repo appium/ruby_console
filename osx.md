@@ -65,7 +65,7 @@ grunt-cli v0.1.6
 grunt v0.4.1
 ```
 
-- Install [ant](http://ant.apache.org/)
+- Install [ant](http://ant.apache.org/) if it's not already installed.
 - Install [maven](http://maven.apache.org/download.cgi) if it's not already installed.
 
 ```
