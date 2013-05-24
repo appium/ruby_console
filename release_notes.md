@@ -1,3 +1,10 @@
+#### v0.5.1 2013-05-24
+
+- [3d9aef1](https://github.com/appium/ruby_console/commit/3d9aef1458d0874c5c740faf8e41086ee65da86d) Release 0.5.1
+- [7242c5e](https://github.com/appium/ruby_console/commit/7242c5e72f9057fd18efa726077f78999e0f53e3) Update appium_console.gemspec
+- [f9d8b70](https://github.com/appium/ruby_console/commit/f9d8b7031425ab742285e0513520ca17bbbf2cde) Update readme.md
+
+
 #### v0.5.0 2013-05-24
 
 - [2734fda](https://github.com/appium/ruby_console/commit/2734fdabed2802e15f161bf81ba56dc51cd76ce3) Release 0.5.0
