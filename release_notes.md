@@ -1,3 +1,16 @@
+#### v0.5.0 2013-05-24
+
+- [2734fda](https://github.com/appium/ruby_console/commit/2734fdabed2802e15f161bf81ba56dc51cd76ce3) Release 0.5.0
+- [b79814c](https://github.com/appium/ruby_console/commit/b79814c1b83c756583038aabe419c6ea81bc41cd) Fix gemspec
+- [57883e6](https://github.com/appium/ruby_console/commit/57883e63d76f006ffecca38df38bfe4332d10f19) Move appium.txt loading to appium_lib
+- [b683249](https://github.com/appium/ruby_console/commit/b6832498adce98a053370085f96973d272b6be58) Update osx.md
+- [4b1dc4e](https://github.com/appium/ruby_console/commit/4b1dc4efa56be4be23e4e4842c6ca5c98486f12f) Update osx.md
+- [ab94da2](https://github.com/appium/ruby_console/commit/ab94da2212c89d22bbe77ab3ad749343da390242) Update readme.md
+- [263ca4d](https://github.com/appium/ruby_console/commit/263ca4d2490e712901279fe6f184864760edc1a8) Update osx.md
+- [5c001b3](https://github.com/appium/ruby_console/commit/5c001b357c132d26f3eee1d0e5f40569d489e9bf) Update osx.md
+- [0bf1dd7](https://github.com/appium/ruby_console/commit/0bf1dd7f517cde84f77f46bcff1fe03aa26f9e95) Update osx.md
+
+
 #### v0.3.6 2013-05-20
 
 - [20508c2](https://github.com/appium/ruby_console/commit/20508c2ed00edb3ae1260fe1b0f4b61206658631) Release 0.3.6
