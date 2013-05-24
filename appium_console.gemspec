@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.version = Appium::Console::VERSION
   s.date = Appium::Console::DATE
   s.license = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-  s.description = s.summary = 'Ruby console for use with Appium'
+  s.description = s.summary = 'Appium Ruby Console'
   s.description += '.' # avoid identical warning
   s.authors = s.email = [ 'code@bootstraponline.com' ]
   s.homepage = 'https://github.com/appium/ruby_console' # published as appium_console
