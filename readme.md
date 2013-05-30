@@ -1,4 +1,4 @@
-#### Ruby Console for Appium [![Gem Version](https://badge.fury.io/rb/appium_console.png)](http://badge.fury.io/rb/appium_console)[![Dependency Status](https://gemnasium.com/appium/ruby_console.png)](https://gemnasium.com/appium/ruby_console)
+#### Ruby Console for Appium [![Gem Version](https://badge.fury.io/rb/appium_console.png)](http://rubygems.org/gems/appium_console)[![Dependency Status](https://gemnasium.com/appium/ruby_console.png)](https://gemnasium.com/appium/ruby_console)
 
 - [appium_console on RubyGems](https://rubygems.org/gems/appium_console)
 
