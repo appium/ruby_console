@@ -37,3 +37,12 @@ Android
 iOS .name returns the [accessibility attribute](http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Reference/UIAElementClassReference/UIAElement/UIAElement.html#//apple_ref/javascript/instm/UIAElement/name) if it's set. if not set, the string value is used.
 
 Android .name returns the accessibility attribute and nothing if it's not set.
+
+The android `options` button will be hidden if the device has a hardware menu button. To work around this:
+
+```ruby
+# see abs__action_menu_overflow_description in ActionBarSherlock
+# click more options if it exists. if it doesn't then the device has a hardware menu button that must be pressed instead.
+exists { name 'more options' } ? name('more options').click : mobile(:keyevent, keycode: 82)
+```
+
