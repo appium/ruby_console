@@ -38,6 +38,8 @@ iOS .name returns the [accessibility attribute](http://developer.apple.com/libra
 
 Android .name returns the accessibility attribute and nothing if it's not set.
 
+#### More options button
+
 The android `options` button will be hidden if the device has a hardware menu button. To work around this:
 
 ```ruby
