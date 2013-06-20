@@ -87,6 +87,11 @@ If you see config errors, try cleaning git. `git clean -dfx; git reset --hard`
 
 You can also reset by platform. `./reset.sh --android`
 
+
+- Authorize for iOS testing.
+
+`sudo grunt authorize`
+
 - Start appium.
 
 `node server.js`
