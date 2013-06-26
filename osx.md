@@ -90,7 +90,7 @@ You can also reset by platform. `./reset.sh --android`
 
 - Authorize for iOS testing.
 
-> sudo `which grunt` authorize
+> sudo \`which grunt\` authorize
 
 - Start appium.
 
