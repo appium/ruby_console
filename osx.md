@@ -4,6 +4,9 @@ This document is written for OS X 10.8.3 or better. iOS testing requires OS X. A
 
 Install `Xcode` from the Mac app store and the command line build tools (Xcode -> Preferences -> Downloads).
 
+- Install Java 7 if there's no Java on the system.
+  - [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
 - Ensure you have Ruby 1.9.3-p392 or better (1.8 is not supported). Install the latest stable patch release of Ruby 1.9.3 (not Ruby 2.0).
 
 `$ \curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3`
