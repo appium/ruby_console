@@ -91,7 +91,7 @@ If you see config errors, try cleaning git. `git clean -dfx; git reset --hard`
 You can also reset by platform. `./reset.sh --android`
 
 
-- Authorize for iOS testing.
+- Authorize for iOS testing. Must run reset.sh as mentioned above before running the grunt task.
 
 > sudo \`which grunt\` authorize
 
