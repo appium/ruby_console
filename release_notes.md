@@ -19,14 +19,14 @@
 - [cce92d9](https://github.com/appium/ruby_console/commit/cce92d9494bbb281aa714be8a39ac0aeaa435372) Add version badge
 
 
-#### 
+#### v0.5.1 2013-05-24
 
 - [3d9aef1](https://github.com/appium/ruby_console/commit/3d9aef1458d0874c5c740faf8e41086ee65da86d) Release 0.5.1
 - [7242c5e](https://github.com/appium/ruby_console/commit/7242c5e72f9057fd18efa726077f78999e0f53e3) Update appium_console.gemspec
 - [f9d8b70](https://github.com/appium/ruby_console/commit/f9d8b7031425ab742285e0513520ca17bbbf2cde) Update readme.md
 
 
-#### 
+#### v0.5.0 2013-05-24
 
 - [2734fda](https://github.com/appium/ruby_console/commit/2734fdabed2802e15f161bf81ba56dc51cd76ce3) Release 0.5.0
 - [b79814c](https://github.com/appium/ruby_console/commit/b79814c1b83c756583038aabe419c6ea81bc41cd) Fix gemspec
@@ -39,7 +39,7 @@
 - [0bf1dd7](https://github.com/appium/ruby_console/commit/0bf1dd7f517cde84f77f46bcff1fe03aa26f9e95) Update osx.md
 
 
-#### 
+#### v0.3.6 2013-05-20
 
 - [20508c2](https://github.com/appium/ruby_console/commit/20508c2ed00edb3ae1260fe1b0f4b61206658631) Release 0.3.6
 - [4004daa](https://github.com/appium/ruby_console/commit/4004daa8b388c07599e94c063e327a8e89472980) Fix relative paths
@@ -70,50 +70,50 @@
 - [bdb9aaa](https://github.com/appium/ruby_console/commit/bdb9aaabe8cd07fc516dc19909fd43323179ea03) Update osx.md
 
 
-#### 
+#### v0.3.5 2013-05-06
 
 - [b031b60](https://github.com/appium/ruby_console/commit/b031b60276b01e86a649cd8db8b250f3d52da9cc) Release 0.3.5
 - [521639d](https://github.com/appium/ruby_console/commit/521639dc1b53371a472a40304c59e4476ab22197) Add selendroid
 - [c5456d2](https://github.com/appium/ruby_console/commit/c5456d29d5a1aeed1f1226b90c69a7d0025ad224) Use --local install
 
 
-#### 
+#### v0.3.4 2013-04-26
 
 - [2a621bb](https://github.com/appium/ruby_console/commit/2a621bb1620685577173fdf59daabca036cd30f7) Release 0.3.4
 - [bd60857](https://github.com/appium/ruby_console/commit/bd60857f39bd17e454a10ad0658c01c20869c33a) Fix arc upgrade
 
 
-#### 
+#### v0.3.3 2013-04-26
 
 - [a4cea5b](https://github.com/appium/ruby_console/commit/a4cea5b9857f5b450ade03cf3f326605b2aff040) Release 0.3.3
 - [188503c](https://github.com/appium/ruby_console/commit/188503c0f1c884884408896a8351ab34823c5c69) Fix appium.txt support
 
 
-#### 
+#### v0.3.2 2013-04-26
 
 - [521b85e](https://github.com/appium/ruby_console/commit/521b85e570717dc83481e4d2baf0804787031c46) Release 0.3.2
 
 
-#### 
+#### v0.3.1 2013-04-26
 
 - [5e41993](https://github.com/appium/ruby_console/commit/5e41993aa505310b3442b0ea5c8cdf72b01cd62c) Release 0.3.1
 - [d98d052](https://github.com/appium/ruby_console/commit/d98d052af5e118a099d4abac7c24db41a5ff6974) Fix uninstall
 - [6b10caa](https://github.com/appium/ruby_console/commit/6b10caa3be482a149e433e8053ccb23c64aa723f) Fix version command
 
 
-#### 
+#### v0.3.0 2013-04-25
 
 - [09ee29c](https://github.com/appium/ruby_console/commit/09ee29c03e4a2222c089f4ab736ec0e0bfa53930) Release 0.3.0
 - [2f0f38e](https://github.com/appium/ruby_console/commit/2f0f38e86155b41ff49f3419800413589efb19c4) Update for new Appium lib
 - [1bbc128](https://github.com/appium/ruby_console/commit/1bbc128cd5e7d9cadfc6ff9397179ed38459238e) Remove minitest example
 
 
-#### 
+#### v0.0.30 2013-04-16
 
 - [af1dd74](https://github.com/appium/ruby_console/commit/af1dd74f254c512c9b63a013570638eb13adbe91) Release 0.0.30
 
 
-#### 
+#### v0.0.29 2013-04-15
 
 - [f3251c8](https://github.com/appium/ruby_console/commit/f3251c819e85f5d8fabd3f9a30a3de4307d38098) Release 0.0.29
 - [83ed1b9](https://github.com/appium/ruby_console/commit/83ed1b9f4a3ca1a3b1eb6770116b0e3d42f39dfa) Update osx.md
@@ -123,7 +123,7 @@
 - [211fe2e](https://github.com/appium/ruby_console/commit/211fe2ecc681403fa081ff89e7caaf0a97a440c4) Fix notes
 
 
-#### 
+#### v0.0.28 2013-04-11
 
 - [94ae27d](https://github.com/appium/ruby_console/commit/94ae27d54c57f16b45937decfded0cdac9e10160) Release 0.0.28
 - [8030b11](https://github.com/appium/ruby_console/commit/8030b116ac6b677366a823608fc4de4c68747ecf) Add release notes
@@ -144,12 +144,12 @@
 - [3f5af60](https://github.com/appium/ruby_console/commit/3f5af6077a872a40314aba9f00b89a519e22b0ba) Update osx.md
 
 
-#### 
+#### v0.0.27 2013-04-05
 
 - [1551adc](https://github.com/appium/ruby_console/commit/1551adc6167b0195d847c14edbc9358f4d23a078) Release 0.0.27
 
 
-#### 
+#### v0.0.26 2013-04-05
 
 - [645578b](https://github.com/appium/ruby_console/commit/645578bed82d11c06ea1e7415d5864edc09e8b31) Release 0.0.26
 - [d42cfd2](https://github.com/appium/ruby_console/commit/d42cfd228b059202c7b745cb0b69259ce431e04d) Add @keep to cucumber example
@@ -157,19 +157,19 @@
 - [9d10070](https://github.com/appium/ruby_console/commit/9d10070102c855cb2d5b47bec751c276582c1beb) Update readme.md
 
 
-#### 
+#### v0.0.25 2013-03-28
 
 - [12e40b8](https://github.com/appium/ruby_console/commit/12e40b876136ea987d47f4d419f67d4d8aeaadd5) Release 0.0.25
 
 
-#### 
+#### v0.0.24 2013-03-28
 
 - [c7097e1](https://github.com/appium/ruby_console/commit/c7097e1247c76397196389d2221efc1ae4dac803) Release 0.0.24
 - [c9a94ea](https://github.com/appium/ruby_console/commit/c9a94ea19890c6b96f5ce4f491d953e651dbf4b9) RubyGems can't detect dependencies properly
 - [2596610](https://github.com/appium/ruby_console/commit/2596610151f3d939fcc8edc178a65379831095d9) Add name doc
 
 
-#### 
+#### v0.0.23 2013-03-27
 
 - [b9334ff](https://github.com/appium/ruby_console/commit/b9334ff5e5b4070ce0ceff061a07bd57c3386bb3) Release 0.0.23
 - [62ff36a](https://github.com/appium/ruby_console/commit/62ff36a2224aa6c045efd43520b9f52910d4a2d7) Update readme.md
@@ -183,26 +183,26 @@
 - [f5e3a5f](https://github.com/appium/ruby_console/commit/f5e3a5f599113d567180768fc79d241d9913184f) Update osx.md
 
 
-#### 
+#### v0.0.22 2013-03-23
 
 - [319554c](https://github.com/appium/ruby_console/commit/319554cc14c34cd981a91ad0e5a84afc574d036e) Release 0.0.22
 - [e7b4508](https://github.com/appium/ruby_console/commit/e7b45082250c9e17feb4c1529bae634c46580c75) Fix gemspec
 
 
-#### 
+#### v0.0.21 2013-03-22
 
 - [9dc45af](https://github.com/appium/ruby_console/commit/9dc45aff3d369d73b6ed2c3df79cb9845e4fa2eb) Release 0.0.21
 - [4ad39ca](https://github.com/appium/ruby_console/commit/4ad39caeaafbb58d983adb06b10ca4fc6c962261) Complete rename
 
 
-#### 
+#### v0.0.20 2013-03-22
 
 - [667db43](https://github.com/appium/ruby_console/commit/667db43968c9d584d1fc606c264bc894d08bc74c) Release 0.0.20
 - [c6b0cad](https://github.com/appium/ruby_console/commit/c6b0cad7b139ecc6f3acaf13c3ae9fdc97254bf8) Update appium_console.gemspec
 - [f3cfe6f](https://github.com/appium/ruby_console/commit/f3cfe6f835c5cb1c9784c4914ca7555ad82426af) Update readme.md
 
 
-#### 
+#### v0.0.19 2013-03-22
 
 - [217c452](https://github.com/appium/ruby_console/commit/217c452980347c1da0ab1244b58c66076d7b603f) Release 0.0.19
 - [e77fbf9](https://github.com/appium/ruby_console/commit/e77fbf97f243ecf63b1ff58c49f5fbee0bd71834) Fix gemspec
@@ -219,18 +219,18 @@
 - [a647bd2](https://github.com/appium/ruby_console/commit/a647bd2c7e3e8e18103317796c57b90df68971a4) Add implicit wait docs
 
 
-#### 
+#### v0.0.17 2013-03-21
 
 - [81f2288](https://github.com/appium/ruby_console/commit/81f2288c9559ae2d1eb893c146e43e7c6455aa29) Release 0.0.17
 - [6a4f5e6](https://github.com/appium/ruby_console/commit/6a4f5e67c943f08beb8aca599e561e4e7ba4abea) Fix doc
 
 
-#### 
+#### v0.0.16 2013-03-20
 
 - [6548de1](https://github.com/appium/ruby_console/commit/6548de111182df8a6eacf7f2a4f896fb23593ce0) Release 0.0.16
 
 
-#### 
+#### v0.0.15 2013-03-20
 
 - [68b4b80](https://github.com/appium/ruby_console/commit/68b4b8085b95582528fe7769fff3682a88e161da) Release 0.0.15
 - [e5a4227](https://github.com/appium/ruby_console/commit/e5a4227911880c9ce583bb3914a76f071db03740) Update Rakefile
@@ -242,7 +242,7 @@
 - [fa9e0a8](https://github.com/appium/ruby_console/commit/fa9e0a86b2d7109991f57e979055b8d26212f23d) Update readme.md
 
 
-#### 
+#### v0.0.14 2013-03-20
 
 - [bb3a695](https://github.com/appium/ruby_console/commit/bb3a69546e6cfa63dc4d71fd77ed1178e75d896b) Release 0.0.14
 - [cf92263](https://github.com/appium/ruby_console/commit/cf922632cfb8fb2abfe63b4c28d708cb451eff40) Fix app_lib to ruby console version
@@ -259,7 +259,7 @@
 - [a00c6a9](https://github.com/appium/ruby_console/commit/a00c6a91b53d166afc4b3d2213ef5e44cddee1ad) Update readme.md
 
 
-#### 
+#### v0.0.13 2013-03-20
 
 - [36127e0](https://github.com/appium/ruby_console/commit/36127e0e2250068673d7cff81b6a51c10ef65c7a) Release 0.0.13
 - [7af75f5](https://github.com/appium/ruby_console/commit/7af75f540043cac96afc4a686204355d4d4fa895) Release 0.0.12
@@ -276,12 +276,12 @@
 - [69f24f6](https://github.com/appium/ruby_console/commit/69f24f6b9afb775143af97e8fd8287d2f9bf5f4c) Release 0.0.9
 
 
-#### 
+#### v0.0.12 2013-03-20
 
 - [02d41c7](https://github.com/appium/ruby_console/commit/02d41c7231f3e83fff27ea0463dc6dcf064a2e48) Release 0.0.12
 
 
-#### 
+#### v0.0.11 2013-03-20
 
 - [9b4f796](https://github.com/appium/ruby_console/commit/9b4f796b5292025bc7c958f1d1bdd91cebaf3e8e) Release 0.0.11
 - [59673a5](https://github.com/appium/ruby_console/commit/59673a5891356e2a927cfc3b217765d71596ac78) Bump gemspec
