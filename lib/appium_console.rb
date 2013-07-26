@@ -10,8 +10,6 @@ module Appium::Console
   to_require = load_appium_txt file: Dir.pwd + '/appium.txt', verbose: true
 
   start = File.expand_path '../start.rb', __FILE__
-  # to do:
-  # -e switch to pass require string
   cmd = ['-r', start]
 
   if to_require && !to_require.empty?
