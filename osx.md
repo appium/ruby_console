@@ -18,6 +18,13 @@ $ rvm list
 $ rvm --default use 1.9.3
 ```
 
+- Installing Ruby 2.0 instead
+
+```
+$ rvm get stable
+$ rvm install 2.0.0
+```
+
 - Check that it's installed properly by printing the ruby version.
 
 `$ ruby --version`
