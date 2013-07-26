@@ -7,18 +7,18 @@ Install `Xcode` from the Mac app store and the command line build tools (Xcode -
 - Install Java 7 if there's no Java on the system.
   - [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-- Ensure you have Ruby 1.9.3-p392 or better (1.8 is not supported). Install the latest stable patch release of Ruby 1.9.3 (not Ruby 2.0).
+- Ensure you have Ruby 1.9.3-p392 or better (1.8 is not supported). Install the latest stable patch release of Ruby 2.0.
 
-`$ \curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3`
+`$ \curl -L https://get.rvm.io | bash -s stable --ruby=2.0.0`
 
 - Make sure RVM is using the correct Ruby by default
 
 ```
 $ rvm list
-$ rvm --default use 1.9.3
+$ rvm --default use 2.0.0
 ```
 
-- Installing Ruby 2.0 instead
+- If you have an old ruby, you can installing Ruby 2.0 instead
 
 ```
 $ rvm get stable
