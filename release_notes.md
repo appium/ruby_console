@@ -1,3 +1,12 @@
+#### v0.5.3 2013-08-07
+
+- [595bbe9](https://github.com/appium/ruby_console/commit/595bbe91fd437f95efde7da5a16cf85b0debb4f2) Release 0.5.3
+- [91b8afc](https://github.com/appium/ruby_console/commit/91b8afcfabb2a2884da343f7f7e7781a6e08da02) Use awesome_print in Pry
+- [220c31c](https://github.com/appium/ruby_console/commit/220c31c12c4aa765181ed271fdadbef8d004c50d) Fix release notes
+- [d3d1960](https://github.com/appium/ruby_console/commit/d3d1960eb3de6d097ae46dfe19340159a1851990) Recommend Ruby 2.0
+- [02850fa](https://github.com/appium/ruby_console/commit/02850faab107e3749334560573061db2ddf034ea) Remove old todo
+
+
 #### v0.5.2 2013-07-26
 
 - [0845ddd](https://github.com/appium/ruby_console/commit/0845dddda181f9349a4e1162b3dfea732491a743) Release 0.5.2
