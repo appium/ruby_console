@@ -7,6 +7,7 @@ module Appium; end unless defined? Appium
 
 module Appium::Console
   require 'appium_lib'
+  AwesomePrint.pry!
   to_require = load_appium_txt file: Dir.pwd + '/appium.txt', verbose: true
 
   start = File.expand_path '../start.rb', __FILE__
