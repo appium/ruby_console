@@ -24,9 +24,9 @@ Gem::Specification.new do |s|
   s.require_paths = [ 'lib' ]
 
   # appium_lib version must match ruby console version.
-  s.add_runtime_dependency 'appium_lib', '>= 0.3.13'
+  s.add_runtime_dependency 'appium_lib', '>= 0.6.3'
   s.add_runtime_dependency 'pry', '~> 0.9.12.2'
-  s.add_development_dependency 'rake', '~> 10.0.4'
+  s.add_development_dependency 'rake', '~> 10.1.0'
 
   s.executables   = [ 'arc' ]
   s.files = `git ls-files`.split "\n"
