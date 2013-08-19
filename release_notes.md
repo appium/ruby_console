@@ -1,3 +1,9 @@
+#### v0.5.4 2013-08-19
+
+- [97f5c4f](https://github.com/appium/ruby_console/commit/97f5c4f67c8f689f7342336b428262975e3f8421) Release 0.5.4
+- [54c61b7](https://github.com/appium/ruby_console/commit/54c61b73091cdaef990eb6b1692576c29a2b5325) Enable export session
+
+
 #### v0.5.3 2013-08-07
 
 - [595bbe9](https://github.com/appium/ruby_console/commit/595bbe91fd437f95efde7da5a16cf85b0debb4f2) Release 0.5.3
