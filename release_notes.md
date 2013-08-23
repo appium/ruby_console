@@ -1,3 +1,9 @@
+#### v0.5.5 2013-08-23
+
+- [e048325](https://github.com/appium/ruby_console/commit/e04832589c71359fc4c30e45a3da2a04f93fbd66) Release 0.5.5
+- [fdc7749](https://github.com/appium/ruby_console/commit/fdc7749b7fd074b89643407a1cd4c7ba71ff15f2) Load minitest by default
+
+
 #### v0.5.4 2013-08-19
 
 - [97f5c4f](https://github.com/appium/ruby_console/commit/97f5c4f67c8f689f7342336b428262975e3f8421) Release 0.5.4
