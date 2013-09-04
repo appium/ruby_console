@@ -1,13 +1,13 @@
 #### Getting Started
 
-This document is written for OS X 10.8.3 or better. iOS testing requires OS X. Android testing works on OS X, Windows, and Linux.
+This document is written for OS X 10.8.4 or better. iOS testing requires OS X. Android testing works on OS X, Windows, and Linux.
 
-Install `Xcode` from the Mac app store and the command line build tools (Xcode -> Preferences -> Downloads).
+Install `Xcode` 4.6.3 or better from the Mac app store and the command line build tools (Xcode -> Preferences -> Downloads).
 
 - Install Java 7 if there's no Java on the system.
   - [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-- Ensure you have Ruby 1.9.3-p392 or better (1.8 is not supported). Install the latest stable patch release of Ruby 2.0.
+- Install the latest stable patch release of Ruby 2.0.
 
 `$ \curl -L https://get.rvm.io | bash -s stable --ruby=2.0.0`
 
@@ -58,7 +58,7 @@ brew upgrade node ;\
 brew install node
 ```
 
-- Node should be `v0.10.2` or better.
+- Node should be `v0.10.5` or better.
 Don't use the big green install button on nodejs.org or all npm commands will require sudo.
 
 `$ node --version`
@@ -107,7 +107,7 @@ You can also reset by platform. `./reset.sh --android`
 `node server.js`
 
 
-# Bash Profile
+#### Bash Profile
 - Add the Android SDK tools folder to your path so you can run `android`.
 - Define the `ANDROID_HOME` env var pointing to SDK root. On OSX place it in `~/.bash_profile`
 - You may have to add grunt as well `/usr/local/share/npm/bin/grunt`
@@ -132,22 +132,18 @@ export PATH
 
 - Run `android` to open the SDK manager. 
 - Install `Intel x86 Emulator Accelerator (HAXM)` under Extras
-- Install API 17 `SDK Platform`, `Intel x86 Atom System Image`, `Google APIs` as in the picture.
+- Install API 18 `SDK Platform`, `Intel x86 Atom System Image`, `Google APIs`
 If there are any problems viewing or downloading the packages, go to `Packages -> Reload` and try again.
-
-![](img/packages.png)
 
 - Create a new Android virtual device that uses the Intel image. Ensure `Use Host GPU` is checked. Set `VM Heap` to `64`. `32` is too small.
 
 `android avd`
 
-![](img/avd_settings.png)
-
 - Check that `hax is working` If it's not, install hax [directly from Intel](http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager)
 
 ![](img/hax.png)
 
-- Launch the emulator with `emulator @t17`
+- Launch the emulator with `emulator @t18`
 
 - After launching the emulator, check that it's listed in adb devices. Run the following commands a few times until it's listed.
 
