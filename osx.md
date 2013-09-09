@@ -175,3 +175,5 @@ rm -rf /Users/`whoami`/.npm
 ./reset.sh --ios
 ./reset.sh --android
 ```
+
+- [Helper bash methods](https://gist.github.com/bootstraponline/5580587)
