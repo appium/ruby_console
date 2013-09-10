@@ -4,6 +4,11 @@ This document is written for OS X 10.8.4 or better. iOS testing requires OS X. A
 
 Install `Xcode` 4.6.3 or better from the Mac app store and the command line build tools (Xcode -> Preferences -> Downloads).
 
+Make sure to create this symlink after installing the Xcode developer tools. Otherwise, FFI will not install properly.
+Reinstall Ruby if you didn't set this symlink and have FFI issues.
+
+`sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2`
+
 - Install Java 7 if there's no Java on the system.
   - [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
