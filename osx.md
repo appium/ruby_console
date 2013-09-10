@@ -144,7 +144,10 @@ If there are any problems viewing or downloading the packages, go to `Packages -
 
 - Check that `hax is working` If it's not, install hax [directly from Intel](http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager)
 
-![](img/hax.png)
+```bash
+$ emulator @t18
+HAX is working and emulator runs in fast virt mode
+```
 
 - Launch the emulator with `emulator @t18`
 
