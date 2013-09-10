@@ -138,6 +138,8 @@ If there are any problems viewing or downloading the packages, go to `Packages -
 
 - Create a new Android virtual device that uses the Intel image. Ensure `Use Host GPU` is checked. Set `VM Heap` to `64`. `32` is too small.
 
+![](img/avd_settings.png)
+
 `android avd`
 
 - Check that `hax is working` If it's not, install hax [directly from Intel](http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager)
