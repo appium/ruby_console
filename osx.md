@@ -174,6 +174,10 @@ If you see `error: protocol fault (no status)` just keep running the command unt
 
 - See [running on OS X](https://github.com/appium/appium/blob/master/docs/running-on-osx.md)
 
+#### Troubleshooting
+
+- If install fails, keep trying to install a few times.
+
 When using `Appium.app` make sure to set Appium -> Preferences... -> Check "Use External Appium Package" and set it to the path of Appium cloned from GitHub.
 
 Fix permission errors. npm shouldn't require sudo.
@@ -183,6 +187,7 @@ brew uninstall node
 brew install node
 rm -rf ./node_modules # run from the appium folder
 rm -rf /Users/`whoami`/.npm
+rm -rf /usr/local/lib/node_modules/ 
 ./reset.sh --ios
 ./reset.sh --android
 ```
