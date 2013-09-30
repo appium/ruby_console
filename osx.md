@@ -186,7 +186,7 @@ Fix permission errors. npm shouldn't require sudo.
 brew uninstall node
 brew install node
 rm -rf ./node_modules # run from the appium folder
-rm -rf /Users/`whoami`/.npm
+rm -rf "/Users/`whoami`/.npm"
 rm -rf /usr/local/lib/node_modules/ 
 ./reset.sh --ios
 ./reset.sh --android
