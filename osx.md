@@ -193,3 +193,9 @@ rm -rf /usr/local/lib/node_modules/
 ```
 
 - [Helper bash methods](https://gist.github.com/bootstraponline/5580587)
+- [Fix SSL issues](http://railsapps.github.io/openssl-certificate-verify-failed.html) with:
+
+```bash
+$ rvm osx-ssl-certs update all
+$ rvm osx-ssl-certs status all
+```
