@@ -43,6 +43,13 @@ gem update ;\
 gem cleanup
 ```
 
+- Check that RubyGems is >= 2.1.5
+
+```bash
+$ gem --version
+2.1.5
+```
+
 - Install appium_console gem.
 
 ```ruby
