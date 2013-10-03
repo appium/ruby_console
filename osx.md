@@ -51,6 +51,13 @@ gem uninstall -aIx appium_console ;\
 gem install --no-rdoc --no-ri appium_console
 ```
 
+- Install [flaky](https://github.com/appium/flaky) gem.
+
+```ruby
+gem uninstall -aIx flaky ;\
+gem install --no-rdoc --no-ri flaky
+```
+
 - Install [brew](http://mxcl.github.io/homebrew/)
 
 `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
