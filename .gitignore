@@ -1,3 +1,6 @@
+# if osx_install.rake is used from this dir, ignore the appium subdir it creates
+appium/
+
 *.app
 .*
 *.trace

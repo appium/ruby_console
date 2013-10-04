@@ -1,13 +1,30 @@
-#### Getting Started
+### Getting Started
 
-This document is written for OS X 10.8.4 or better. iOS testing requires OS X. Android testing works on OS X, Windows, and Linux.
+This document is written for OS X 10.8.4 or better. iOS testing requires OS X. Android testing works on OS X, Windows, and Linux. 
 
-Install `Xcode` 4.6.3 or better from the Mac app store and the command line build tools (Xcode -> Preferences -> Downloads).
+For OS X, there is rake script which will attempt to do most of this for you, with
+```
+rake -f install_osx.rake
+```
+The rake script will not install Xcode, etc., nor Java, but should take care of everything else. 
+Changes to these instructions might imply changes to that script as well.
 
-Make sure to create this symlink after installing the Xcode developer tools. Otherwise, FFI will not install properly.
+#### Steps to install
+
+Install `Xcode` 4.6.3 or better from the Mac App Store. After that, install
+ the command line build tools (Xcode -> Preferences -> Downloads).
+
+That done, you'll need to create a symlink for
+`gcc` to get the ruby build (particularly FFI) to install properly. 
+If `/usr/local/bin` is in your path, you can do:
+```
+ln -s /usr/bin/gcc /usr/local/bin/gcc-4.2
+```
+Otherwise
+```
+sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2
+```
 Reinstall Ruby if you didn't set this symlink and have FFI issues.
-
-`sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2`
 
 - Install Java 7 if there's no Java on the system.
   - [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
