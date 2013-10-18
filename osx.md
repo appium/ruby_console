@@ -13,6 +13,9 @@ Changes to these instructions might imply changes to that script as well.
 
 Install `Xcode` 4.6.3 or better from the Mac App Store. After that, install
  the command line build tools (Xcode -> Preferences -> Downloads).
+ 
+If you're testing iOS 6, then install `Xcode 4.6.3` from [Apple](https://developer.apple.com/downloads/index.action).
+For iOS 7+ make sure to use Xcode 5.
 
 That done, you'll need to create a symlink for
 `gcc` to get the ruby build (particularly FFI) to install properly. 
