@@ -248,3 +248,10 @@ $ git reset --hard origin/master
 $ brew update
 $ brew install maven
 ```
+
+#### HAXM on OS X 10.9
+
+HAXM [doesn't currently support 10.9](http://software.intel.com/en-us/forums/topic/477793). Uninstall using:
+
+> sudo /System/Library/Extensions/intelhaxm.kext/Contents/Resources/uninstall.sh
+
