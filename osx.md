@@ -238,3 +238,13 @@ rm -rf /usr/local/lib/node_modules/
 $ rvm osx-ssl-certs update all
 $ rvm osx-ssl-certs status all
 ```
+
+#### Maven on OS X 10.9
+
+```bash
+$ cd /usr/local
+$ git reset --hard origin/master
+
+$ brew update
+$ brew install maven
+```
