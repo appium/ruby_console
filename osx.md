@@ -255,3 +255,6 @@ HAXM [doesn't currently support 10.9](http://software.intel.com/en-us/forums/top
 
 > sudo /System/Library/Extensions/intelhaxm.kext/Contents/Resources/uninstall.sh
 
+#### Restore dev tools on 10.9
+
+`xcode-select --install`
