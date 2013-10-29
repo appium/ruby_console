@@ -120,7 +120,7 @@ grunt v0.4.1
 ```
 
 - Install [ant](http://ant.apache.org/) if it's not already installed.
-- Install [maven](http://maven.apache.org/download.cgi) if it's not already installed.
+- Install [maven 3.0.5](http://maven.apache.org/download.cgi) if it's not already installed. Do not use maven 3.1.1.
 
 ```
 $ ant -version
