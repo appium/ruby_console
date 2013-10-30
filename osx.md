@@ -23,7 +23,7 @@ If you're testing iOS 6, then install `Xcode 4.6.3` from [Apple](https://develop
 For iOS 7+ make sure to use Xcode 5.
 
 That done, you'll need to create a symlink for
-`gcc` to get the ruby build (particularly FFI) to install properly. 
+`gcc` to get the ruby build (particularly FFI) to install properly. This isn't required on OS X 10.9.
 If `/usr/local/bin` is in your path, you can do:
 ```
 ln -s /usr/bin/gcc /usr/local/bin/gcc-4.2
@@ -51,7 +51,8 @@ $ rvm --default use 2.0.0
 - If you have an old ruby, you can installing Ruby 2.0 instead
 
 ```
-$ rvm get stable
+$ rvm get head
+$ rvm autolibs homebrew
 $ rvm install 2.0.0
 ```
 
