@@ -4,7 +4,7 @@ This document is written for OS X 10.8.4 or better. iOS testing requires OS X. A
 
 For OS X, there is rake script which will attempt to do most of this for you, with
 ```
-rake -f install_osx.rake
+rake -f osx_install.rake
 ```
 The rake script will not install Xcode, etc., nor Java, but should take care of everything else. 
 Changes to these instructions might imply changes to that script as well.
