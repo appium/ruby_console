@@ -257,12 +257,8 @@ $ brew install maven
 
 #### HAXM on OS X 10.9
 
-<del> HAXM [doesn't currently support 10.9](http://software.intel.com/en-us/forums/topic/477793). Uninstall using: </del>
-
-<del> > sudo /System/Library/Extensions/intelhaxm.kext/Contents/Resources/uninstall.sh </del>
-
-HOTFIX has been released: http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-macos-hotfix
-
+Install the [HAXM 10.9 hotfix](http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-macos-hotfix
+).
 
 #### Restore dev tools on 10.9
 
