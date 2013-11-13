@@ -1,5 +1,13 @@
 #### Notes on iOS and Android Appium compatibility
 
+#### iOS Ghosting
+
+It's not uncommon to have multiple elements from different pages. To find the correct back button for example,
+it's necessary to find all the back buttons `names('Back')` and then return the first one that's displayed.
+
+This has implications for searching by index. If you select textfield 1 for the 1st textfield, then you may
+be getting a textfield from a previous page. The solution is to ensure each element has a unique accessibility identifier
+and to verify visibility.
 
 #### iPhone vs iPad
 
