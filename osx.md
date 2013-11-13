@@ -114,6 +114,8 @@ Don't use the big green install button on nodejs.org or all npm commands will re
 
 `npm install -g grunt grunt-cli`
 
+- Run the version command from the appium folder. If you're not in that folder, the grunt version will not display.
+
 ```bash
 $ grunt --version
 grunt-cli v0.1.6
@@ -141,6 +143,10 @@ Apache Maven 3.0.3 (r1075438; 2011-02-28 12:31:09-0500)
 If you see config errors, try cleaning git. `git clean -dfx; git reset --hard`
 
 You can also reset by platform. `./reset.sh --android`
+
+If npm is having issues, you may have to disable https. I don't recommend this, however if you must this is how to do so:
+
+`npm config set registry http://registry.npmjs.org/`
 
 
 - Authorize for iOS testing. Must run reset.sh as mentioned above before running the grunt task.
