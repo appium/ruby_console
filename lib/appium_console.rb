@@ -7,7 +7,13 @@ module Appium; end unless defined? Appium
 
 def define_reload paths
   Pry.send(:define_singleton_method, :reload) do
-    paths.each { |p| load p }
+    paths.each do |p|
+      # If a page obj is deleted then load will error.
+      begin
+        load p
+      rescue # LoadError: cannot load such file
+      end
+    end
   end
   nil
 end
