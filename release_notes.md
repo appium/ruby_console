@@ -1,3 +1,39 @@
+#### v0.5.6 2013-11-18
+
+- [ce14efa](https://github.com/appium/ruby_console/commit/ce14efa1bb139a2f8a8f391d28588376757739bc) Release 0.5.6
+- [e6ee1f5](https://github.com/appium/ruby_console/commit/e6ee1f5704ceb5358997af77dc43c4bc401e204e) Add "reload" command
+- [877a42b](https://github.com/appium/ruby_console/commit/877a42b728ac8d3d7093ce92feab69010701893a) Update ios_v_android.md
+- [86eed78](https://github.com/appium/ruby_console/commit/86eed78ebcb4ab06bf148e629aad1f4de35c3309) Update osx.md
+- [c32fa78](https://github.com/appium/ruby_console/commit/c32fa7859afa659dce46ec61494544b3a9b9f2b9) Add note about iOS duplicate elements
+- [cdd23c7](https://github.com/appium/ruby_console/commit/cdd23c7e8a21e83f19763796b33a17b163de1e43) Update hotfix section
+- [a4800ab](https://github.com/appium/ruby_console/commit/a4800abc1e366fd31c1cfa5fddd2f00ae6253fe6) Merge pull request #32 from bkone/patch-2
+- [2e24615](https://github.com/appium/ruby_console/commit/2e24615366622cd658a0516850d07dda45ab7428) Update osx.md
+- [bb90e04](https://github.com/appium/ruby_console/commit/bb90e048b9835f6ee43ec43ee537ca2a5691aea5) Merge pull request #31 from bkone/patch-1
+- [c85b39d](https://github.com/appium/ruby_console/commit/c85b39d375b8dce6e97ade8701f8ab57d48e5833) install_osx.rake to osx_install.rake
+- [ff59f4d](https://github.com/appium/ruby_console/commit/ff59f4dba3557a69867af5bb53008ed2d0fb15dd) Add rvm fix for OS X 10.9
+- [add328a](https://github.com/appium/ruby_console/commit/add328a34506915f9b453722730d4f7217504658) Clarify maven version
+- [db263d3](https://github.com/appium/ruby_console/commit/db263d36fac3ef673e363cf36d93d5bb8bab03db) Clarify Xcode versions
+- [7cdd5de](https://github.com/appium/ruby_console/commit/7cdd5dead03fc08eb495e9118c337fe465b7d66e) Update osx.md
+- [869e4a4](https://github.com/appium/ruby_console/commit/869e4a4454d115a8b171e92b61b420e7e4c0152b) HAXM on OS X 10.9
+- [85f9f39](https://github.com/appium/ruby_console/commit/85f9f39eadf12b993d4389759bdcd863aaac4fbc) Add Maven OS X 10.9 doc
+- [793d780](https://github.com/appium/ruby_console/commit/793d7805705e5709c990714e545013a16189e743) Update osx.md
+- [78fbc94](https://github.com/appium/ruby_console/commit/78fbc9473b009af39043f89b50fe34105dad0870) Merge pull request #30 from claybridges/clay-rake-install
+- [604a385](https://github.com/appium/ruby_console/commit/604a3857a4612c5db7c0c2c157a51e513235f385) Add osx_install.rake, and associated changes
+- [0efa857](https://github.com/appium/ruby_console/commit/0efa857b561edf7370e27a165f9fb8b2dc68dff7) Recommend RubyGems >= 2.1.5
+- [7ba2e04](https://github.com/appium/ruby_console/commit/7ba2e042b62b1c8c6658f390b0db66b356791a33) Add flaky gem to osx.md
+- [0574a34](https://github.com/appium/ruby_console/commit/0574a3400b9f489838ace4894fde787a3361a88e) Update SSL issue docs
+- [ccb94ce](https://github.com/appium/ruby_console/commit/ccb94cebaceccdc067e646be8c6016803afd1ffe) Add SSL issue fix
+- [594c8c3](https://github.com/appium/ruby_console/commit/594c8c3100576f0168874e70bab551ae6b226a52) Use quotes
+- [763e6d4](https://github.com/appium/ruby_console/commit/763e6d48296459044b112fcfe1fb3fc3ae9dc0e4) Improve troubleshooting
+- [f60791e](https://github.com/appium/ruby_console/commit/f60791eca5166c7925f4dc8f35663142fbf5414d) Update osx.md
+- [e79b668](https://github.com/appium/ruby_console/commit/e79b6684e5321c4b393fafe0892bad7b72651b3f) Update osx.md
+- [3e2a8ae](https://github.com/appium/ruby_console/commit/3e2a8aece693227a83ab79b61c84bd400005a31a) Update osx.md
+- [21b0240](https://github.com/appium/ruby_console/commit/21b0240194a03bc4f4a33abbfc0063e1af19d48f) Update avd settings to API 18
+- [5390c80](https://github.com/appium/ruby_console/commit/5390c80febeb15ecb0d9b667694181850065a7c4) Update osx.md
+- [05e312c](https://github.com/appium/ruby_console/commit/05e312c3918686fe5e9a9769e3f1571623915dc7) Add helper bash methods for launching Appium
+- [afcb37f](https://github.com/appium/ruby_console/commit/afcb37f1b9951ff2caa41f2a4c802ee2b7ebcf16) Update to API 18
+
+
 #### v0.5.5 2013-08-23
 
 - [e048325](https://github.com/appium/ruby_console/commit/e04832589c71359fc4c30e45a3da2a04f93fbd66) Release 0.5.5
