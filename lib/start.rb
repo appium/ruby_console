@@ -13,3 +13,8 @@ begin
   Minitest::Spec.new 'pry'
 rescue
 end
+
+def reload
+  Pry.reload
+  nil
+end

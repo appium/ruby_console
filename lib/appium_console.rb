@@ -5,6 +5,13 @@ require 'pry'
 
 module Appium; end unless defined? Appium
 
+def define_reload paths
+  Pry.send(:define_singleton_method, :reload) do
+    paths.each { |p| load p }
+  end
+  nil
+end
+
 module Appium::Console
   require 'appium_lib'
   AwesomePrint.pry!
@@ -14,6 +21,7 @@ module Appium::Console
   cmd = ['-r', start]
 
   if to_require && !to_require.empty?
+    define_reload to_require
     load_files = to_require.map { |f| %(require "#{f}";) }.join "\n"
     cmd += [ '-e', load_files ]
   end
