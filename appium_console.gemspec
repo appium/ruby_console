@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'pry', '~> 0.9.12.2'
   s.add_runtime_dependency 'spec', '~> 5.0.19'
   s.add_development_dependency 'rake', '~> 10.1.0'
+  s.add_development_dependency 'posix/spawn', '~> 0.3.6'
 
   s.executables   = [ 'arc' ]
   s.files = `git ls-files`.split "\n"

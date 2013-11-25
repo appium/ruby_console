@@ -1,7 +1,9 @@
 # encoding: utf-8
+# ruby_console Rakefile
 require 'rubygems'
 require 'rake'
 require 'date'
+require 'posix/spawn'
 
 # Defines gem name.
 def repo_name; 'appium_console'; end # ruby_console published as appium_console
@@ -46,6 +48,11 @@ task :bump do
   bump
 end
 
+def tag_exists tag_name
+  cmd = %Q(git branch -a --contains "#{tag_name}")
+  POSIX::Spawn::Child.new(cmd).out.include? '* master'
+end
+
 # Inspired by Gollum's Rakefile
 desc 'Build and release a new gem to rubygems.org'
 task :release => :gem do
@@ -55,14 +62,18 @@ task :release => :gem do
   end
 
   # Commit then pull before pushing.
+  tag_name = "v#{version}"
+  raise 'Tag already exists!' if tag_exists tag_name
+
+  # Commit then pull before pushing.
   sh "git commit --allow-empty -am 'Release #{version}'"
   sh 'git pull'
-  sh "git tag v#{version}"
+  sh "git tag #{tag_name}"
   # update notes now that there's a new tag
   Rake::Task['notes'].execute
   sh "git commit --allow-empty -am 'Update release notes'"
   sh 'git push origin master'
-  sh "git push origin v#{version}"
+  sh "git push origin #{tag_name}"
   sh "gem push #{repo_name}-#{version}.gem"
 end
 
