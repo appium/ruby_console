@@ -1,3 +1,10 @@
+#### v0.5.7 2013-11-25
+
+- [c0877e8](https://github.com/appium/ruby_console/commit/c0877e8b948da670d9df3a8e6c757b2dcc476911) Release 0.5.7
+- [4bf603f](https://github.com/appium/ruby_console/commit/4bf603f911058146b88d6c4330e1d9121cbf9a87) Rescue load errors
+- [027af76](https://github.com/appium/ruby_console/commit/027af763e8563c1b91dd195e978b7410ece9ec76) Release 0.5.6
+
+
 #### v0.5.6 2013-11-18
 
 - [ce14efa](https://github.com/appium/ruby_console/commit/ce14efa1bb139a2f8a8f391d28588376757739bc) Release 0.5.6
