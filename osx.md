@@ -136,7 +136,7 @@ Apache Maven 3.0.3 (r1075438; 2011-02-28 12:31:09-0500)
 
 `$ git clone git://github.com/appium/appium.git`
 
-- Run reset.sh
+- Run reset.sh. When running reset.sh, make sure to be on Xcode 5.0.2 for best results. You may have problems if you reset on Xcode 4.6.3 and then switch to a newer Xcode.
 
 `cd appium; ./reset.sh`
 
@@ -269,3 +269,6 @@ Install the [HAXM 10.9 hotfix](http://software.intel.com/en-us/articles/intel-ha
 #### Restore dev tools on 10.9
 
 `xcode-select --install`
+
+
+- [Install specific node version](https://coderwall.com/p/lqphzg)
