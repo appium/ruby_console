@@ -269,3 +269,6 @@ Install the [HAXM 10.9 hotfix](http://software.intel.com/en-us/articles/intel-ha
 #### Restore dev tools on 10.9
 
 `xcode-select --install`
+
+
+- [Install specific node version](https://coderwall.com/p/lqphzg)
