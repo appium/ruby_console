@@ -272,3 +272,12 @@ Install the [HAXM 10.9 hotfix](http://software.intel.com/en-us/articles/intel-ha
 
 
 - [Install specific node version](https://coderwall.com/p/lqphzg)
+
+
+#### Corrupt ruby gems
+
+If you see:
+
+> invalid gem: package is corrupt, exception while verifying: undefined method
+
+Then run `$ rm -rf ~/.rvm` and reinstall RVM.
