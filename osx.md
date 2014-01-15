@@ -93,7 +93,7 @@ gem install --no-rdoc --no-ri flaky
 
 - Install [brew](http://mxcl.github.io/homebrew/)
 
-`ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
+`ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
 
 - Install [nodejs](http://nodejs.org/) using brew.
 
