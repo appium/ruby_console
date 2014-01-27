@@ -5,12 +5,13 @@ require 'pry'
 
 module Appium; end unless defined? Appium
 
-def define_reload paths
+def define_reload
   Pry.send(:define_singleton_method, :reload) do
-    paths.each do |p|
+    files = load_appium_txt file: Dir.pwd + '/appium.txt'
+    files.each do |file|
       # If a page obj is deleted then load will error.
       begin
-        load p
+        load file
       rescue # LoadError: cannot load such file
       end
     end
@@ -27,7 +28,7 @@ module Appium::Console
   cmd = ['-r', start]
 
   if to_require && !to_require.empty?
-    define_reload to_require
+    define_reload
     load_files = to_require.map { |f| %(require "#{f}";) }.join "\n"
     cmd += [ '-e', load_files ]
   end
