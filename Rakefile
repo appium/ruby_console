@@ -106,26 +106,32 @@ end
 desc 'Update release notes'
 task :notes do
   tag_sort = ->(tag1,tag2) do
+    begin
     tag1_numbers = tag1.match(/\.?v(\d+\.\d+\.\d+)$/)[1].split('.').map! { |n| n.to_i }
     tag2_numbers = tag2.match(/\.?v(\d+\.\d+\.\d+)$/)[1].split('.').map! { |n| n.to_i }
     tag1_numbers <=> tag2_numbers
+    rescue
+      raise "Match failed on\n'#{tag1}'\n'#{tag2}'"
+    end
   end
 
   tags = `git tag`.split "\n"
   tags.sort! &tag_sort
   pairs = []
-  tags.each_index { |a| pairs.push tags[a] + '...' + tags[a+1] unless tags[a+1].nil? }
+  tags.each_index { |a| pairs.push tags[a] + '..' + tags[a+1] unless tags[a+1].nil? }
 
   notes = ''
 
   dates = `git log --tags --simplify-by-decoration --pretty="format:%d %ad" --date=short`.split "\n"
+  #  " (tag: v0.0.21) 2013-03-22"
+  dates.reject! { |d| ! d.match /\(tag: v\d+\.\d+\.\d+\) \d+-\d+-\d+/ }
 
   pairs.sort! &tag_sort
   pairs.reverse! # pairs are in reverse order.
 
   tag_date = []
   pairs.each do |pair|
-    tag = pair.split('...').last
+    tag = pair.split('..').last
     dates.each do |line|
       # regular tag, or tag on master.
       if line.include?(tag + ')') || line.include?(tag + ',')
