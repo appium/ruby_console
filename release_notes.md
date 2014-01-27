@@ -1,3 +1,21 @@
+#### v0.5.8 2014-01-27
+
+- [7035cf1](https://github.com/appium/ruby_console/commit/7035cf178239803b55fbba29b844e51fd2afab5e) Release 0.5.8
+- [f1a4532](https://github.com/appium/ruby_console/commit/f1a4532a8b7717bd726ca7b3e8a79bf36362160a) Release 0.5.8
+- [7cb6fa7](https://github.com/appium/ruby_console/commit/7cb6fa7b56263049687b7261caeda7d7f62c6e07) Update reload to support new files
+- [24143df](https://github.com/appium/ruby_console/commit/24143df0566bc7ccb5dbf6eee0a52031b2b0e8d6) Add RVM note to docs
+- [dba0326](https://github.com/appium/ruby_console/commit/dba032635749ff4475b99ab42802a81ae3223396) Fix homebrew install link
+- [e365731](https://github.com/appium/ruby_console/commit/e3657310ed08e26975e759d88cf3f549e910f7e8) Fix posix-spawn
+- [870aecd](https://github.com/appium/ruby_console/commit/870aecd0d24650d96ca13730e52703051880bdc7) Update with node doc
+- [00b2dfa](https://github.com/appium/ruby_console/commit/00b2dfae8b3b6d0362a6ff4d3f751a20f4e9adca) Update docs
+- [8d48c62](https://github.com/appium/ruby_console/commit/8d48c629f79adea3d920299f74512cdb124207bf) Check for duplicate tags
+- [d1580ac](https://github.com/appium/ruby_console/commit/d1580acc99b7d7f17b6963f5c96b353a076fac37) Release 0.5.7
+- [9a7c6d6](https://github.com/appium/ruby_console/commit/9a7c6d610b77df629f5bc2b2357e190775f57946) Rescue load errors
+- [c0877e8](https://github.com/appium/ruby_console/commit/c0877e8b948da670d9df3a8e6c757b2dcc476911) Release 0.5.7
+- [4bf603f](https://github.com/appium/ruby_console/commit/4bf603f911058146b88d6c4330e1d9121cbf9a87) Rescue load errors
+- [027af76](https://github.com/appium/ruby_console/commit/027af763e8563c1b91dd195e978b7410ece9ec76) Release 0.5.6
+
+
 #### v0.5.7 2013-11-25
 
 - [c0877e8](https://github.com/appium/ruby_console/commit/c0877e8b948da670d9df3a8e6c757b2dcc476911) Release 0.5.7
