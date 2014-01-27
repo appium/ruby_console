@@ -1,21 +1,19 @@
 #### v0.5.8 2014-01-27
 
-- [7cb6fa7](https://github.com/appium/ruby_console/commit/7cb6fa7b56263049687b7261caeda7d7f62c6e07) Update reload to support new files
-- [24143df](https://github.com/appium/ruby_console/commit/24143df0566bc7ccb5dbf6eee0a52031b2b0e8d6) Add RVM note to docs
-- [dba0326](https://github.com/appium/ruby_console/commit/dba032635749ff4475b99ab42802a81ae3223396) Fix homebrew install link
-- [e365731](https://github.com/appium/ruby_console/commit/e3657310ed08e26975e759d88cf3f549e910f7e8) Fix posix-spawn
-- [870aecd](https://github.com/appium/ruby_console/commit/870aecd0d24650d96ca13730e52703051880bdc7) Update with node doc
-- [00b2dfa](https://github.com/appium/ruby_console/commit/00b2dfae8b3b6d0362a6ff4d3f751a20f4e9adca) Update docs
-- [8d48c62](https://github.com/appium/ruby_console/commit/8d48c629f79adea3d920299f74512cdb124207bf) Check for duplicate tags
-- [d1580ac](https://github.com/appium/ruby_console/commit/d1580acc99b7d7f17b6963f5c96b353a076fac37) Release 0.5.7
-- [9a7c6d6](https://github.com/appium/ruby_console/commit/9a7c6d610b77df629f5bc2b2357e190775f57946) Rescue load errors
+- [28663d7](https://github.com/appium/ruby_console/commit/28663d7c6615f2cf135934fca661138aa5b274b1) Release 0.5.8
+- [a8d19b1](https://github.com/appium/ruby_console/commit/a8d19b12d7f913b6e6b59c920c80662d2d5c2062) Update reload to support new files
+- [9baad04](https://github.com/appium/ruby_console/commit/9baad04e4ed78927bbe4b24f86e1b063087d002f) Add RVM note to docs
+- [0a077c0](https://github.com/appium/ruby_console/commit/0a077c0f35ed0d043987b4912f91336c63b0d0b0) Fix homebrew install link
+- [772816b](https://github.com/appium/ruby_console/commit/772816b2fc87145bc8c7bfae31659e3a68ca73da) Fix posix-spawn
+- [79e59fd](https://github.com/appium/ruby_console/commit/79e59fd2c5e653a3f5e43873283f41d29aa5bdc5) Update docs
+- [e3e8a9c](https://github.com/appium/ruby_console/commit/e3e8a9c53f58a7d444b89ddcb3fe47f95aa9e381) Check for duplicate tags
+- [26385c2](https://github.com/appium/ruby_console/commit/26385c28c49070614a10fc146624513e4802820f) Rescue load errors
 
 
 #### v0.5.7 2013-11-25
 
-- [c0877e8](https://github.com/appium/ruby_console/commit/c0877e8b948da670d9df3a8e6c757b2dcc476911) Release 0.5.7
-- [4bf603f](https://github.com/appium/ruby_console/commit/4bf603f911058146b88d6c4330e1d9121cbf9a87) Rescue load errors
-- [027af76](https://github.com/appium/ruby_console/commit/027af763e8563c1b91dd195e978b7410ece9ec76) Release 0.5.6
+- [d1580ac](https://github.com/appium/ruby_console/commit/d1580acc99b7d7f17b6963f5c96b353a076fac37) Release 0.5.7
+- [9a7c6d6](https://github.com/appium/ruby_console/commit/9a7c6d610b77df629f5bc2b2357e190775f57946) Rescue load errors
 
 
 #### v0.5.6 2013-11-18
