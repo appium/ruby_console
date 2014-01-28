@@ -16,8 +16,10 @@ gem update bundler
 ```bash
 gem uninstall -aIx appium_lib ;\
 gem uninstall -aIx appium_console ;\
-gem install --no-rdoc --no-ri appium_console
+gem install --no-rdoc --no-ri appium_console bond
 ```
+
+The bond gem is necessary for proper auto complete. Installing it will fix this error `NameError: uninitialized constant Pry::BondCompleter::Bond`
 
 If `appium_console` is already installed, run `arc upgrade` to automatically update.
 
