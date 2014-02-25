@@ -11,7 +11,7 @@ Changes to these instructions might imply changes to that script as well.
 
 #### Steps to install
 
-Install `Xcode` 4.6.3 (iOS 6) or 5.0.0 (iOS 7).
+Install `Xcode` 4.6.3 (iOS 6) or 5.0.2 (iOS 7).
 
 - Xcode 5.0.0 shouldn't be used for iOS 6 as it's flaky.
 - Xcode 5.0.1 is broken.
@@ -20,7 +20,7 @@ Install `Xcode` 4.6.3 (iOS 6) or 5.0.0 (iOS 7).
 After that, install the command line build tools (Xcode -> Preferences -> Downloads).
  
 If you're testing iOS 6, then install `Xcode 4.6.3` from [Apple](https://developer.apple.com/downloads/index.action).
-For iOS 7+ make sure to use Xcode 5.
+For iOS 7+ make sure to use Xcode 5.0.2.
 
 That done, you'll need to create a symlink for
 `gcc` to get the ruby build (particularly FFI) to install properly. This isn't required on OS X 10.9.
