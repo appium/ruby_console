@@ -123,13 +123,13 @@ grunt v0.4.1
 ```
 
 - Install [ant](http://ant.apache.org/) if it's not already installed.
-- Install [maven 3.0.5](http://maven.apache.org/download.cgi) if it's not already installed. Do not use maven 3.1.1.
+- Install [maven 3.1.1 or better](http://maven.apache.org/download.cgi) if it's not already installed. Old maven will not work.
 
 ```
 $ ant -version
 Apache Ant(TM) version 1.8.2 compiled on June 20 2012
 $ mvn -version
-Apache Maven 3.0.3 (r1075438; 2011-02-28 12:31:09-0500)
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 11:22:22-0400)
 ```
 
 - Clone appium
