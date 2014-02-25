@@ -155,7 +155,7 @@ If npm is having issues, you may have to disable https. I don't recommend this, 
 
 - Start appium.
 
-`node server.js`
+`node .`
 
 
 #### Bash Profile
