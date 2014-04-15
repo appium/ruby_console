@@ -7,8 +7,10 @@ module Appium; end unless defined? Appium
 
 def define_reload
   Pry.send(:define_singleton_method, :reload) do
-    files = load_appium_txt file: Dir.pwd + '/appium.txt'
-    files.each do |file|
+    parsed = load_appium_txt file: Dir.pwd + '/appium.txt'
+    return unless parsed && parsed[:appium_lib] && parsed[:appium_lib][:requires]
+    requires = parsed[:appium_lib][:requires]
+    requires.each do |file|
       # If a page obj is deleted then load will error.
       begin
         load file
