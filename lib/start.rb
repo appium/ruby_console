@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'appium_lib'
 
-Appium::Driver.new(export_session: true).start_driver if $driver.nil?
+Appium::Driver.new(Pry.pry_load_appium_txt).start_driver if $driver.nil?
 
 # Load minitest
 begin
