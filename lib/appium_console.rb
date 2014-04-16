@@ -24,7 +24,9 @@ end
 module Appium::Console
   require 'appium_lib'
   AwesomePrint.pry!
-  to_require = load_appium_txt file: Dir.pwd + '/appium.txt', verbose: true
+  parsed = load_appium_txt file: Dir.pwd + '/appium.txt', verbose: true
+  return unless parsed && parsed[:appium_lib] && parsed[:appium_lib][:requires]
+  to_require = parsed[:appium_lib][:requires]
 
   start = File.expand_path '../start.rb', __FILE__
   cmd = ['-r', start]
