@@ -1,3 +1,16 @@
+#### v0.5.9 2014-01-28
+
+- [38c21c9](https://github.com/appium/ruby_console/commit/38c21c935ec50ce30d320888342a3df3da975917) Release 0.6.0
+- [2df9ce2](https://github.com/appium/ruby_console/commit/2df9ce223555a3906d809b2523176a0e27b02e43) Update set command timeout for appium 1.0
+- [9b6b201](https://github.com/appium/ruby_console/commit/9b6b201f2d290f34e97b55b40d353b83686fa31b) Update for new appium_lib
+- [19a9f71](https://github.com/appium/ruby_console/commit/19a9f716e7ec54e4bc3dd646da12ea39d55a92a4) Update console
+- [29b2aee](https://github.com/appium/ruby_console/commit/29b2aee0c375b7e94887b4653800e8193bd20690) Update to work with new appium_lib gem
+- [6835147](https://github.com/appium/ruby_console/commit/68351478351016f90d9a0eb11e307b981c7a9919) Update osx.md
+- [554fe33](https://github.com/appium/ruby_console/commit/554fe33ec488465684d670c20279376329d55c0f) Update maven in install guide
+- [fb1444e](https://github.com/appium/ruby_console/commit/fb1444eac315e87c42fecafb912c8923c9e241a9) Recommend Xcode 5.0.2
+- [3da8929](https://github.com/appium/ruby_console/commit/3da89297fc3394592136922225bb32b0be9f2909) Update readme.md
+
+
 #### v0.5.8 2014-01-27
 
 - [d7ed421](https://github.com/appium/ruby_console/commit/d7ed421772e94a82a8668b26dd29fa7c180b7ef0) Release 0.5.9
