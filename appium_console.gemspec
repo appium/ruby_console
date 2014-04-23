@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'appium_lib', '>= 0.6.3'
   s.add_runtime_dependency 'pry', '~> 0.9.12.5'
   s.add_runtime_dependency 'bond', '~> 0.5.0'
-  s.add_runtime_dependency 'spec', '~> 5.0.19'
+  s.add_runtime_dependency 'spec', '>= 5.3.3'
   s.add_development_dependency 'rake', '~> 10.1.0'
   s.add_development_dependency 'posix-spawn', '~> 0.3.8'
 
