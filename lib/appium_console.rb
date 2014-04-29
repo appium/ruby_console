@@ -16,8 +16,8 @@ end
 
 Pry.send(:define_singleton_method, :reload) do
   parsed = Pry.pry_load_appium_txt
-  return unless parsed && parsed[:appium_lib] && parsed[:appium_lib][:requires]
-  requires = parsed[:appium_lib][:requires]
+  return unless parsed && parsed[:appium_lib] && parsed[:appium_lib][:require]
+  requires = parsed[:appium_lib][:require]
   requires.each do |file|
     # If a page obj is deleted then load will error.
     begin
@@ -35,9 +35,9 @@ module Appium
     cmd   = ['-r', start]
 
     parsed       = Pry.pry_load_appium_txt verbose: true
-    has_requires = parsed && parsed[:appium_lib] && parsed[:appium_lib][:requires]
+    has_requires = parsed && parsed[:appium_lib] && parsed[:appium_lib][:require]
     if has_requires
-      requires = parsed[:appium_lib][:requires]
+      requires = parsed[:appium_lib][:require]
 
       if !requires.empty?
         load_files = requires.map { |f| %(require "#{f}";) }.join "\n"
