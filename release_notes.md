@@ -1,3 +1,9 @@
+#### v0.6.0 2014-04-22
+
+- [7342d45](https://github.com/appium/ruby_console/commit/7342d45c6b0a287ab52bca98bf8e1dfb8590e08b) Release 1.0.0
+- [0500ca0](https://github.com/appium/ruby_console/commit/0500ca0e80a91e5d10cb28ee2c84fec4fe4611b5) Fix require support in appium.txt
+
+
 #### v0.5.9 2014-01-28
 
 - [38c21c9](https://github.com/appium/ruby_console/commit/38c21c935ec50ce30d320888342a3df3da975917) Release 0.6.0
