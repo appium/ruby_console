@@ -15,11 +15,11 @@ def version
   @version = @version || File.read(version_file).match(version_rgx)[1]
 end
 
-def bump
+def bump value
   data = File.read version_file
 
   v_line = data.match version_rgx
-  d_line = data.match /DATE = '([^']+)'/m
+  d_line = data.match /\s*DATE\s*=\s*'([^']+)'/m
 
   old_v = v_line[0]
   old_d = d_line[0]
@@ -27,6 +27,16 @@ def bump
   old_num = v_line[1]
   new_num = old_num.split('.')
   new_num[-1] = new_num[-1].to_i + 1
+
+  if value == :y
+    new_num[-1] = 0 # x.y.Z -> x.y.0
+    new_num[-2] = new_num[-2].to_i + 1 # x.Y -> x.Y+1
+  elsif value == :x
+    new_num[-1] = 0 # x.y.Z -> x.y.0
+    new_num[-2] = 0 # x.Y.z -> x.0.z
+    new_num[-3]= new_num[-3].to_i + 1
+  end
+
   new_num = new_num.join '.'
 
   new_v = old_v.sub old_num, new_num
@@ -43,9 +53,19 @@ def bump
   File.write version_file, data
 end
 
-desc 'Bump the version number and update the date.'
+desc 'Bump the z version number and update the date.'
 task :bump do
-  bump
+  bump :z
+end
+
+desc 'Bump the y version number, set z to zero, update the date.'
+task :bumpy do
+  bump :y
+end
+
+desc 'Bump the x version number, set y & z to zero, update the date.'
+task :bumpx do
+  bump :x
 end
 
 def tag_exists tag_name
