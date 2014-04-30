@@ -103,6 +103,14 @@ grunt v0.4.1
 - Install [ant](http://ant.apache.org/) if it's not already installed.
 - Install [maven 3.1.1 or better](http://maven.apache.org/download.cgi) if it's not already installed. Old maven will not work.
 
+Ant and maven can be installed manually or using brew.
+
+```bash
+$ brew update
+$ brew install ant
+$ brew install maven
+```
+
 ```
 $ ant -version
 Apache Ant(TM) version 1.8.2 compiled on June 20 2012
