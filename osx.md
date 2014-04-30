@@ -1,59 +1,46 @@
 ### Getting Started
 
-This document is written for OS X 10.8.4 or better. iOS testing requires OS X. Android testing works on OS X, Windows, and Linux. 
+This document is written for OS X 10.9.2 or better. iOS testing requires OS X. Android testing works on OS X, Windows, and Linux. 
 
 For OS X, there is rake script which will attempt to do most of this for you, with
+
 ```
 rake -f osx_install.rake
 ```
+
 The rake script will not install Xcode, etc., nor Java, but should take care of everything else. 
 Changes to these instructions might imply changes to that script as well.
 
 #### Steps to install
 
-Install `Xcode` 4.6.3 (iOS 6) or 5.0.2 (iOS 7).
+Install `Xcode` 5.1.1.
 
 - Xcode 5.0.0 shouldn't be used for iOS 6 as it's flaky.
 - Xcode 5.0.1 is broken.
 - Xcode 4.6.3 doesn't support iOS 7.
 
-After that, install the command line build tools (Xcode -> Preferences -> Downloads).
+After that, install the command line build tools for your version of OS X (Xcode -> Open Developer Tools -> More Developer Tools).
  
-If you're testing iOS 6, then install `Xcode 4.6.3` from [Apple](https://developer.apple.com/downloads/index.action).
-For iOS 7+ make sure to use Xcode 5.0.2.
-
-That done, you'll need to create a symlink for
-`gcc` to get the ruby build (particularly FFI) to install properly. This isn't required on OS X 10.9.
-If `/usr/local/bin` is in your path, you can do:
-```
-ln -s /usr/bin/gcc /usr/local/bin/gcc-4.2
-```
-Otherwise
-```
-sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2
-```
-Reinstall Ruby if you didn't set this symlink and have FFI issues.
-
 - Install Java 7 if there's no Java on the system.
   - [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-- Install the latest stable patch release of Ruby 2.0.
+- Install stable release of Ruby.
 
-`$ \curl -L https://get.rvm.io | bash -s stable --ruby=2.0.0`
+`$ \curl -L https://get.rvm.io | bash -s stable --ruby`
 
 - Make sure RVM is using the correct Ruby by default
 
 ```
 $ rvm list
-$ rvm --default use 2.0.0
+$ rvm --default use 2.1.1
 ```
 
-- If you have an old ruby, you can installing Ruby 2.0 instead
+- If you have an old ruby, you can installing Ruby 2.1.1 instead
 
 ```
 $ rvm get head
 $ rvm autolibs homebrew
-$ rvm install 2.0.0
+$ rvm install 2.1.1
 ```
 
 - Check that it's installed properly by printing the ruby version.
@@ -173,19 +160,16 @@ PATH=$PATH:$ANDROID_HOME/build-tools
 PATH=$PATH:$ANDROID_HOME/platform-tools
 PATH=$PATH:$ANDROID_HOME/tools
 export JAVA_HOME="`/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/java_home`"
-export APP_PATH="/path/to/MyiOS.app"
-export APK_PATH="/path/to/my.apk"
-export APP_PACKAGE="com.example.Package"
-export APP_ACTIVITY="StartActivity"
-export APP_WAIT_ACTIVITY="SplashActivity"
 
 export PATH
 ```
 
 - Run `android` to open the SDK manager. 
 - Install `Intel x86 Emulator Accelerator (HAXM)` under Extras
-- Install API 18 `SDK Platform`, `Intel x86 Atom System Image`, `Google APIs`
+- Install API 19 `SDK Platform`, `Intel x86 Atom System Image`, `Google APIs`
 If there are any problems viewing or downloading the packages, go to `Packages -> Reload` and try again.
+
+![](img/packages.png)
 
 - Create a new Android virtual device that uses the Intel image. Ensure `Use Host GPU` is checked. Set `VM Heap` to `64`. `32` is too small.
 
@@ -196,11 +180,11 @@ If there are any problems viewing or downloading the packages, go to `Packages -
 - Check that `hax is working` If it's not, install hax [directly from Intel](http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager)
 
 ```bash
-$ emulator @t18
+$ emulator @android
 HAX is working and emulator runs in fast virt mode
 ```
 
-- Launch the emulator with `emulator @t18`
+- Launch the emulator with `emulator @android`
 
 - After launching the emulator, check that it's listed in adb devices. Run the following commands a few times until it's listed.
 
@@ -209,10 +193,6 @@ HAX is working and emulator runs in fast virt mode
 If you see `error: protocol fault (no status)` just keep running the command until the emulator is detected.
 
 - With both the Android emulator running and the Appium server started, it's time to launch the appium console. Make sure the ENV vars are exported.
-
-- Echo the values to make sure they're set correctly
-
-`$ echo $APP_PATH $APP_PACKAGE $APP_ACTIVITY $APP_WAIT_ACTIVITY`
 
 - Start appium console
 
@@ -270,9 +250,7 @@ Install the [HAXM 10.9 hotfix](http://software.intel.com/en-us/articles/intel-ha
 
 `xcode-select --install`
 
-
 - [Install specific node version](https://coderwall.com/p/lqphzg)
-
 
 #### Corrupt ruby gems
 
