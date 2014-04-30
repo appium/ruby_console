@@ -2,15 +2,6 @@
 
 This document is written for OS X 10.9.2 or better. iOS testing requires OS X. Android testing works on OS X, Windows, and Linux. 
 
-For OS X, there is rake script which will attempt to do most of this for you, with
-
-```
-rake -f osx_install.rake
-```
-
-The rake script will not install Xcode, etc., nor Java, but should take care of everything else. 
-Changes to these instructions might imply changes to that script as well.
-
 #### Steps to install
 
 Install `Xcode` 5.1.1.
