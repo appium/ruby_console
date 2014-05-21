@@ -170,7 +170,7 @@ If there are any problems viewing or downloading the packages, go to `Packages -
 
 ![](img/packages.png)
 
-- Create a new Android virtual device that uses the Intel image. Ensure `Use Host GPU` is checked. Set `VM Heap` to `64`. `32` is too small.
+- Create a new Android virtual device that uses the Intel image. Ensure `Use Host GPU` is not checked. Some apps will break in strange ways when the host GPU is used. Also don't attach an SD card [as that may cause issues](http://stackoverflow.com/questions/5744298/what-does-this-mean-failure-install-failed-container-error). Set `VM Heap` to `64`. `32` is too small.
 
 ![](img/avd_settings.png)
 
