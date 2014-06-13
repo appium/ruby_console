@@ -11,6 +11,11 @@ gem update --system ;\
 gem update bundler
 ```
 
+#### Pry commands
+
+Pry commands are prefixed with `%`. For example `%reset` invokes Pry's reset command.
+To use the ruby_lib reset, it's `reset`
+
 #### Install / Upgrade Ruby Console
 
 ```bash

@@ -2,6 +2,12 @@
 require 'rubygems'
 require 'appium_lib'
 
+# must prefix pry commands such as %reset or the pry command will
+# override the ruby_lib command with the same name.
+#
+# old Pry may not respond to config
+Pry.respond_to?(:config) ? Pry.config.command_prefix = '%' : ''
+
 if $driver.nil?
   opts = Pry.pry_load_appium_txt
   # override command timeout so the server doesn't shut down after 60 seconds
