@@ -1,3 +1,14 @@
+#### v1.0.0 2014-04-29
+
+- [c68f766](https://github.com/appium/ruby_console/commit/c68f7664b07010679c4a3ba780ad2dc95499076f) Release 1.0.1
+- [dbee56b](https://github.com/appium/ruby_console/commit/dbee56bf2ec3d5fa9eeae2c7a5f1aee64f4c0984) Update osx.md
+- [de03ad6](https://github.com/appium/ruby_console/commit/de03ad68363c6c33348c95369c90dbd036f37c18) Prefix pry commands with %
+- [97329b6](https://github.com/appium/ruby_console/commit/97329b623b9961a65404e17927204ed3a014c8c4) Add note about host gpu and sd card
+- [b451b1a](https://github.com/appium/ruby_console/commit/b451b1a70c551b9e2c5c12691bec42727c7397f2) Update osx.md
+- [428849a](https://github.com/appium/ruby_console/commit/428849a17c73023739bebe01db6cca17f90f969f) rake -f osx_install.rake is out of date
+- [7cf1ed2](https://github.com/appium/ruby_console/commit/7cf1ed2f191f5660fb0966c740d0e5ec266981fb) Update install doc
+
+
 #### v0.6.0 2014-04-22
 
 - [7342d45](https://github.com/appium/ruby_console/commit/7342d45c6b0a287ab52bca98bf8e1dfb8590e08b) Release 1.0.0
