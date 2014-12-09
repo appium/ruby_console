@@ -1,3 +1,12 @@
+#### v1.0.1 2014-06-13
+
+- [5a89125](https://github.com/appium/ruby_console/commit/5a89125ba71115f23ac55e9b7507a1f0dda52cc3) Release 1.0.2
+- [01e14b9](https://github.com/appium/ruby_console/commit/01e14b93435edd23f09fce0a9b8c55acc2772e14) Fix toml generation
+- [cd26d98](https://github.com/appium/ruby_console/commit/cd26d9866aeb1c76a3164ca744a5af4b9df23b8d) Merge pull request #41 from GokhanArik/master
+- [0acd1cb](https://github.com/appium/ruby_console/commit/0acd1cbd3f837a34e6092b340e725d5a8020ca80) Variable names in sample appium.txt file for Android updated
+- [1d5b46a](https://github.com/appium/ruby_console/commit/1d5b46ad174c0815ecb5e385339e6859c0ce2d00) Update readme.md
+
+
 #### v1.0.0 2014-04-29
 
 - [c68f766](https://github.com/appium/ruby_console/commit/c68f7664b07010679c4a3ba780ad2dc95499076f) Release 1.0.1
