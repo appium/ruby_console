@@ -2,6 +2,10 @@
 
 - [appium_console on RubyGems](https://rubygems.org/gems/appium_console)
 
+#### How to use
+
+Read the [bootcamp guide on the ruby console](https://saucelabs.com/resources/appium-bootcamp/appium-bootcamp-2013-chapter-2-the-console).
+
 #### Update system
 
 Paste the following into Terminal. If you're not using [RVM](https://rvm.io/), you may have to prefix gem commands with sudo.
@@ -28,20 +32,7 @@ The bond gem is necessary for proper auto complete. Installing it will fix this 
 
 If `appium_console` is already installed, run `arc upgrade` to automatically update.
 
-#### Update Appium
-
-To update `appium` from source (assuming node.js requires sudo):
-
-Clone appium if you haven't already.
-
-`git clone git@github.com:appium/appium.git`
-
-then in the `appium` folder:
-
-```bash
-git pull ;\
-sudo ./reset.sh ; ./reset.sh
-```
+#### Notes
 
 You should uninstall the `ap` gem because it breaks awesome_print.
 
@@ -55,34 +46,6 @@ The `arc` command starts Appium Ruby Console.
 - `arc upgrade` upgrades appium_console and appium_lib.
 - `arc setup android` creates `appium.txt` for android in the current working dir.
 - `arc setup ios` creates `appium.txt` for ios in the current working dir.
-
-Ruby 1.9.3 and Appium from GitHub are required. Run Appium from source.
-
-`node server.js -V --fast-reset`
-
-For OS X, export the path to your .app bundle `MyApp.app` or zipped app bundle `MyApp.app.zip`
-
-`export APP_PATH="../MyApp.app"`
-
-For Android:
-
-`APP_ACTIVITY` is the activity to start the app with.
-`APP_WAIT_ACTIVITY` is the activity to wait for before considering the app as having been started.
-
-```
-export APP_PATH="/path/to/my.apk" ;\
-export APP_PACKAGE="com.my.Pkg" ;\
-export APP_ACTIVITY="StartActivity" ;\
-export APP_WAIT_ACTIVITY="SplashActivity"
-```
-
-You may want to define the environment variables in `~/.bash_profile` so you don't have to export them again.
-
-#### Reset Appium
-
-Reset Appium after pulling the latest changes.
-
-`$ ./reset.sh`
 
 #### Documentation
 
