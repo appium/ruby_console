@@ -33,10 +33,10 @@ ARGV.each_index do |idx|
     end
     File.open toml, 'w' do |f|
       if b && b.match(/android/i)
-        f.puts %Q(APP_PATH="#{ENV['APP_PATH'] || '/path/to/my.apk'}")
-        f.puts %Q(APP_PACKAGE="#{ENV['APP_PACKAGE'] || 'com.my.Pkg'}")
-        f.puts %Q(APP_ACTIVITY="#{ENV['APP_ACTIVITY'] || 'StartActivity'}")
-        f.puts %Q(APP_WAIT_ACTIVITY="#{ENV['APP_WAIT_ACTIVITY'] || 'SplashActivity'}")
+        f.puts %Q([caps])
+        f.puts %Q(app = "#{ENV['APP_PATH'] || '/path/to/my.apk'}")
+        f.puts %Q(platformName = "com.my.Pkg")
+        f.puts %Q(deviceName = "Android")
       elsif b && b.match(/ios/i)
         # iOS requires only APP_PATH
         ios = ENV['APP_PATH']
