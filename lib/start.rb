@@ -14,6 +14,7 @@ if $driver.nil?
   new_command_timeout = { caps: { newCommandTimeout: 999_999 }.merge(opts[:caps] || {}) }
   opts = opts.merge(new_command_timeout)
   Appium::Driver.new(opts).start_driver
+  Appium.promote_appium_methods Object
 end
 
 # Load minitest
