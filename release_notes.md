@@ -1,3 +1,10 @@
+#### v1.0.2 2014-12-08
+
+- [58f7d52](https://github.com/appium/ruby_console/commit/58f7d52b4ef923edf3051df8f145eaf9541bab1d) Release 1.0.3
+- [5aa3d51](https://github.com/appium/ruby_console/commit/5aa3d51db558f8de812cc166c7dc4002a631dd6d) Promote on Object by default for pry
+- [30d0729](https://github.com/appium/ruby_console/commit/30d0729e886dde408e5ebff1b286f1206610926e) Update readme.md
+
+
 #### v1.0.1 2014-06-13
 
 - [5a89125](https://github.com/appium/ruby_console/commit/5a89125ba71115f23ac55e9b7507a1f0dda52cc3) Release 1.0.2
