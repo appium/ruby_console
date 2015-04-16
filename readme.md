@@ -1,4 +1,7 @@
-#### Appium Ruby Console [![Gem Version](https://badge.fury.io/rb/appium_console.png)](http://rubygems.org/gems/appium_console)[![Dependency Status](https://gemnasium.com/appium/ruby_console.png)](https://gemnasium.com/appium/ruby_console)
+[![Downloads](https://img.shields.io/gem/dt/appium_console.svg)](https://rubygems.org/gems/appium_console)
+[![Pull Requests](http://issuestats.com/github/appium/ruby_console/badge/pr?style=flat)](http://issuestats.com/github/appium/ruby_console)
+[![Issues](http://issuestats.com/github/appium/ruby_console/badge/issue?style=flat)](http://issuestats.com/github/appium/ruby_console)
+#### Appium Ruby Console [![Gem Version](https://badge.fury.io/rb/appium_console.svg)](http://badge.fury.io/rb/appium_console)[![Dependency Status](https://gemnasium.com/appium/ruby_console.svg)](https://gemnasium.com/appium/ruby_console)
 
 - [appium_console on RubyGems](https://rubygems.org/gems/appium_console)
 
