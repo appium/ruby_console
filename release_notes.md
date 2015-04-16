@@ -1,3 +1,11 @@
+#### v1.0.3 2014-12-23
+
+- [7803da9](https://github.com/appium/ruby_console/commit/7803da93f968d86e49af62ca20df910049452101) Release 1.0.4
+- [228bd34](https://github.com/appium/ruby_console/commit/228bd3441db0f3a42a4a0ffea46486b00cae3e17) Update deps
+- [4820904](https://github.com/appium/ruby_console/commit/48209043e45868fc1ad790c29e6714725685bdbf) Merge pull request #46 from xsmaster/master
+- [e5113b3](https://github.com/appium/ruby_console/commit/e5113b3caca6a1355ed0f6fe15f21b748fca42b4) Updated the version of pry used. From 0.9.12.5 -> 0.10.1
+
+
 #### v1.0.2 2014-12-08
 
 - [58f7d52](https://github.com/appium/ruby_console/commit/58f7d52b4ef923edf3051df8f145eaf9541bab1d) Release 1.0.3
