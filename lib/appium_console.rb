@@ -9,9 +9,17 @@ end
 
 require 'pry'
 
-Pry.send(:define_singleton_method, :pry_load_appium_txt) do |opts={}|
-  verbose = opts.fetch :verbose, false
-  Appium.load_appium_txt file: Dir.pwd + '/appium.txt', verbose: verbose
+Pry.send(:define_singleton_method, :pry_load_appium_txt) do |opts = {}|
+  if ARGV.any?
+    command       = ARGV[0].to_sym
+    option        = ARGV[1]
+    opts[command] = option
+  end
+
+  verbose       = opts.fetch :verbose, false
+  dir           = opts.fetch :appium_dir, Dir.pwd
+  path          = dir + "/appium.txt"
+  Appium.load_appium_txt file: path, verbose: verbose
 end
 
 Pry.send(:define_singleton_method, :reload) do
