@@ -10,7 +10,7 @@ end
 require 'pry'
 
 Pry.send(:define_singleton_method, :pry_load_appium_txt) do |opts = {}|
-  if ARGV.any?
+  if ARGV.size >= 2
     command       = ARGV[0].to_sym
     option        = ARGV[1]
     opts[command] = option
