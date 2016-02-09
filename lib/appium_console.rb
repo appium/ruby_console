@@ -18,7 +18,7 @@ Pry.send(:define_singleton_method, :pry_load_appium_txt) do |opts = {}|
 
   verbose       = opts.fetch :verbose, false
   dir           = opts.fetch :appium_dir, Dir.pwd
-  path          = dir + "/appium.txt"
+  path          = File.join dir, "/appium.txt"
   Appium.load_appium_txt file: path, verbose: verbose
 end
 
