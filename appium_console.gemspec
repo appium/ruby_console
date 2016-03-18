@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'pry', '~> 0.10.1'
   s.add_runtime_dependency 'bond', '~> 0.5.1'
   s.add_runtime_dependency 'spec', '>= 5.3.4'
+  s.add_runtime_dependency 'thor', '>= 0.19'
   s.add_development_dependency 'rake', '~> 10.4.2'
   s.add_development_dependency 'posix-spawn', '~> 0.3.11'
 

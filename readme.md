@@ -49,11 +49,12 @@ The `arc` command starts Appium Ruby Console.
 - `arc upgrade` upgrades appium_console and appium_lib.
 - `arc setup android` creates `appium.txt` for android in the current working dir.
 - `arc setup ios` creates `appium.txt` for ios in the current working dir.
+- `arc toml FILE` starts arc with toml FILE path
 
 #### Documentation
 
 - [Installing Appium on OS X](https://github.com/appium/ruby_console/blob/master/osx.md)
-- [Overview](https://github.com/appium/ruby_lib/blob/master/docs/docs.md) 
+- [Overview](https://github.com/appium/ruby_lib/blob/master/docs/docs.md)
 - [Android methods](https://github.com/appium/ruby_lib/blob/master/docs/android_docs.md)
 - [iOS methods](https://github.com/appium/ruby_lib/blob/master/docs/ios_docs.md)
 - [Appium docs](https://github.com/appium/appium/tree/master/docs)
