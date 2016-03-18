@@ -7,12 +7,14 @@ require 'appium_console'
 
 module Appium::CLI
   module Config
-    def self.appium_txt_template_path
-      "templates/appium.txt.erb"
-    end
+    class << self
+      def appium_txt_template_path
+        "templates/appium.txt.erb"
+      end
 
-    def self.default_appium_txt_path
-      "appium.txt"
+      def default_appium_txt_path
+        "appium.txt"
+      end
     end
   end
 
@@ -55,20 +57,6 @@ module Appium::CLI
       puts "appium_console: v#{::Appium::Console::VERSION}"
       puts "    appium_lib: v#{::Appium::VERSION}"
       exit
-    end
-
-    desc "upgrade", "Upgrades libraries to latest versions"
-    def upgrade
-      commands = [ 'gem uninstall -aIx appium_lib',
-        'gem uninstall -aIx appium_console',
-        'gem install --no-rdoc --no-ri appium_console'
-      ]
-      commands.each do |command|
-        if !system(command)
-          puts "There was an error executing: \"#{command}\""
-          exit
-        end
-      end
     end
 
     desc "toml [FILE]", "Starts appium console session with path to toml file"
