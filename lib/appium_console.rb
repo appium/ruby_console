@@ -50,6 +50,11 @@ module Appium
 
           $stdout.puts "pry #{cmd.join(' ')}"
         end
+
+        Pry.hooks.add_hook(:after_session, "Release session hook") do |output, binding, pry|
+          output.puts "Closing appium session..."
+          $driver.x
+        end
         Pry::CLI.parse_options cmd
       end
     end
