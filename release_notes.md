@@ -1,3 +1,13 @@
+#### v2.0.1 2016-03-18
+
+- [bbee248](https://github.com/appium/ruby_console/commit/bbee248870ee670bf2fe199dfc193d5e3a045144) Release 2.0.1
+- [0939028](https://github.com/appium/ruby_console/commit/0939028af176025772c81852a5847f0f3a683fda) Merge pull request #54 from Spin42/appium_dir
+- [61b0f19](https://github.com/appium/ruby_console/commit/61b0f1915d8c3a673a388fb5fb7330a1cf14d9be) Close appium session on exit or ctrl-d
+- [8e4aa2d](https://github.com/appium/ruby_console/commit/8e4aa2df19b7e416509768bac7519820550a657d) Replace Rakefile with appium_thor
+- [b16236e](https://github.com/appium/ruby_console/commit/b16236ecfc6ff7104746579a8406114c6f9e3341) Release 2.0.0
+- [5ae4556](https://github.com/appium/ruby_console/commit/5ae45566a767dce4efc0116a737975c4aaec98ea) Release 2.0.0
+
+
 #### v2.0.0 2016-03-18
 
 - [5ae4556](https://github.com/appium/ruby_console/commit/5ae45566a767dce4efc0116a737975c4aaec98ea) Release 2.0.0
