@@ -33,8 +33,6 @@ gem install --no-rdoc --no-ri appium_console bond
 
 The bond gem is necessary for proper auto complete. Installing it will fix this error `NameError: uninitialized constant Pry::BondCompleter::Bond`
 
-If `appium_console` is already installed, run `arc upgrade` to automatically update.
-
 #### Notes
 
 You should uninstall the `ap` gem because it breaks awesome_print.
@@ -45,8 +43,8 @@ You should uninstall the `ap` gem because it breaks awesome_print.
 
 The `arc` command starts Appium Ruby Console.
 
+- `arc help` prints a description of all available commands
 - `arc version` prints the current version of appium console and appium lib.
-- `arc upgrade` upgrades appium_console and appium_lib.
 - `arc setup android` creates `appium.txt` for android in the current working dir.
 - `arc setup ios` creates `appium.txt` for ios in the current working dir.
 - `arc toml FILE` starts arc with toml FILE path
