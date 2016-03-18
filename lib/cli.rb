@@ -1,0 +1,92 @@
+require 'rubygems'
+require 'thor'
+require 'appium_console/version'
+require 'appium_lib/common/version'
+require 'erb'
+require 'appium_console'
+
+module Appium::CLI
+  module Config
+    def self.appium_txt_template_path
+      "templates/appium.txt.erb"
+    end
+
+    def self.default_appium_txt_path
+      "appium.txt"
+    end
+  end
+
+  class Setup < Thor
+    desc "ios", "Generates toml for ios"
+    def ios
+      toml     = File.join(Dir.pwd, Config.default_appium_txt_path)
+      template = ERB.new(File.new(Config.appium_txt_template_path).read, nil, "-")
+      File.open toml, 'w' do |f|
+        caps = {
+          platform_name: "iOS",
+          device_name: "iPhone Simulator",
+          platform_version: "9.0",
+          path_to_app: "/path/to/app_bundle"
+        }
+        f.puts template.result(binding)
+      end
+    end
+
+    desc "android", "Generates toml for android"
+    def android
+      toml     = File.join(Dir.pwd, Config.default_appium_txt_path)
+      template = ERB.new(File.new(Config.appium_txt_template_path).read, nil, "-")
+      File.open toml, 'w' do |f|
+        caps = {
+          platform_name: "Android",
+          device_name: "Nexus 5",
+          path_to_app: "/path/to/apk",
+          app_package: "com.package.example",
+          app_activity: ".ExampleActivity"
+        }
+        f.puts template.result(binding)
+      end
+    end
+  end
+
+  class Main < Thor
+    desc "version", "Prints version of appium_lib and appium_console"
+    def version
+      puts "appium_console: v#{::Appium::Console::VERSION}"
+      puts "    appium_lib: v#{::Appium::VERSION}"
+      exit
+    end
+
+    desc "upgrade", "Upgrades libraries to latest versions"
+    def upgrade
+      commands = [ 'gem uninstall -aIx appium_lib',
+        'gem uninstall -aIx appium_console',
+        'gem install --no-rdoc --no-ri appium_console'
+      ]
+      commands.each do |command|
+        if !system(command)
+          puts "There was an error executing: \"#{command}\""
+          exit
+        end
+      end
+    end
+
+    desc "toml [FILE]", "Starts appium console session with path to toml file"
+    def toml appium_txt_path = Config.default_appium_txt_path
+      Appium::Console.setup appium_txt_path
+      Appium::Console.start
+    end
+
+    desc "init", "Starts appium console session with defaults settings"
+    def init
+      Appium::Console.setup Config.default_appium_txt_path
+      Appium::Console.start
+    end
+    default_command :init
+
+    desc "setup", "Generates toml file"
+    subcommand "setup", Setup
+  end
+end
+
+Appium::CLI::Main.start(ARGV)

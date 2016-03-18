@@ -1,0 +1,17 @@
+[caps]
+platformName = "<%= caps[:platform_name] %>"
+<% if !caps[:platform_version].nil? -%>
+platformVersion = <%= caps[:platform_version] %>
+<% end -%>
+deviceName = "<%= caps[:device_name] %>"
+app = "<%= caps[:path_to_app] %>"
+<% if !caps[:app_package].nil? -%>
+appPackage = <%= caps[:app_package] %>
+<% end -%>
+<% if !caps[:app_activity].nil? -%>
+appActivity = <%= caps[:app_activity] %>
+<% end -%>
+
+[appium_lib]
+sauce_username = ""
+sauce_access_key = ""
