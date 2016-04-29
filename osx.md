@@ -23,15 +23,15 @@ After that, install the command line build tools for your version of OS X (Xcode
 
 ```
 $ rvm list
-$ rvm --default use 2.1.1
+$ rvm --default use 2.3.0
 ```
 
-- If you have an old ruby, you can installing Ruby 2.1.1 instead
+- If you have an old ruby, you can installing Ruby 2.3.0 instead
 
 ```
 $ rvm get head
 $ rvm autolibs homebrew
-$ rvm install 2.1.1
+$ rvm install 2.3.0
 ```
 
 - Check that it's installed properly by printing the ruby version.
@@ -51,7 +51,7 @@ gem cleanup
 
 ```bash
 $ gem --version
-2.1.5
+2.6.4
 ```
 
 - Install appium_console gem.
@@ -113,9 +113,9 @@ $ brew install maven
 
 ```
 $ ant -version
-Apache Ant(TM) version 1.8.2 compiled on June 20 2012
+Apache Ant(TM) version 1.9.7 compiled on April 9 2016
 $ mvn -version
-Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 11:22:22-0400)
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T09:41:47-07:00)
 ```
 
 - Clone appium
