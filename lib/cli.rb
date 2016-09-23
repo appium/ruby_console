@@ -9,7 +9,7 @@ module Appium::CLI
   module Config
     class << self
       def appium_txt_template_path
-        "templates/appium.txt.erb"
+        File.join(File.dirname(__FILE__), "..", "templates/appium.txt.erb")
       end
 
       def default_appium_txt_path
@@ -60,7 +60,8 @@ module Appium::CLI
     end
 
     desc "toml [FILE]", "Starts appium console session with path to toml file"
-    def toml appium_txt_path = Config.default_appium_txt_path
+    def toml
+      appium_txt_path = Config.default_appium_txt_path
       Appium::Console.setup appium_txt_path
       Appium::Console.start
     end
