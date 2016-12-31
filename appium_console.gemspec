@@ -24,13 +24,13 @@ Gem::Specification.new do |s|
   s.require_paths = [ 'lib' ]
 
   # appium_lib version must match ruby console version.
-  s.add_runtime_dependency 'appium_lib', '>= 1.0.0'
-  s.add_runtime_dependency 'pry', '~> 0.10.1'
-  s.add_runtime_dependency 'bond', '~> 0.5.1'
-  s.add_runtime_dependency 'spec', '>= 5.3.4'
-  s.add_runtime_dependency 'thor', '>= 0.19'
-  s.add_development_dependency 'rake', '~> 10.4.2'
-  s.add_development_dependency 'appium_thor', '>= 1.0.1'
+  s.add_runtime_dependency 'appium_lib', '~> 8.0', '>= 8.0.3'
+  s.add_runtime_dependency 'pry', '~> 0.10'
+  s.add_runtime_dependency 'bond', '~> 0.5'
+  s.add_runtime_dependency 'spec', '~> 5.3', '>= 5.3.1'
+  s.add_runtime_dependency 'thor', '~> 0.19'
+  s.add_development_dependency 'rake', '~> 10.4'
+  s.add_development_dependency 'appium_thor', '~> 1.0', '>= 1.0.1'
   s.add_development_dependency 'posix-spawn', '~> 0.3.11'
 
   s.executables   = [ 'arc' ]
