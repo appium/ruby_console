@@ -1,3 +1,13 @@
+#### v2.1.0 2017-03-15
+
+- [c156dd8](https://github.com/appium/ruby_console/commit/c156dd8da2fca398fce437d05b1113d9979fada2) Release 2.1.0
+- [5cb4efb](https://github.com/appium/ruby_console/commit/5cb4efbc1cdb4e90c6cf79bb51a1b16a2ca8c8e5) Merge pull request #59 from montdidier/master
+- [1257eb7](https://github.com/appium/ruby_console/commit/1257eb7f53af3f4dc001480438cd5c3316d81259) support for xctest compatible version of appium
+- [40e163e](https://github.com/appium/ruby_console/commit/40e163eaf9e61b202f9f9e35b7a564e3afa7fd4a) fixed arc setup ios|android command (issue #57)
+- [4407a63](https://github.com/appium/ruby_console/commit/4407a631d113bba69bf93664469fb9e5b372b426) Merge pull request #55 from trevren11/patch-1
+- [e57212c](https://github.com/appium/ruby_console/commit/e57212c4a8be3a8c0bba1958a8aa92f11de94d13) Update osx.md
+
+
 #### v2.0.1 2016-03-18
 
 - [bbee248](https://github.com/appium/ruby_console/commit/bbee248870ee670bf2fe199dfc193d5e3a045144) Release 2.0.1
