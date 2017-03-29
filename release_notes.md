@@ -1,3 +1,10 @@
+#### v2.1.1 2017-03-30
+
+- [fd5c711](https://github.com/appium/ruby_console/commit/fd5c7114f0796440d9389a8ef1ef6aef95c83b8a) Release 2.1.1
+- [6b63c3b](https://github.com/appium/ruby_console/commit/6b63c3b9d7736079e79dea25faf6fa7420d2c5ff) Merge pull request #63 from bblanco1/master
+- [e39ca95](https://github.com/appium/ruby_console/commit/e39ca95812881de93b583d82089b60d8ea3691ff) Updated version of 'appium_lib' -> 9.3.5
+
+
 #### v2.1.0 2017-03-15
 
 - [c156dd8](https://github.com/appium/ruby_console/commit/c156dd8da2fca398fce437d05b1113d9979fada2) Release 2.1.0
