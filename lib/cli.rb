@@ -62,8 +62,7 @@ module Appium::CLI
     end
 
     desc "toml [FILE]", "Starts appium console session with path to toml file"
-    def toml
-      appium_txt_path = Config.default_appium_txt_path
+    def toml(appium_txt_path = Config.default_appium_txt_path)
       Appium::Console.setup appium_txt_path
       Appium::Console.start
     end
