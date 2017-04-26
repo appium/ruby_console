@@ -25,9 +25,10 @@ module Appium::CLI
       template = ERB.new(File.new(Config.appium_txt_template_path).read, nil, "-")
       File.open toml, 'w' do |f|
         caps = {
+          automation_name: "XCUITest",
           platform_name: "iOS",
           device_name: "iPhone Simulator",
-          platform_version: "9.0",
+          platform_version: "10.3",
           path_to_app: "/path/to/app_bundle"
         }
         f.puts template.result(binding)
@@ -40,8 +41,9 @@ module Appium::CLI
       template = ERB.new(File.new(Config.appium_txt_template_path).read, nil, "-")
       File.open toml, 'w' do |f|
         caps = {
+          automation_name: "uiautomator2",
           platform_name: "Android",
-          device_name: "Nexus 5",
+          device_name: "Nexus 5X",
           path_to_app: "/path/to/apk",
           app_package: "com.package.example",
           app_activity: ".ExampleActivity"
