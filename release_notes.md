@@ -1,3 +1,12 @@
+#### v2.2.1 2017-04-26
+
+- [30b71fa](https://github.com/appium/ruby_console/commit/30b71faae94032178da5dd222ec396a6b62573c2) Release 2.2.1
+- [a31fd3e](https://github.com/appium/ruby_console/commit/a31fd3e724ead70e383d541ca6399d91f5682c6a) Merge pull request #69 from oscartanner/master
+- [079e43e](https://github.com/appium/ruby_console/commit/079e43e85ef6d1efb5e7377f61d3af3ef788d81d) Fixed toml function parameter
+- [45820ac](https://github.com/appium/ruby_console/commit/45820ac2b0f312a1e4d83e801e6c09bb84d3e166) Merge pull request #68 from KazuCocoa/add_automation_name
+- [cab87ac](https://github.com/appium/ruby_console/commit/cab87ac12238adfa23356c6a254dc63c8417b343) add automationName in template
+
+
 #### v2.2.0 2017-04-20
 
 - [795a6ec](https://github.com/appium/ruby_console/commit/795a6ec26a637f822104c6fb31a64f2587f37bf9) Release 2.2.0
