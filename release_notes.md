@@ -1,3 +1,10 @@
+#### v2.3.0 2017-04-27
+
+- [c643e10](https://github.com/appium/ruby_console/commit/c643e10294e5bb4b3c695273f2312718ebc5a428) Release 2.3.0
+- [1090259](https://github.com/appium/ruby_console/commit/109025922c0924bd736e0068406aed2c1acba755) Merge pull request #70 from KazuCocoa/support_ruby_over_22
+- [b54b676](https://github.com/appium/ruby_console/commit/b54b676418c209239f7802a94ba3fe9223c3d564) support ruby over 2.2+
+
+
 #### v2.2.1 2017-04-26
 
 - [30b71fa](https://github.com/appium/ruby_console/commit/30b71faae94032178da5dd222ec396a6b62573c2) Release 2.2.1
