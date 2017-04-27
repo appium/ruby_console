@@ -11,7 +11,7 @@ require 'appium_console/version'
 
 Gem::Specification.new do |s|
   # 1.8.x is not supported
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 2.2'
 
   s.name = 'appium_console'
   s.version = Appium::Console::VERSION
@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'bond', '~> 0.5'
   s.add_runtime_dependency 'spec', '~> 5.3', '>= 5.3.1'
   s.add_runtime_dependency 'thor', '~> 0.19'
-  s.add_development_dependency 'rake', '~> 10.4'
+  s.add_development_dependency 'rake', '~> 12.0'
   s.add_development_dependency 'appium_thor', '~> 1.0', '>= 1.0.1'
   s.add_development_dependency 'posix-spawn', '~> 0.3.11'
 
