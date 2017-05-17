@@ -197,7 +197,7 @@ If you see `error: protocol fault (no status)` just keep running the command unt
 
 `arc`
 
-- See [running on OS X](https://github.com/appium/appium/blob/master/docs/running-on-osx.md)
+- See [running on OS X](https://github.com/appium/appium/blob/master/docs/en/appium-setup/running-on-osx.md)
 
 #### Troubleshooting
 
