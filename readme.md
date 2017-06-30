@@ -7,7 +7,7 @@
 
 #### How to use
 
-Read the [bootcamp guide on the ruby console](https://saucelabs.com/resources/appium-bootcamp/appium-bootcamp-2013-chapter-2-the-console).
+Read the [bootcamp guide on the ruby console](https://wiki.saucelabs.com/display/DOCS/Appium+Bootcamp+2%3A+Configuring+Appium).
 
 #### Update system
 
