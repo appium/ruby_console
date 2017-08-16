@@ -1,3 +1,14 @@
+#### v2.4.0 2017-08-16
+
+- [e28a78f](https://github.com/appium/ruby_console/commit/e28a78f9197160f3fccd1b017205f6371e462d1a) Release 2.4.0
+- [6fba7c1](https://github.com/appium/ruby_console/commit/6fba7c1eff397928a75c97c1a2207fde827abe07) Merge pull request #75 from tommeier/loosen-dependency-restriction
+- [97558d5](https://github.com/appium/ruby_console/commit/97558d5a672d4f22631ae67a07527027273e4794) Allow minor and patch updates
+- [3ad2c8f](https://github.com/appium/ruby_console/commit/3ad2c8f3ab19f91df5a3e618d65f6bcbec992a52) Merge pull request #74 from appium/fix_a_link_for_boorcamp
+- [bfe789f](https://github.com/appium/ruby_console/commit/bfe789fa74bb17db276dbf852c0a5a0539c3fce6) Update readme.md
+- [40a848b](https://github.com/appium/ruby_console/commit/40a848b51c49b8523a3c9509072c5a83ea4117d5) Merge pull request #71 from liangway/patch-1
+- [4a4f5c9](https://github.com/appium/ruby_console/commit/4a4f5c90ed4c1b272d12517cc4dff3145632faf0) Update doc url
+
+
 #### v2.3.0 2017-04-27
 
 - [c643e10](https://github.com/appium/ruby_console/commit/c643e10294e5bb4b3c695273f2312718ebc5a428) Release 2.3.0
