@@ -1,3 +1,10 @@
+#### v2.5.0 2017-09-02
+
+- [9b58455](https://github.com/appium/ruby_console/commit/9b58455f8d680ec8cf358927743eca2c30c9e15b) Release 2.5.0
+- [b5622fb](https://github.com/appium/ruby_console/commit/b5622fb09159b8231283591b16285d4008385d8c) Merge pull request #77 from KazuCocoa/require_appium_lib_960
+- [c964691](https://github.com/appium/ruby_console/commit/c9646914c2ddb8cd92129bd82ef57ce51ad69d3a) require appium 9.6+
+
+
 #### v2.4.0 2017-08-16
 
 - [e28a78f](https://github.com/appium/ruby_console/commit/e28a78f9197160f3fccd1b017205f6371e462d1a) Release 2.4.0
