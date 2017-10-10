@@ -1,3 +1,10 @@
+#### v2.6.0 2017-10-11
+
+- [79556e2](https://github.com/appium/ruby_console/commit/79556e2af7da58c1eff28cd966dca05ca38ccfb4) Release 2.6.0
+- [59f694a](https://github.com/appium/ruby_console/commit/59f694a98ae29fd18febe10a4bc6c3ed59570478) Merge pull request #79 from scorix/master
+- [0968807](https://github.com/appium/ruby_console/commit/096880749936c55988dcbeaa0ef7d67b148509d3) Fix LoadError
+
+
 #### v2.5.0 2017-09-02
 
 - [9b58455](https://github.com/appium/ruby_console/commit/9b58455f8d680ec8cf358927743eca2c30c9e15b) Release 2.5.0
