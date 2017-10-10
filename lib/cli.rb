@@ -1,7 +1,11 @@
 require 'rubygems'
 require 'thor'
 require 'appium_console/version'
-require 'appium_lib/common/version'
+begin
+  require 'appium_lib/common/version'
+rescue LoadError
+  require 'appium_lib/version'
+end
 require 'erb'
 require 'appium_console'
 
