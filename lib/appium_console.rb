@@ -55,7 +55,9 @@ module Appium
           output.puts "Closing appium session..."
           $driver.x
         end
-        Pry::CLI.parse_options cmd
+
+        opts = Pry::CLI.parse_options cmd
+        Pry::CLI.start(opts)
       end
     end
   end
