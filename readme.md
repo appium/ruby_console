@@ -35,9 +35,13 @@ The bond gem is necessary for proper auto complete. Installing it will fix this 
 
 #### Notes
 
-You should uninstall the `ap` gem because it breaks awesome_print.
-
-`gem uninstall -aIx ap`
+1. You should uninstall the `ap` gem because it breaks awesome_print.
+    - `gem uninstall -aIx ap`
+2. If the statement ends in `;` then the element will not be shown in Pry
+    ```
+    find_element(:uiautomator, 'new UiSelector().textContains("Text")'); # -- no element shown
+    find_element(:uiautomator, 'new UiSelector().textContains("Text")') # shows element
+    ```
 
 #### Run
 
