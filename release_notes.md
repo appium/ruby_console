@@ -1,3 +1,10 @@
+#### v2.7.0 2017-10-14
+
+- [4a20815](https://github.com/appium/ruby_console/commit/4a20815de598042c98a9c83069148261d90fc67b) Release 2.7.0
+- [b4f2252](https://github.com/appium/ruby_console/commit/b4f22523564e5c6fd1224afa5ff84b68a1badf47) Merge pull request #81 from KazuCocoa/use_pry_0_11
+- [c46ea75](https://github.com/appium/ruby_console/commit/c46ea75dd135e5ad1770cb7e688eae3fa29df3ee) use pry 0.11.x
+
+
 #### v2.6.0 2017-10-11
 
 - [79556e2](https://github.com/appium/ruby_console/commit/79556e2af7da58c1eff28cd966dca05ca38ccfb4) Release 2.6.0
