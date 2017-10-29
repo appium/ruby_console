@@ -1,3 +1,10 @@
+#### v2.7.1 2017-10-29
+
+- [40e9214](https://github.com/appium/ruby_console/commit/40e92141020df1e5b8c536fe2552abfe1d04b862) Release 2.7.1
+- [6a01fe3](https://github.com/appium/ruby_console/commit/6a01fe32290bb09a0d429f1ca90614c269e3d815) Merge pull request #82 from KazuCocoa/update_readme
+- [d8f096e](https://github.com/appium/ruby_console/commit/d8f096eebc58cf5ba0ffe7ed071d9804461bbdb5) add notice for ;
+
+
 #### v2.7.0 2017-10-14
 
 - [4a20815](https://github.com/appium/ruby_console/commit/4a20815de598042c98a9c83069148261d90fc67b) Release 2.7.0
