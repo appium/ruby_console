@@ -6,10 +6,10 @@ platformVersion = <%= caps[:platform_version] %>
 deviceName = "<%= caps[:device_name] %>"
 app = "<%= caps[:path_to_app] %>"
 <% if !caps[:app_package].nil? -%>
-appPackage = <%= caps[:app_package] %>
+appPackage = "<%= caps[:app_package] %>"
 <% end -%>
 <% if !caps[:app_activity].nil? -%>
-appActivity = <%= caps[:app_activity] %>
+appActivity = "<%= caps[:app_activity] %>"
 <% end -%>
 
 [appium_lib]
