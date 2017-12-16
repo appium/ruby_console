@@ -1,3 +1,11 @@
+#### v2.7.2 2017-12-17
+
+- [3e0aeab](https://github.com/appium/ruby_console/commit/3e0aeab27669dda26e70375f477614507dc9bdeb) Release 2.7.2
+- [23f0165](https://github.com/appium/ruby_console/commit/23f01656f4c97dc5568cf38b87a337171672a3f9) Added double quotes in the appium.txt template (#86)
+- [f1170b9](https://github.com/appium/ruby_console/commit/f1170b9a979fcfbf87d59a4f21561a6486e5e921) Merge pull request #85 from oscartanner/master
+- [c52b1dd](https://github.com/appium/ruby_console/commit/c52b1dda49618e8c4fcf5905e467eae603f850eb) Double quotes added in appium.txt template
+
+
 #### v2.7.1 2017-10-29
 
 - [40e9214](https://github.com/appium/ruby_console/commit/40e92141020df1e5b8c536fe2552abfe1d04b862) Release 2.7.1
