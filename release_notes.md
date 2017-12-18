@@ -1,3 +1,9 @@
+#### v2.8.0 2017-12-18
+
+- [2eef9cf](https://github.com/appium/ruby_console/commit/2eef9cfacb4ab405998da4f3712139ac97f381e8) Release 2.8.0
+- [0d9bde6](https://github.com/appium/ruby_console/commit/0d9bde6846cf9a8e4820c84820f1ae12224dcf0d) add awesome print (#88)
+
+
 #### v2.7.2 2017-12-17
 
 - [3e0aeab](https://github.com/appium/ruby_console/commit/3e0aeab27669dda26e70375f477614507dc9bdeb) Release 2.7.2
