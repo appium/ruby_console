@@ -2,6 +2,7 @@
 require 'rubygems'
 require 'pry'
 require 'appium_lib'
+require 'awesome_print'
 
 # Silence gem warnings
 Gem::Specification.class_eval do
