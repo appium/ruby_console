@@ -1,3 +1,11 @@
+#### v2.9.0 2018-08-16
+
+- [6f9d1a6](https://github.com/appium/ruby_console/commit/6f9d1a63def0498381db3e004872150d2ab7ffa1) Release 2.9.0
+- [5fdcf53](https://github.com/appium/ruby_console/commit/5fdcf53188e0b72e50f98417491c4f4a65595103) bump up
+- [ec7e883](https://github.com/appium/ruby_console/commit/ec7e8832611d09136bae73aaec68ca41aa10d472) tweak gemspec (#92)
+- [b445f3d](https://github.com/appium/ruby_console/commit/b445f3dbae43f07289ab16adf2142eade9d8da86) delete outdated documentation (#91)
+
+
 #### v2.8.1 2017-12-21
 
 - [9b840d2](https://github.com/appium/ruby_console/commit/9b840d23b12a6942ca2cf1fc6eafc31aecdf789d) Release 2.8.1
