@@ -44,9 +44,9 @@ module Appium
         if has_requires
           requires = parsed[:appium_lib][:require]
 
-          if !requires.empty?
-            load_files = requires.map { |f| %(require "#{f}";) }.join "\n"
-            cmd        += ['-e', load_files]
+          unless requires.empty?
+            load_files = requires.map {|f| %(require "#{f}";)}.join "\n"
+            cmd += ['-e', load_files]
           end
 
           $stdout.puts "pry #{cmd.join(' ')}"
