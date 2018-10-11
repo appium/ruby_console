@@ -1,3 +1,9 @@
+#### v2.9.1 2018-10-11
+
+- [9ee4361](https://github.com/appium/ruby_console/commit/9ee4361b41a8056199c7f743f56032f64940855e) Release 2.9.1
+- [b25f24f](https://github.com/appium/ruby_console/commit/b25f24fdf88b27703f3587f46129d50dec87d78c) use 11.4 for ios template
+
+
 #### v2.9.0 2018-08-16
 
 - [6f9d1a6](https://github.com/appium/ruby_console/commit/6f9d1a63def0498381db3e004872150d2ab7ffa1) Release 2.9.0
