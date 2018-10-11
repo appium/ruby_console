@@ -28,7 +28,7 @@ module Appium::CLI
           automation_name: "XCUITest",
           platform_name: "iOS",
           device_name: "iPhone Simulator",
-          platform_version: "10.3",
+          platform_version: "11.4",
           path_to_app: "/path/to/app_bundle"
         }
         f.puts template.result(binding)
