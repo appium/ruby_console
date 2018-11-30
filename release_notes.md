@@ -1,3 +1,9 @@
+#### v2.9.2 2018-11-30
+
+- [510438c](https://github.com/appium/ruby_console/commit/510438cbf0dca2747923150e60c61e8f2e91e7ad) Release 2.9.2
+- [8dd00cc](https://github.com/appium/ruby_console/commit/8dd00ccb9481c0f6a3add83d834b4dc3d0c22917) relax the version of appium lib (#95)
+
+
 #### v2.9.1 2018-10-11
 
 - [9ee4361](https://github.com/appium/ruby_console/commit/9ee4361b41a8056199c7f743f56032f64940855e) Release 2.9.1
