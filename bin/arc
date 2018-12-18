@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 # appium ruby console = arc
-require 'cli'
-require 'appium_console'
+require './lib/cli'
+require './lib/appium_console'

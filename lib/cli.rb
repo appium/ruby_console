@@ -15,6 +15,21 @@ module Appium::CLI
       def default_appium_txt_path
         "appium.txt"
       end
+
+      def template(caps)
+        %([caps]\n) +
+        %(platformName = "#{caps[:platform_name]}"\n) +
+        %(#{ "platformVersion = \"#{caps[:platform_version]}\"\n" if caps[:platform_version]}) +
+        %(#{ "deviceName = \"#{caps[:device_name]}\"\n" if caps[:device_name]}) +
+        %(app = "#{caps[:path_to_app]}"\n) +
+        %(#{ "appPackage = \"#{caps[:app_package]}\"\n" if caps[:app_package]}) +
+        %(#{ "appActivity = \"#{caps[:app_activity]}\"\n" if caps[:app_activity]}) +
+        %(\n[appium_lib]\n) +
+        %(server_url = "http://127.0.0.1:4723/wd/hub"\n) +
+        %(sauce_username = ""\n) +
+        %(sauce_access_key = ""\n)
+      end
+
     end
   end
 
@@ -22,7 +37,6 @@ module Appium::CLI
     desc "ios", "Generates toml for ios"
     def ios
       toml     = File.join(Dir.pwd, Config.default_appium_txt_path)
-      template = ERB.new(File.new(Config.appium_txt_template_path).read, nil, "-")
       File.open toml, 'w' do |f|
         caps = {
           automation_name: "XCUITest",
@@ -31,14 +45,13 @@ module Appium::CLI
           platform_version: "11.4",
           path_to_app: "/path/to/app_bundle"
         }
-        f.puts template.result(binding)
+        f.puts Config.template(caps)
       end
     end
 
     desc "android", "Generates toml for android"
     def android
       toml     = File.join(Dir.pwd, Config.default_appium_txt_path)
-      template = ERB.new(File.new(Config.appium_txt_template_path).read, nil, "-")
       File.open toml, 'w' do |f|
         caps = {
           automation_name: "uiautomator2",
@@ -48,7 +61,7 @@ module Appium::CLI
           app_package: "com.package.example",
           app_activity: ".ExampleActivity"
         }
-        f.puts template.result(binding)
+        f.puts Config.template(caps)
       end
     end
   end
