@@ -1,3 +1,9 @@
+#### v2.10.0 2018-12-19
+
+- [6b12201](https://github.com/appium/ruby_console/commit/6b12201e65333d27cf30006f19a8d793844834c4) Release 2.10.0
+- [ded6f78](https://github.com/appium/ruby_console/commit/ded6f786ec143e6b4abd50c1c5553fd5171c886f) Clean, use heredoc (#96)
+
+
 #### v2.9.2 2018-11-30
 
 - [510438c](https://github.com/appium/ruby_console/commit/510438cbf0dca2747923150e60c61e8f2e91e7ad) Release 2.9.2
