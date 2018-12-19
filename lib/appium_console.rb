@@ -15,8 +15,8 @@ module Appium
     class << self
       def setup appium_txt_path
         Pry.send(:define_singleton_method, :pry_load_appium_txt) do |opts = {}|
-          verbose       = opts.fetch :verbose, false
-          path          = appium_txt_path
+          verbose = opts.fetch :verbose, false
+          path = appium_txt_path
           Appium.load_appium_txt file: path, verbose: verbose
         end
 
@@ -37,9 +37,9 @@ module Appium
       def start
         AwesomePrint.pry!
         start = File.expand_path '../start.rb', __FILE__
-        cmd   = ['-r', start]
+        cmd = ['-r', start]
 
-        parsed       = Pry.pry_load_appium_txt verbose: true
+        parsed = Pry.pry_load_appium_txt verbose: true
         has_requires = parsed && parsed[:appium_lib] && parsed[:appium_lib][:require]
         if has_requires
           requires = parsed[:appium_lib][:require]
@@ -52,8 +52,8 @@ module Appium
           $stdout.puts "pry #{cmd.join(' ')}"
         end
 
-        Pry.hooks.add_hook(:after_session, "Release session hook") do |output, binding, pry|
-          output.puts "Closing appium session..."
+        Pry.hooks.add_hook(:after_session, 'Release session hook') do |output, binding, pry|
+          output.puts 'Closing appium session...'
           $driver.x
         end
 

@@ -8,87 +8,83 @@ require 'appium_console'
 module Appium::CLI
   module Config
     class << self
-      def appium_txt_template_path
-        File.join(File.dirname(__FILE__), "..", "templates/appium.txt.erb")
-      end
-
       def default_appium_txt_path
-        "appium.txt"
+        'appium.txt'
       end
 
       def template(caps)
-        %([caps]\n) +
-        %(platformName = "#{caps[:platform_name]}"\n) +
-        %(#{ "platformVersion = \"#{caps[:platform_version]}\"\n" if caps[:platform_version]}) +
-        %(#{ "deviceName = \"#{caps[:device_name]}\"\n" if caps[:device_name]}) +
-        %(app = "#{caps[:path_to_app]}"\n) +
-        %(#{ "appPackage = \"#{caps[:app_package]}\"\n" if caps[:app_package]}) +
-        %(#{ "appActivity = \"#{caps[:app_activity]}\"\n" if caps[:app_activity]}) +
-        %(\n[appium_lib]\n) +
-        %(server_url = "http://127.0.0.1:4723/wd/hub"\n) +
-        %(sauce_username = ""\n) +
-        %(sauce_access_key = ""\n)
+        <<-EOS.gsub(/skip\s/, '')
+[caps]
+platformName = "#{caps[:platform_name]}"
+#{ caps[:platform_version] ? "platformVersion = \"#{caps[:platform_version]}\"" : "skip"}
+#{ caps[:device_name] ? "deviceName = \"#{caps[:device_name]}\"" : "skip" }
+app = "#{caps[:path_to_app]}"
+#{caps[:app_package] ? "appPackage = \"#{caps[:app_package]}\"" : "skip"}
+#{ caps[:app_activity] ? "appActivity = \"#{caps[:app_activity]}\"" : "skip"}
+
+[appium_lib]
+server_url = "http://127.0.0.1:4723/wd/hub"
+sauce_username = ""
+sauce_access_key = ""
+        EOS
       end
 
     end
   end
 
   class Setup < Thor
-    desc "ios", "Generates toml for ios"
+    desc 'ios', 'Generates toml for ios'
     def ios
-      toml     = File.join(Dir.pwd, Config.default_appium_txt_path)
-      File.open toml, 'w' do |f|
-        caps = {
-          automation_name: "XCUITest",
-          platform_name: "iOS",
-          device_name: "iPhone Simulator",
-          platform_version: "11.4",
-          path_to_app: "/path/to/app_bundle"
-        }
-        f.puts Config.template(caps)
-      end
+      toml = File.join(Dir.pwd, Config.default_appium_txt_path)
+      template = Config.template(
+        automation_name: 'XCUITest',
+        platform_name: 'iOS',
+        device_name: 'iPhone Simulator',
+        platform_version: '12.0',
+        path_to_app: '/path/to/app_bundle'
+      )
+      File.write(toml, template)
     end
 
-    desc "android", "Generates toml for android"
+    desc 'android', 'Generates toml for android'
     def android
-      toml     = File.join(Dir.pwd, Config.default_appium_txt_path)
-      File.open toml, 'w' do |f|
-        caps = {
-          automation_name: "uiautomator2",
-          platform_name: "Android",
-          device_name: "Nexus 5X",
-          path_to_app: "/path/to/apk",
-          app_package: "com.package.example",
-          app_activity: ".ExampleActivity"
-        }
-        f.puts Config.template(caps)
-      end
+      toml = File.join(Dir.pwd, Config.default_appium_txt_path)
+      template = Config.template(
+        automation_name: 'uiautomator2',
+        platform_name: 'Android',
+        device_name: 'Pixel 3',
+        path_to_app: '/path/to/apk',
+        app_package: 'com.package.example',
+        app_activity: 'com.package.example.ExampleActivity'
+      )
+      File.write(toml, template)
     end
   end
 
   class Main < Thor
-    desc "version", "Prints version of appium_lib and appium_console"
+    desc 'version', 'Prints version of appium_lib and appium_console'
     def version
-      puts "appium_console: v#{::Appium::Console::VERSION}"
-      puts "    appium_lib: v#{::Appium::VERSION}"
-      exit
+      puts <<-VERSION
+appium_console: v#{::Appium::Console::VERSION}
+    appium_lib: v#{::Appium::VERSION}
+      VERSION
     end
 
-    desc "toml [FILE]", "Starts appium console session with path to toml file"
+    desc 'toml [FILE]', 'Starts appium console session with path to toml file'
     def toml(appium_txt_path = Config.default_appium_txt_path)
       Appium::Console.setup appium_txt_path
       Appium::Console.start
     end
 
-    desc "init", "Starts appium console session with defaults settings"
+    desc 'init', 'Starts appium console session with defaults settings'
     def init
       Appium::Console.setup Config.default_appium_txt_path
       Appium::Console.start
     end
     default_command :init
 
-    desc "setup", "Generates toml file"
-    subcommand "setup", Setup
+    desc 'setup', 'Generates toml file'
+    subcommand 'setup', Setup
   end
 end
 
