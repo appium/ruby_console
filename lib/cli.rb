@@ -16,11 +16,11 @@ module Appium::CLI
         <<-EOS.gsub(/skip\s/, '')
 [caps]
 platformName = "#{caps[:platform_name]}"
-#{ caps[:platform_version] ? "platformVersion = \"#{caps[:platform_version]}\"" : "skip"}
-#{ caps[:device_name] ? "deviceName = \"#{caps[:device_name]}\"" : "skip" }
+#{ caps[:platform_version] ? "platformVersion = \"#{caps[:platform_version]}\"" : 'skip' }
+#{ caps[:device_name] ? "deviceName = \"#{caps[:device_name]}\"" : 'skip' }
 app = "#{caps[:path_to_app]}"
-#{caps[:app_package] ? "appPackage = \"#{caps[:app_package]}\"" : "skip"}
-#{ caps[:app_activity] ? "appActivity = \"#{caps[:app_activity]}\"" : "skip"}
+#{ caps[:app_package] ? "appPackage = \"#{caps[:app_package]}\"" : 'skip' }
+#{ caps[:app_activity] ? "appActivity = \"#{caps[:app_activity]}\"" : 'skip' }
 
 [appium_lib]
 server_url = "http://127.0.0.1:4723/wd/hub"

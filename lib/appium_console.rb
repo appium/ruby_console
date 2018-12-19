@@ -36,7 +36,7 @@ module Appium
 
       def start
         AwesomePrint.pry!
-        start = File.expand_path '../start.rb', __FILE__
+        start = File.expand_path 'start.rb', __dir__
         cmd = ['-r', start]
 
         parsed = Pry.pry_load_appium_txt verbose: true
