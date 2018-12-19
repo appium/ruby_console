@@ -28,7 +28,6 @@ sauce_username = ""
 sauce_access_key = ""
         EOS
       end
-
     end
   end
 
