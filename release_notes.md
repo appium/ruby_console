@@ -1,3 +1,9 @@
+#### v2.11.0 2018-12-28
+
+- [22c0247](https://github.com/appium/ruby_console/commit/22c02479270a04dbc01a68caa5cd6b3eb6b10b14) Release 2.11.0
+- [f39face](https://github.com/appium/ruby_console/commit/f39facebbbc71b968296b9ee869b3e1265c4c17c) Add rubocop remove awesomeprint (#97)
+
+
 #### v2.10.0 2018-12-19
 
 - [6b12201](https://github.com/appium/ruby_console/commit/6b12201e65333d27cf30006f19a8d793844834c4) Release 2.10.0
