@@ -1,4 +1,3 @@
-# encoding: utf-8
 require 'rubygems'
 require 'appium_lib'
 
@@ -24,7 +23,8 @@ begin
   # set current_spec. fixes:
   # NoMethodError: undefined method `assert_equal' for nil:NilClass
   Minitest::Spec.new 'pry'
-rescue
+rescue StandardError => e
+  puts(e.message)
 end
 
 def reload

@@ -1,5 +1,3 @@
-# encoding: utf-8
-#
 # run with
 # ruby my_test.rb
 #
