@@ -1,0 +1,14 @@
+AllCops:
+  TargetRubyVersion: 2.2
+Metrics/LineLength:
+  Max: 128
+Metrics/MethodLength:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/GlobalVars:
+  Enabled: false
+Layout/IndentHeredoc:
+  Enabled: false
