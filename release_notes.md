@@ -1,3 +1,9 @@
+#### v2.12.0 2019-02-08
+
+- [5ecc460](https://github.com/appium/ruby_console/commit/5ecc4600605da1a7167e1b279540145edcb07ad9) Release 2.12.0
+- [d38e70b](https://github.com/appium/ruby_console/commit/d38e70bc40e230214719a1f7ea1dfb196f4873d2) bump ruby lib to 10.0+ (#99)
+
+
 #### v2.11.0 2018-12-28
 
 - [22c0247](https://github.com/appium/ruby_console/commit/22c02479270a04dbc01a68caa5cd6b3eb6b10b14) Release 2.11.0
