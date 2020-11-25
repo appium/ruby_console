@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
 
   # appium_lib version must match ruby console version.
   s.add_runtime_dependency 'appium_lib', '~> 10.0'
-  s.add_runtime_dependency 'pry', '~> 0.12.0'
+  s.add_runtime_dependency 'pry', '~> 0.13.0'
   s.add_runtime_dependency 'bond', '~> 0.5'
   s.add_runtime_dependency 'spec', '~> 5.3', '>= 5.3.1'
   s.add_runtime_dependency 'thor', '>= 0.19', '< 2.0'
