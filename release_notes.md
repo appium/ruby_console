@@ -1,3 +1,12 @@
+#### v2.13.0 2021-01-25
+
+- [f7e8d18](https://github.com/appium/ruby_console/commit/f7e8d1869e1ca09e0434c299dcbe126be79a7e15) Release 2.13.0
+- [540c561](https://github.com/appium/ruby_console/commit/540c5616a55afabea20f272fe959dd32febb3f3b) chore: Update appium_console.gemspec (#105)
+- [323c3d9](https://github.com/appium/ruby_console/commit/323c3d9fd2535b512d01639c021c93094b9f750b) Update rake requirement from ~> 12.0 to ~> 13.0 (#102)
+- [b5f647f](https://github.com/appium/ruby_console/commit/b5f647faf7d81c0c8e8b297a1c875b7c1a2626db) Update thor requirement from ~> 0.19 to >= 0.19, < 2.0 (#101)
+- [22d772e](https://github.com/appium/ruby_console/commit/22d772e41f3d71448b707b87ee76abfdb4526026) Update rubocop requirement from = 0.61.0 to = 0.68.1 (#103)
+
+
 #### v2.12.0 2019-02-08
 
 - [5ecc460](https://github.com/appium/ruby_console/commit/5ecc4600605da1a7167e1b279540145edcb07ad9) Release 2.12.0
