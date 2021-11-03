@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # run with
 # ruby my_test.rb
 #
