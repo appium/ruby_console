@@ -10,7 +10,7 @@ add_to_path 'lib'
 require 'appium_console/version'
 
 Gem::Specification.new do |s|
-  s.required_ruby_version = '>= 2.2'
+  s.required_ruby_version = '>= 2.6'
 
   s.name          = 'appium_console'
   s.version       = Appium::Console::VERSION
@@ -24,15 +24,14 @@ Gem::Specification.new do |s|
   s.require_paths = [ 'lib' ]
 
   # appium_lib version must match ruby console version.
-  s.add_runtime_dependency 'appium_lib', '> 11.0'
+  s.add_runtime_dependency 'appium_lib', '12.0.0.rc4'
   s.add_runtime_dependency 'pry', '~> 0.13.0'
-  s.add_runtime_dependency 'bond', '~> 0.5'
   s.add_runtime_dependency 'spec', '~> 5.3', '>= 5.3.1'
   s.add_runtime_dependency 'thor', '>= 0.19', '< 2.0'
   s.add_development_dependency 'rake', '~> 13.0'
   s.add_development_dependency 'appium_thor', '~> 1.0', '>= 1.0.1'
   s.add_development_dependency 'posix-spawn', '~> 0.3.11'
-  s.add_development_dependency 'rubocop', '1.8.1'
+  s.add_development_dependency 'rubocop', '1.22.3'
 
   s.executables   = [ 'arc' ]
   s.files = `git ls-files`.split "\n"

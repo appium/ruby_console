@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 require 'pry'
 require 'appium_lib'
@@ -24,11 +26,9 @@ module Appium
           requires = parsed[:appium_lib][:require]
           requires.each do |file|
             # If a page obj is deleted then load will error.
-            begin
-              load file
-            rescue LoadError => e
-              puts e.message
-            end
+            load file
+          rescue LoadError => e
+            puts e.message
           end
         end
       end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 require 'thor'
 require 'appium_console/version'
@@ -24,8 +26,6 @@ app = "#{caps[:path_to_app]}"
 
 [appium_lib]
 server_url = "http://127.0.0.1:4723/wd/hub"
-sauce_username = ""
-sauce_access_key = ""
         TEMPLATE
       end
     end
@@ -39,7 +39,7 @@ sauce_access_key = ""
         automation_name: 'XCUITest',
         platform_name: 'iOS',
         device_name: 'iPhone Simulator',
-        platform_version: '12.0',
+        platform_version: '15.0',
         path_to_app: '/path/to/app_bundle'
       )
       File.write(toml, template)
@@ -51,7 +51,7 @@ sauce_access_key = ""
       template = Config.template(
         automation_name: 'uiautomator2',
         platform_name: 'Android',
-        device_name: 'Pixel 3',
+        device_name: 'Pixel 5',
         path_to_app: '/path/to/apk',
         app_package: 'com.package.example',
         app_activity: 'com.package.example.ExampleActivity'
