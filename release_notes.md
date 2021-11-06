@@ -1,3 +1,17 @@
+#### v3.0.0 2021-11-06
+
+- [5e9d1c8](https://github.com/appium/ruby_console/commit/5e9d1c86e4f36d9ccb780c0f6d62af2b59c5eb71) Release 3.0.0
+- [16d5490](https://github.com/appium/ruby_console/commit/16d54909e474602ba49c5c47a3cdb71ec8a07ab4) Merge branch 'master' of github.com:appium/ruby_console
+- [8400d85](https://github.com/appium/ruby_console/commit/8400d85fb4b0b42c24da4cd6d015fbae27f92ed5) chore: update appium_lib requirement from = 12.0.0.rc4 to = 12.0.0.rc5 (#112)
+- [266360d](https://github.com/appium/ruby_console/commit/266360dbd5d55e281b112bf1da9b5aeb41cc5c74) chore: bump version to rc2
+- [fed136c](https://github.com/appium/ruby_console/commit/fed136ca4ca6575669a03e78d5ada5caed868945) chore: appium_lib to rc5
+- [82685c4](https://github.com/appium/ruby_console/commit/82685c4132807169176acfc4312747c11401eb64) chore: bump version to rc
+- [6defbab](https://github.com/appium/ruby_console/commit/6defbab391197221eaa8efe357fa4be6fb49382b) bump pry
+- [22f7ac5](https://github.com/appium/ruby_console/commit/22f7ac5d1e3be2ff407dea7882e75416b8f84827) chore: update deps (#111)
+- [4fbe06c](https://github.com/appium/ruby_console/commit/4fbe06c446172eeee51625f87c2e423545357068) chore: Create Dependabot config file (#109)
+- [439be2c](https://github.com/appium/ruby_console/commit/439be2c8b7681c9fdfd4d6cf2f547b65a065c6e3) Update rubocop requirement from = 0.68.1 to = 1.8.1 (#108)
+
+
 #### v2.13.0 2021-01-25
 
 - [f7e8d18](https://github.com/appium/ruby_console/commit/f7e8d1869e1ca09e0434c299dcbe126be79a7e15) Release 2.13.0
