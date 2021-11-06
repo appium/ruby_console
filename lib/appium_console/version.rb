@@ -4,7 +4,7 @@
 module Appium; end unless defined? Appium
 module Appium
   module Console
-    VERSION = '2.14.0.rc2' unless defined? ::Appium::Console::VERSION
-    DATE = '2021-11-05' unless defined? ::Appium::Console::DATE
+    VERSION = '3.0.0' unless defined? ::Appium::Console::VERSION
+    DATE = '2021-11-06' unless defined? ::Appium::Console::DATE
   end
 end

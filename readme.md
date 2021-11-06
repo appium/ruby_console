@@ -9,9 +9,9 @@
     - Read [a setup guide](http://appium.io/docs/en/about-appium/getting-started/?lang=en)
 2. Install `appium_console`
     ```bash
-    gem uninstall -aIx appium_lib ;\
-    gem uninstall -aIx appium_console ;\
-    gem install --no-rdoc --no-ri appium_console
+    gem uninstall appium_lib
+    gem uninstall appium_console
+    gem install appium_console
     ```
 3. Run
     - The `arc` command starts Appium Ruby Console.
@@ -24,3 +24,8 @@
 ## Documentation
 
 - [ruby_lib](https://github.com/appium/ruby_lib)
+
+## Changelog
+- 3.0.0
+    - Update ruby_lib version to v12
+
