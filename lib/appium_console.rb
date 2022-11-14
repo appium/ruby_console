@@ -52,7 +52,7 @@ module Appium
 
         Pry.hooks.add_hook(:after_session, 'Release session hook') do |output, _binding, _pry|
           output.puts 'Closing appium session...'
-          $driver.x
+          x
         end
 
         opts = Pry::CLI.parse_options cmd
