@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake', '~> 13.0'
   s.add_development_dependency 'appium_thor', '~> 1.0', '>= 1.0.1'
   s.add_development_dependency 'posix-spawn', '~> 0.3.11'
-  s.add_development_dependency 'rubocop', '1.39.0'
+  s.add_development_dependency 'rubocop', '1.40.0'
 
   s.executables   = [ 'arc' ]
   s.files = `git ls-files`.split "\n"
