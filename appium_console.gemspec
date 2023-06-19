@@ -10,7 +10,7 @@ add_to_path 'lib'
 require 'appium_console/version'
 
 Gem::Specification.new do |s|
-  s.required_ruby_version = '>= 2.7'
+  s.required_ruby_version = '>= 3.0'
 
   s.name          = 'appium_console'
   s.version       = Appium::Console::VERSION

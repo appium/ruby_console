@@ -26,6 +26,8 @@
 - [ruby_lib](https://github.com/appium/ruby_lib)
 
 ## Changelog
+- 4.0.0
+    - Drop Ruby 2.7 support
 - 3.0.0
     - Update ruby_lib version to v12
 
