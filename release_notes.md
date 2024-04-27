@@ -1,3 +1,16 @@
+#### v4.1.1 2024-04-26
+
+- [cff749c](https://github.com/appium/ruby_console/commit/cff749cef4e63e66f62d7075cb89c7b0fb706d4d) Release 4.1.1
+- [f31e48c](https://github.com/appium/ruby_console/commit/f31e48ca8133eff0fbeb51b37591aca1d50fb911) chore: bump thor
+- [a7af172](https://github.com/appium/ruby_console/commit/a7af1727df20168451bafe743b44775c2129aec6) chore: update rubocop requirement from = 1.63.2 to = 1.63.3 (#192)
+- [6427a8a](https://github.com/appium/ruby_console/commit/6427a8a7afcbe078d3a2cac57307a358b33c74df) chore: update rubocop requirement from = 1.63.1 to = 1.63.2 (#191)
+- [c5bfb8d](https://github.com/appium/ruby_console/commit/c5bfb8d3de53f9ecea86e35ba291ca47fc7d8691) chore: update rubocop requirement from = 1.63.0 to = 1.63.1 (#190)
+- [ff418ec](https://github.com/appium/ruby_console/commit/ff418ecf222259c0a077d805db79b243e1ab5963) chore: update rubocop requirement from = 1.62.1 to = 1.63.0 (#189)
+- [d5d3949](https://github.com/appium/ruby_console/commit/d5d3949d7b50944a54d32b7a0d5b1e44f953d356) chore: update rubocop requirement from = 1.62.0 to = 1.62.1 (#188)
+- [5ad12e9](https://github.com/appium/ruby_console/commit/5ad12e900ac39a9d8c56b5eb3a9bcf6961e9cee8) chore: update rubocop requirement from = 1.61.0 to = 1.62.0 (#187)
+- [4bb0580](https://github.com/appium/ruby_console/commit/4bb058063aae0cdae45842bf2f736648c29f3f9b) chore: update rubocop requirement from = 1.60.2 to = 1.61.0 (#186)
+
+
 #### v4.1.0 2024-01-25
 
 - [64eba6a](https://github.com/appium/ruby_console/commit/64eba6aaa0e40b919d63646c9909b965f3be3b50) Release 4.1.0
