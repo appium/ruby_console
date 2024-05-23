@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'thor', '>= 0.19', '< 2.0'
   s.add_development_dependency 'rake', '~> 13.0'
   s.add_development_dependency 'appium_thor', '~> 2.0'
-  s.add_development_dependency 'rubocop', '1.63.5'
+  s.add_development_dependency 'rubocop', '1.64.0'
 
   s.executables   = [ 'arc' ]
   s.files = `git ls-files`.split "\n"
