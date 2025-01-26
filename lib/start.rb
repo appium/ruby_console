@@ -17,7 +17,6 @@ core = Appium::Driver.new opts, false
 core.start_driver
 Appium.promote_appium_methods Object, core
 
-
 # Load minitest
 begin
   require 'minitest'
