@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
 
   # appium_lib version must match ruby console version.
   s.add_dependency 'appium_lib', '>= 14.0.0'
-  s.add_dependency 'pry', '~> 0.14.0'
+  s.add_dependency 'pry', '>= 0.14', '< 0.16'
   s.add_dependency 'thor', '>= 0.19', '< 2.0'
 
   s.executables = ['arc']
