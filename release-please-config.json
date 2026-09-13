@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "2f63a20264d375195d49b975df974522605c54ce",
+  "packages": {
+    ".": {
+      "release-type": "ruby",
+      "package-name": "appium_console",
+      "version-file": "lib/appium_console/version.rb",
+      "include-component-in-tag": false,
+      "include-v-in-tag": true,
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        "lib/appium_console/version.rb"
+      ]
+    }
+  }
+}
