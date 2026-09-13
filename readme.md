@@ -31,3 +31,8 @@
 - 3.0.0
     - Update ruby_lib version to v12
 
+
+## Releasing
+
+Review and merge the Release Please PR to publish. See [RELEASING.md](RELEASING.md)
+for one-time Trusted Publishing setup and recovery instructions.
