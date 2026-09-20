@@ -18,6 +18,7 @@ module Appium::CLI # rubocop:disable Style/ClassAndModuleChildren
         <<-TEMPLATE.gsub(/skip\s/, '')
 [caps]
 platformName = "#{caps[:platform_name]}"
+automationName = "#{caps[:automation_name]}"
 #{caps[:platform_version] ? "platformVersion = \"#{caps[:platform_version]}\"" : 'skip'}
 #{caps[:device_name] ? "deviceName = \"#{caps[:device_name]}\"" : 'skip'}
 app = "#{caps[:path_to_app]}"
@@ -25,7 +26,7 @@ app = "#{caps[:path_to_app]}"
 #{caps[:app_activity] ? "appActivity = \"#{caps[:app_activity]}\"" : 'skip'}
 
 [appium_lib]
-server_url = "http://127.0.0.1:4723/wd/hub"
+server_url = "http://127.0.0.1:4723/"
         TEMPLATE
       end
     end
@@ -33,6 +34,7 @@ server_url = "http://127.0.0.1:4723/wd/hub"
 
   class Setup < Thor
     desc 'ios', 'Generates toml for ios'
+    method_option :force, type: :boolean, default: false, desc: 'Overwrite an existing appium.txt'
     def ios
       toml = File.join(Dir.pwd, Config.default_appium_txt_path)
       template = Config.template(
@@ -42,10 +44,11 @@ server_url = "http://127.0.0.1:4723/wd/hub"
         platform_version: '15.0',
         path_to_app: '/path/to/app_bundle'
       )
-      File.write(toml, template)
+      write_config(toml, template)
     end
 
     desc 'android', 'Generates toml for android'
+    method_option :force, type: :boolean, default: false, desc: 'Overwrite an existing appium.txt'
     def android
       toml = File.join(Dir.pwd, Config.default_appium_txt_path)
       template = Config.template(
@@ -56,11 +59,23 @@ server_url = "http://127.0.0.1:4723/wd/hub"
         app_package: 'com.package.example',
         app_activity: 'com.package.example.ExampleActivity'
       )
-      File.write(toml, template)
+      write_config(toml, template)
+    end
+
+    private
+
+    def write_config(path, template)
+      File.write(path, template, mode: options[:force] ? 'w' : 'wx')
+    rescue Errno::EEXIST
+      raise Thor::Error, "#{path} already exists. Use --force to overwrite it."
     end
   end
 
   class Main < Thor
+    def self.exit_on_failure?
+      true
+    end
+
     desc 'version', 'Prints version of appium_lib and appium_console'
     def version
       puts <<-VERSION

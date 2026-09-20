@@ -19,11 +19,17 @@
         - `arc version` prints the current version of appium console and appium lib.
         - `arc setup android` creates `appium.txt` for android in the current working dir.
         - `arc setup ios` creates `appium.txt` for ios in the current working dir.
+        - Setup preserves an existing `appium.txt`. Add `--force` to overwrite it.
         - `arc toml FILE` starts arc with toml FILE path
 
 ## Documentation
 
 - [ruby_lib](https://github.com/appium/ruby_lib)
+
+## Development
+
+Run `bundle install`, then `bundle exec rake test` and `bundle exec rake rubocop`.
+Tests run without an Appium server or device.
 
 ## Changelog
 - 4.0.0

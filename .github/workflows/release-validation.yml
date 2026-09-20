@@ -23,6 +23,7 @@ jobs:
       - name: Check console
         run: |
           bundle exec rake rubocop
+          bundle exec rake test
           bundle exec ruby -Ilib bin/arc version
       - name: Build gem
         run: bundle exec rake build

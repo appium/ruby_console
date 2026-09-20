@@ -43,7 +43,7 @@ module Appium
           requires = parsed[:appium_lib][:require]
 
           unless requires.empty?
-            load_files = requires.map { |f| %(require "#{f}";) }.join "\n"
+            load_files = requires.map { |f| "require #{f.dump};" }.join "\n"
             cmd += ['-e', load_files]
           end
 
