@@ -49,6 +49,7 @@ jobs:
       - name: Run checks on the release commit
         run: |
           bundle exec rake rubocop
+          bundle exec rake test
           bundle exec ruby -Ilib bin/arc version
       - name: Validate the built gem
         id: package
