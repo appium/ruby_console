@@ -43,4 +43,21 @@ class ConsoleTest < Minitest::Test
       end
     end
   end
+
+  def test_after_session_hook_handles_missing_driver_and_repeated_start
+    Appium::Console.setup('appium.txt')
+    Appium.stub(:load_appium_txt, {}) do
+      Pry::CLI.stub(:parse_options, ->(args) { args }) do
+        Pry::CLI.stub(:start, ->(_args) {}) do
+          Appium::Console.start
+          Appium::Console.start
+        end
+      end
+    end
+    output = StringIO.new
+    Pry.hooks.exec_hook(:after_session, output, binding, Pry.new)
+    assert_includes output.string, 'Closing appium session...'
+  ensure
+    Pry.hooks.delete_hook(:after_session, 'Release session hook')
+  end
 end
