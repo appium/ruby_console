@@ -55,7 +55,9 @@ class ConsoleTest < Minitest::Test
       end
     end
     output = StringIO.new
-    Pry.hooks.exec_hook(:after_session, output, binding, Pry.new)
+    Pry.hooks.errors.clear
+    Pry.hooks.get_hook(:after_session, 'Release session hook').call(output, binding, Pry.new)
+    assert_empty Pry.hooks.errors
     assert_includes output.string, 'Closing appium session...'
   ensure
     Pry.hooks.delete_hook(:after_session, 'Release session hook')
