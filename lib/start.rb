@@ -11,7 +11,9 @@ Pry.respond_to?(:config) ? Pry.config.command_prefix = '%' : ''
 
 opts = Pry.pry_load_appium_txt
 # override command timeout so the server doesn't shut down after 60 seconds
-new_command_timeout = { caps: { newCommandTimeout: 999_999 }.merge(opts[:caps] || {}) }
+caps = opts[:caps] || {}
+has_command_timeout = caps.key?(:newCommandTimeout) || caps.key?(:'appium:newCommandTimeout')
+new_command_timeout = { caps: (has_command_timeout ? {} : { newCommandTimeout: 999_999 }).merge(caps) }
 opts = opts.merge(new_command_timeout)
 core = Appium::Driver.new opts, false
 core.start_driver
