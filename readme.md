@@ -23,6 +23,13 @@
         - `arc toml FILE` starts arc with toml FILE path
         - `arc multi` opens a console where you start and stop each session yourself.
 
+### Using the configured session
+
+`arc`, `arc init`, and `arc toml FILE` start the configured session and expose
+it as `driver` at the prompt. Use `driver.get_source` in place of the former
+bare `get_source` command. Pass `driver` to page objects and helper methods
+that interact with the device. Exit the console to close its session.
+
 ### Managing multiple sessions
 
 Run `arc multi` and load a configuration for each device. Keep each driver

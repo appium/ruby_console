@@ -8,13 +8,14 @@
 require 'rubygems'
 require 'appium_lib'
 
-def sign_in
-  button('Sign In').click
+def sign_in(driver)
+  driver.button('Sign In').click
 end
 
-start_driver
-
-sign_in
-
-# Quit
-x
+driver = Appium::Driver.new(Appium.load_appium_txt(file: 'appium.txt'), false)
+begin
+  driver.start_driver
+  sign_in(driver)
+ensure
+  driver.driver_quit
+end
