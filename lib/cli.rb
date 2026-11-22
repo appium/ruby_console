@@ -86,12 +86,14 @@ appium_console: v#{::Appium::Console::VERSION}
 
     desc 'toml [FILE]', 'Starts appium console session with path to toml file'
     def toml(appium_txt_path = Config.default_appium_txt_path)
-      Appium::Console::Session.new(appium_txt_path).start
+      Appium::Console.setup appium_txt_path
+      Appium::Console.start
     end
 
     desc 'init', 'Starts appium console session with defaults settings'
     def init
-      toml Config.default_appium_txt_path
+      Appium::Console.setup Config.default_appium_txt_path
+      Appium::Console.start
     end
     default_command :init
 

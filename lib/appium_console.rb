@@ -11,51 +11,63 @@ end
 
 module Appium
   module Console
-    class Session
-      attr_reader :driver
+    class << self
+      def setup(appium_txt_path)
+        define_pry_method(:pry_load_appium_txt) do |opts = {}|
+          verbose = opts.fetch :verbose, false
+          path = appium_txt_path
+          Appium.load_appium_txt file: path, verbose: verbose
+        end
 
-      def initialize(config_path)
-        @config_path = config_path
+        define_pry_method(:reload) do
+          parsed = Pry.pry_load_appium_txt
+          requires = parsed&.dig(:appium_lib, :require)
+          return unless requires
+
+          requires.each do |file|
+            # If a page obj is deleted then load will error.
+            load file
+          rescue LoadError => e
+            puts e.message
+          end
+        end
       end
 
       def start
-        opts = Appium.load_appium_txt(file: @config_path, verbose: true)
-        caps = opts[:caps] || {}
-        unless caps.key?(:newCommandTimeout) || caps.key?(:'appium:newCommandTimeout')
-          opts = opts.merge(caps: caps.merge(newCommandTimeout: 999_999))
+        start = File.expand_path 'start.rb', __dir__
+        cmd = ['-r', start]
+
+        parsed = Pry.pry_load_appium_txt verbose: true
+        requires = parsed&.dig(:appium_lib, :require)
+        if requires
+          unless requires.empty?
+            load_files = requires.map { |f| "require #{f.dump};" }.join "\n"
+            cmd += ['-e', load_files]
+          end
+
+          $stdout.puts "pry #{cmd.join(' ')}"
         end
 
-        @driver = Appium::Driver.new(opts, false)
-        driver.start_driver
-        configure_minitest
-        Array(opts.dig(:appium_lib, :require)).each { |file| require file }
-        Pry.config.command_prefix = '%'
-        Pry.start(self)
-      ensure
-        if driver
-          puts 'Closing appium session...'
-          driver.driver_quit
-        end
+        opts = Pry::CLI.parse_options cmd
+        Pry::CLI.start(opts)
       end
 
-      def reload
-        opts = Appium.load_appium_txt(file: @config_path)
-        Array(opts.dig(:appium_lib, :require)).each do |file|
-          load file
-        rescue LoadError => e
-          puts e.message
+      def register_release_session_hook(driver)
+        if Pry.hooks.hook_exists?(:after_session, 'Release session hook')
+          Pry.hooks.delete_hook(:after_session, 'Release session hook')
         end
-        nil
+        Pry.hooks.add_hook(:after_session, 'Release session hook') do |output, _binding, _pry|
+          output.puts 'Closing appium session...'
+          driver.driver_quit
+          $driver = nil if $driver.equal?(driver)
+        end
       end
 
       private
 
-      def configure_minitest
-        require 'minitest'
-        require 'minitest/spec'
-        Minitest::Spec.new 'pry'
-      rescue StandardError => e
-        puts e.message
+      def define_pry_method(name, &)
+        Pry.singleton_class.send(:remove_method, name) if Pry.respond_to?(name)
+        Pry.send(:define_singleton_method, name, &)
       end
     end
   end

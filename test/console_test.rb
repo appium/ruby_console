@@ -2,64 +2,58 @@
 
 require 'minitest/autorun'
 require 'minitest/mock'
+require 'open3'
 require 'tmpdir'
 require 'appium_console'
 
 class ConsoleTest < Minitest::Test
-  def test_session_exposes_driver_and_loads_and_reloads_files_literally
+  def test_start_requires_files_with_special_characters_literally
     Dir.mktmpdir do |dir|
-      file = File.join(dir, 'page"\#{raise "interpolated"}.rb')
-      File.write(file, 'puts "first version"')
-      opts = { appium_lib: { require: [file] } }
-      driver = Minitest::Mock.new
-      driver.expect(:start_driver, nil)
-      driver.expect(:get_source, '<app/>')
-      driver.expect(:driver_quit, nil)
-      launch = lambda do |session|
-        assert_equal '<app/>', session.driver.get_source
-        refute Object.method_defined?(:get_source)
+      file = File.join(dir, 'page"\\#{raise "interpolated"}.rb')
+      File.write(file, 'puts "page loaded"')
+      parsed = { appium_lib: { require: [file] } }
+      Appium::Console.setup('appium.txt')
+      launch = lambda do |args|
+        assert_equal '-r', args.first
+        assert_equal File.expand_path('../lib/start.rb', __dir__), args[1]
+        assert_equal '-e', args[2]
+        stdout, stderr, status = Open3.capture3(Gem.ruby, '-e', args[3])
+        assert status.success?, stderr
+        assert_equal "page loaded\n", stdout
+      end
+      Appium.stub(:load_appium_txt, parsed) do
+        Pry::CLI.stub(:parse_options, ->(args) { args }) do
+          Pry::CLI.stub(:start, launch) { capture_io { Appium::Console.start } }
+        end
+      end
+    ensure
+      Pry.hooks.delete_hook(:after_session, 'Release session hook')
+    end
+  end
+
+  def test_reload_loads_changed_file_contents
+    Dir.mktmpdir do |dir|
+      file = File.join(dir, 'page.rb')
+      Appium::Console.setup('appium.txt')
+      Appium.stub(:load_appium_txt, { appium_lib: { require: [file] } }) do
+        File.write(file, 'puts "first version"')
+        assert_output("first version\n") { Pry.reload }
         File.write(file, 'puts "second version"')
-        session.reload
+        assert_output("second version\n") { Pry.reload }
       end
-      build = driver_factory(driver, opts.merge(caps: { newCommandTimeout: 999_999 }))
-      Appium.stub(:load_appium_txt, opts) do
-        Appium::Driver.stub(:new, build) do
-          Pry.stub(:start, launch) do
-            assert_output("first version\nsecond version\nClosing appium session...\n") do
-              Appium::Console::Session.new('appium.txt').start
-            end
-          end
-        end
-      end
-      driver.verify
     end
   end
 
-  def test_session_releases_its_driver_when_the_console_raises
+  def test_after_session_hook_releases_only_the_registered_driver
     driver = Minitest::Mock.new
-    driver.expect(:start_driver, nil)
     driver.expect(:driver_quit, nil)
-    config = { caps: { 'appium:newCommandTimeout': 90 } }
-    build = driver_factory(driver, config)
-    Appium.stub(:load_appium_txt, config) do
-      Appium::Driver.stub(:new, build) do
-        Pry.stub(:start, ->(_) { raise IOError }) do
-          assert_output("Closing appium session...\n") do
-            assert_raises(IOError) { Appium::Console::Session.new('appium.txt').start }
-          end
-        end
-      end
-    end
+    Appium::Console.register_release_session_hook(Object.new)
+    Appium::Console.register_release_session_hook(driver)
+    output = StringIO.new
+    Pry.hooks.get_hook(:after_session, 'Release session hook').call(output, binding, Pry.new)
     driver.verify
-  end
-
-  private
-
-  def driver_factory(driver, expected_config)
-    lambda do |config, global|
-      refute global
-      assert_equal expected_config, config
-      driver
-    end
+    assert_includes output.string, 'Closing appium session...'
+  ensure
+    Pry.hooks.delete_hook(:after_session, 'Release session hook')
   end
 end

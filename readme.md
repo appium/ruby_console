@@ -25,10 +25,10 @@
 
 ### Using the configured session
 
-`arc`, `arc init`, and `arc toml FILE` start the configured session and expose
-it as `driver` at the prompt. Use `driver.get_source` in place of the former
-bare `get_source` command. Pass `driver` to page objects and helper methods
-that interact with the device. Exit the console to close its session.
+`arc`, `arc init`, and `arc toml FILE` start the configured session.
+The console exposes that session as `$driver` and makes commands such as
+`get_source` available at the prompt and in page objects. Exit the console
+to close the session.
 
 ### Managing multiple sessions
 

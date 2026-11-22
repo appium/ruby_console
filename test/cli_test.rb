@@ -8,21 +8,43 @@ require 'tomlrb'
 class CliTest < Minitest::Test
   ROOT = File.expand_path('..', __dir__)
 
-  def run_arc(*args, **options)
-    Open3.capture3(Gem.ruby, '-I', File.join(ROOT, 'lib'), File.join(ROOT, 'bin/arc'), *args, **options)
+  def run_arc(*args, offline: false, **options)
+    preload = offline ? ['-r', File.join(__dir__, 'support/offline_session')] : []
+    Open3.capture3(Gem.ruby, *preload, '-I', File.join(ROOT, 'lib'), File.join(ROOT, 'bin/arc'), *args, **options)
   end
 
-  def test_multi_opens_console_without_a_default_driver
+  def test_configured_console_exposes_global_and_bare_methods
+    Dir.mktmpdir do |dir|
+      File.write(File.join(dir, 'appium.txt'), <<~TOML)
+        [caps]
+        platformName = "iOS"
+        automationName = "XCUITest"
+      TOML
+      input = 'puts [get_source, $driver.get_source, Object.new.get_source].join("/")'
+      stdout, stderr, status = run_arc(stdin_data: input, chdir: dir, offline: true)
+      assert status.success?, stderr
+      assert_includes stdout, "ios/ios/ios\n"
+      assert_includes stdout, "closed ios\n"
+    end
+  end
+
+  def test_multi_sessions_can_be_used_and_closed_independently
     Dir.mktmpdir do |dir|
       input = <<~RUBY
         ios = Appium::Driver.new({ caps: { platformName: 'iOS', automationName: 'XCUITest' } }, false)
         android = Appium::Driver.new({ caps: { platformName: 'Android', automationName: 'UiAutomator2' } }, false)
-        puts 'independent drivers' if ios.respond_to?(:get_source) && android.respond_to?(:get_source) &&
-                                      !ios.equal?(android) && $driver.nil? && !respond_to?(:get_source, true)
+        ios.start_driver
+        android.start_driver
+        puts [ios.get_source, android.get_source, $driver.nil?, respond_to?(:get_source, true)].join("/")
+        ios.driver_quit
+        puts "remaining " + android.get_source
+        android.driver_quit
       RUBY
-      stdout, stderr, status = run_arc('multi', stdin_data: input, chdir: dir)
+      stdout, stderr, status = run_arc('multi', stdin_data: input, chdir: dir, offline: true)
       assert status.success?, stderr
-      assert_includes stdout, "independent drivers\n"
+      assert_includes stdout, "ios/android/true/false\n"
+      assert_includes stdout, "remaining android\n"
+      assert_includes stdout, "closed android\n"
     end
   end
 
