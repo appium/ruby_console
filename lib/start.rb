@@ -17,7 +17,9 @@ new_command_timeout = { caps: (has_command_timeout ? {} : { newCommandTimeout: 9
 opts = opts.merge(new_command_timeout)
 core = Appium::Driver.new opts, false
 core.start_driver
+$driver = core
 Appium.promote_appium_methods Object, core
+Appium::Console.register_release_session_hook(core)
 
 # Load minitest
 begin

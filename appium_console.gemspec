@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   # appium_lib version must match ruby console version.
-  s.add_dependency 'appium_lib', '>= 14.0.0'
+  s.add_dependency 'appium_lib', '>= 17.0.0'
   s.add_dependency 'pry', '>= 0.14', '< 0.17'
   s.add_dependency 'thor', '>= 0.19', '< 2.0'
 

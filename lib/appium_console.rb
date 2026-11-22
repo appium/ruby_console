@@ -48,10 +48,19 @@ module Appium
           $stdout.puts "pry #{cmd.join(' ')}"
         end
 
-        register_release_session_hook
-
         opts = Pry::CLI.parse_options cmd
         Pry::CLI.start(opts)
+      end
+
+      def register_release_session_hook(driver)
+        if Pry.hooks.hook_exists?(:after_session, 'Release session hook')
+          Pry.hooks.delete_hook(:after_session, 'Release session hook')
+        end
+        Pry.hooks.add_hook(:after_session, 'Release session hook') do |output, _binding, _pry|
+          output.puts 'Closing appium session...'
+          driver.driver_quit
+          $driver = nil if $driver.equal?(driver)
+        end
       end
 
       private
@@ -59,16 +68,6 @@ module Appium
       def define_pry_method(name, &)
         Pry.singleton_class.send(:remove_method, name) if Pry.respond_to?(name)
         Pry.send(:define_singleton_method, name, &)
-      end
-
-      def register_release_session_hook
-        if Pry.hooks.hook_exists?(:after_session, 'Release session hook')
-          Pry.hooks.delete_hook(:after_session, 'Release session hook')
-        end
-        Pry.hooks.add_hook(:after_session, 'Release session hook') do |output, _binding, _pry|
-          output.puts 'Closing appium session...'
-          x if respond_to?(:x, true)
-        end
       end
     end
   end
