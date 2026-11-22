@@ -3,6 +3,13 @@
 Historical commit-level notes through 4.2.0 are in [release_notes.md](release_notes.md).
 New entries are maintained by Release Please.
 
+## [4.4.0](https://github.com/appium/ruby_console/compare/v4.3.1...v4.4.0) (2026-11-22)
+
+
+### Features
+
+* support multiple sessions while preserving console shortcuts ([#275](https://github.com/appium/ruby_console/issues/275)) ([f0e9be6](https://github.com/appium/ruby_console/commit/f0e9be65d498d5e0bdfeeb00ee8ef1c81ea4ad40))
+
 ## [4.3.1](https://github.com/appium/ruby_console/compare/v4.3.0...v4.3.1) (2026-10-28)
 
 
