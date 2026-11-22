@@ -8,8 +8,22 @@ require 'tomlrb'
 class CliTest < Minitest::Test
   ROOT = File.expand_path('..', __dir__)
 
-  def run_arc(*args)
-    Open3.capture3(Gem.ruby, '-I', File.join(ROOT, 'lib'), File.join(ROOT, 'bin/arc'), *args)
+  def run_arc(*args, **options)
+    Open3.capture3(Gem.ruby, '-I', File.join(ROOT, 'lib'), File.join(ROOT, 'bin/arc'), *args, **options)
+  end
+
+  def test_multi_opens_console_without_a_default_driver
+    Dir.mktmpdir do |dir|
+      input = <<~RUBY
+        ios = Appium::Driver.new({ caps: { platformName: 'iOS', automationName: 'XCUITest' } }, false)
+        android = Appium::Driver.new({ caps: { platformName: 'Android', automationName: 'UiAutomator2' } }, false)
+        puts 'independent drivers' if ios.respond_to?(:get_source) && android.respond_to?(:get_source) &&
+                                      !ios.equal?(android) && $driver.nil? && !respond_to?(:get_source, true)
+      RUBY
+      stdout, stderr, status = run_arc('multi', stdin_data: input, chdir: dir)
+      assert status.success?, stderr
+      assert_includes stdout, "independent drivers\n"
+    end
   end
 
   def test_setup_generates_driver_and_server_settings

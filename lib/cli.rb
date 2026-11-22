@@ -97,6 +97,12 @@ appium_console: v#{::Appium::Console::VERSION}
     end
     default_command :init
 
+    desc 'multi', 'Starts a console for managing independent Appium sessions'
+    def multi
+      Pry.config.command_prefix = '%'
+      Pry::CLI.start(Pry::CLI.parse_options([]))
+    end
+
     desc 'setup', 'Generates toml file'
     subcommand 'setup', Setup
   end

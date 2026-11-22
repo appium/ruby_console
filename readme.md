@@ -21,6 +21,25 @@
         - `arc setup ios` creates `appium.txt` for ios in the current working dir.
         - Setup preserves an existing `appium.txt`. Add `--force` to overwrite it.
         - `arc toml FILE` starts arc with toml FILE path
+        - `arc multi` opens a console where you start and stop each session yourself.
+
+### Managing multiple sessions
+
+Run `arc multi` and load a configuration for each device. Keep each driver
+in its own variable and call commands on the driver you want to use.
+
+```ruby
+ios = Appium::Driver.new(Appium.load_appium_txt(file: 'ios.txt'), false)
+android = Appium::Driver.new(Appium.load_appium_txt(file: 'android.txt'), false)
+ios.start_driver
+android.start_driver
+
+ios.get_source
+android.get_source
+
+ios.driver_quit
+android.driver_quit
+```
 
 ## Documentation
 
